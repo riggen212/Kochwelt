@@ -1,5 +1,19 @@
+:root {
+    --navHover: #008000;
+    --footerColor: #403B3B;
+    --backgroundSectionOtherRecipes: #EFEFEF;
+}
+
+body {
+    margin: 0;
+}
+
 .contentRestrain {
     max-width: 1440px;
+}
+
+header {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .headerContent {
