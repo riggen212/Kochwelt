@@ -17,7 +17,41 @@ header {
 }
 
 .headerContent {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
 
+.figHeader {
+    display: flex;
+    align-items: center;
+}
+
+.headerLogo {
+    width: 64px;
+}
+
+.navBar {
+    align-self: flex-end;
+}
+
+ul {
+    margin: 0;
+    display: flex;
+    gap: 16px;
+}
+
+li {
+    list-style: none;
+}
+
+.navLink {
+    text-decoration: none;
+}
+
+.navLink:hover {
+    color: var(--navHover);
+    border-bottom: 5px solid var(--navHover);
 }
 
 button {
@@ -41,5 +75,5 @@ button {
 }
 
 figure {
-    
+    margin: 0;
 }
