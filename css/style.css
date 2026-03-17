@@ -6,6 +6,7 @@
     --buttonHover: #0ea90e;
     --backgroundSectionOtherRecipes: #EFEFEF;
     --imageBorderRadius: 8px;
+    --headerBoxShadow: 0 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 body {
@@ -28,7 +29,7 @@ img {
 }
 
 header {
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--headerBoxShadow);
 
     .headerContent {
         display: flex;
