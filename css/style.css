@@ -90,23 +90,24 @@ main {
     margin: 0 auto;
     padding: 64px 160px;
     gap: 16px;
-}
 
-.recipeImage {
-    width: 400px;
-}
-
-.recipeDescpription {
-    display: flex;
-    flex-direction: column;
-
-    h2 {
-        padding-bottom: 8px;
+    .recipeImage {
+        width: 400px;
     }
 
-    p {
-        flex: 0.7;
+    .recipeDescpription {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            padding-bottom: 16px;
+        }
+
+        p {
+            flex: 0.7;
+        }
     }
+
 }
 
 button {
@@ -138,12 +139,13 @@ button:hover {
 
 .otherRecipesDisplay {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 16px;
 
     img {
-        max-width: 316px;
-        width: auto;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
     }
 
     figcaption {
