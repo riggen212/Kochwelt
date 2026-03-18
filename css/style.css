@@ -1,5 +1,4 @@
 :root {
-    /* footerColor and fontColor grouped to designColor */
     --designColor: #403B3B;
     --buttonTextColor: #fff;
     --navHover: #008000;
@@ -17,7 +16,7 @@ body {
     box-sizing: border-box;
 }
 
-h2, p, figure {
+h1, h2, p, figure {
     margin: 0;
 }
 
@@ -118,75 +117,6 @@ main {
     }
 }
 
-.recipePropertyImage {
-    width: 15px;
-}
-
-.myRecipeHeader {
-    margin: var(--contentMargin);
-    padding: 0 160px;
-
-    .recipeImage {
-        height: 200px;
-        width: 100%;
-        object-fit: cover;
-    }
-}
-
-.recipeProperties {
-    padding: 16px 160px;
-    display: flex;
-    gap: 16px;
-
-    .recipePropertyFigure {
-        display: flex;
-        border-radius: var(--imageBorderRadius);
-        padding: 8px 4px;
-        gap: 10px;
-        background-color: var(--backgroundSectionOtherRecipes);
-    }
-}
-
-.ingredientAmount {
-    margin: var(--contentMargin);
-    padding: 16px 160px;
-}
-
-.ingredientTable {
-    padding: 0 160px;
-    width: 100%;
-
-    td {
-        padding: 8px 4px;
-        border-radius: var(--imageBorderRadius);
-    }
-
-    tr:nth-child(even) {
-        background-color: var(--backgroundSectionOtherRecipes);
-    }
-}
-
-.recipePreparation {
-    padding: 16px 160px;
-
-    .preparationContainer {
-        display: flex;
-        gap: 16px;
-    }
-
-    .recipePreparationFigure {
-        display: flex;
-        gap: 10px;
-        background-color: var(--backgroundSectionOtherRecipes);
-        padding: 8px 4px;
-        border-radius: var(--imageBorderRadius);
-    }
-
-    p {
-        padding-top: 16px;
-    }
-}
-
 button {
     max-width: 200px;
     padding: 8px 16px;
@@ -282,6 +212,101 @@ button:hover {
 
         .socialMediaFooter{
             width: 132px;
+        }
+    }
+}
+
+/* the recipe-pages */
+.recipePropertyImage {
+    width: 15px;
+}
+
+.articleHeader {
+    margin: var(--contentMargin);
+    padding: 32px 160px 0 160px;
+    h1 {
+        font-weight: bold;
+        padding-bottom: 16px;
+    }
+
+    .recipeImage {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.recipeProperties {
+    padding: 32px 0 64px 0;
+    display: flex;
+    gap: 16px;
+    border-bottom: 2px solid var(--backgroundSectionOtherRecipes);
+
+    .recipePropertyFigure {
+        display: flex;
+        border-radius: var(--imageBorderRadius);
+        padding: 8px 4px;
+        gap: 10px;
+        background-color: var(--backgroundSectionOtherRecipes);
+    }
+}
+
+.ingredientAmount {
+    margin: var(--contentMargin);
+    padding: 8px 160px 16px 160px;
+}
+
+.ingredientTable {
+    padding: 0 160px;
+    width: 100%;
+
+    td {
+        padding: 8px 4px;
+        border-radius: var(--imageBorderRadius);
+    }
+
+    tr:nth-child(even) {
+        background-color: var(--backgroundSectionOtherRecipes);
+    }
+}
+
+.recipePreparation {
+    padding: 16px 160px;
+
+    .preparationContainer {
+        display: flex;
+        gap: 16px;
+    }
+
+    .recipePreparationFigure {
+        display: flex;
+        gap: 10px;
+        background-color: var(--backgroundSectionOtherRecipes);
+        padding: 8px 4px;
+        border-radius: var(--imageBorderRadius);
+    }
+
+    p {
+        padding-top: 16px;
+    }
+}
+
+.articleFooter {
+    margin: 0 auto;
+    padding: 32px 160px;
+
+    .imageRecipeFooter {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        .profileImg {
+            width: 100px;
+            border-radius: 100%;
+        }
+
+        figcaption {
+            font-size: 24px;
         }
     }
 }
