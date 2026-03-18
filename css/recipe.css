@@ -17,12 +17,15 @@ h1 {
     height: 200px;
 }
 
+
 .info-list {
     list-style: none;
     padding: 0;
     display: flex;
     gap: 16px;
     margin: 20px 0;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ddd;
 }
 
 .info-list li {
