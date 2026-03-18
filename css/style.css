@@ -179,6 +179,7 @@ button:hover {
 
 .mainFooter {
     display: flex;
+    justify-content: center;
     margin: var(--contentMargin);
     padding: 0 160px;
     background-color: var(--designColor);
