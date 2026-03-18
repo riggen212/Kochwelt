@@ -181,7 +181,7 @@ button:hover {
     display: flex;
     justify-content: center;
     margin: var(--contentMargin);
-    padding: 0 160px;
+    padding: 16px 160px;
     background-color: var(--designColor);
 }
 
