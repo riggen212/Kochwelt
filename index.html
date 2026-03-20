@@ -9,20 +9,20 @@
 </head>
 <body>
     <!-- logo and nav-bar -->
-   <header>
+   <header class="mainHeader">
         <div class="contentRestrain headerContent">
-            <figure>
-                <a href="#">
-                    <img src="./assets/img/logo_small.png" alt="Logo of a cooking hat">
+            <figure class="fig">
+                <a href="./index.html">
+                    <img class="logoCookingHat" src="./assets/img/logo_small.png" alt="Logo of a cooking hat">
                 </a>
                 <span>Kochwelt</span>
             </figure>
-            <nav>
+            <nav class="navBar">
                 <ul>
-                    <li><a href="#">Start</a></li>
-                    <li><a href="#">Rezept des Tages</a></li>
-                    <li><a href="#">Kontakt</a></li>
-                    <li><a href="#">Impressum</a></li>
+                    <li><a class="navLink active" href="./index.html">Start</a></li>
+                    <li><a class="navLink" href="./pages/rezeptFabian.html">Rezept des Tages</a></li>
+                    <li><a class="navLink" href="./pages/contact.html">Kontakt</a></li>
+                    <li><a class="navLink" href="./pages/impressum.html">Impressum</a></li>
                 </ul>
             </nav>
         </div>
@@ -36,15 +36,16 @@
                 </figure>
                 <div class="recipeDescpription">
                     <h2>Französiche Croissants</h2>
-                    <p>lorem ipsum</p>                    
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, rerum molestiae delectus excepturi in voluptas aspernatur, tempore iusto vel eius magni eveniet deserunt ab. Id excepturi dolores adipisci laudantium recusandae.</p>                    
                     <button>Rezept öffnen</button>
                 </div>
             </section>
 
+            <!-- article steht immer für einen für sich abgeschlossenen Abschnitt der für sich auch alleine stehen kann -->
             <article>
-                <section class="contentRestrain otherRecipes">
+                <section class="otherRecipes">
                     <h2>Lust auf was Neues?</h2>
-                    <div class="otherRecipesDisplay">
+                    <div class="otherRecipesDisplay contentRestrain">
                         <figure>
                             <img src="./assets/img/croissant.jpg" alt="">
                             <figcaption>free-text</figcaption>
@@ -64,24 +65,34 @@
             <section class="contentRestrain wokPan">
                 <h2>Pfanne vs Wok - Was ist besser?</h2>
                 <figure>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae consequuntur perferendis, debitis asperiores vero magni molestias minus iusto quis animi nostrum rerum aut laudantium, in harum perspiciatis eveniet commodi culpa.</p>
+                    <p>Auf diese Frage kann keine pauschale Antwort gegeben werden. Beide Kochutensilien haben ihre Stärken und Schwächen. Entscheidend ist, wie man das Gericht zubereiten möchte.
+                       Benötigt man gleichmäßige Hitze, dann ist die Pfanne die erste Wahl. Sind hingegen hohe Temperaturen von Nöten, so eignet sich der WoK am besten.
+                       Die Pfanne ist zwar der Allrounder, aber hat man Appetit auf ein asiatisches Gericht, spielt der Wok seine Stärken voll aus. Möchte man dagegen Fleisch, Fisch oder Eierspeisen zubereiten, dann sollte man zur Pfanne greifen.
+                       Daher ist es von Vorteil, Pfanne als auch einen Wok in der Küchenausstattung zu haben. Somit ist man für jeden Hunger gewappnet.
+                    </p>
                     <img src="./assets/img/wok.jpg" alt="Image of a wok pan with vegetables inside">
                 </figure>
             </section>
         </div>
    </main>
    <!-- social media -->
-   <footer>
-        <div class="contentRestrain">
-            <figure>
-                <img src="./assets/img/logo_small.png" alt="Logo of a cooking hat">
+   <footer class="mainFooter">
+        <div class="contentRestrain footerContent">
+            <figure class="footerLogo">
+                <img class="logoCookingHat" src="./assets/img/logo_small.png" alt="Logo of a cooking hat">
                 <span>Kochwelt</span>
             </figure>
 
-            <div>
-                <img src="./assets/img/find-us-on-facebook-icon.png" alt="Facebook Logo">
-                <img src="./assets/img/icons/instagram_logo.svg" alt="Instagram Logo">
-                <img src="./assets/img/follow-us-on-twitter.svg" alt="Twitter Logo">
+            <div class="socialMedia">
+                <a href="https://www.facebook.com/?locale=de_DE" target="_blank">
+                    <img class="socialMediaFooter" src="./assets/img/find-us-on-facebook.svg" alt="Facebook Logo">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img class="socialMediaFooter" src="./assets/img/follow-us-on-instagram.svg" alt="Instagram Logo">
+                </a>
+                <a href="https://x.com/" target="_blank">
+                    <img class="socialMediaFooter" src="./assets/img/follow-us-on-twitter.svg" alt="Twitter Logo">
+                </a>
             </div>
         </div>
    </footer>
