@@ -455,7 +455,7 @@ body {
 .contact-card {
     /* width: 100%; */
     max-width: 560px;
-    background: rgba(220, 220, 220);
+    background: #dcdcdc;
     border-radius: 18px;
     padding: 48px;
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
