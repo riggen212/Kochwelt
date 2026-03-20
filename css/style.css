@@ -319,7 +319,7 @@ body {
 }
 
 .recipe-page {
-    padding: 40px 0;
+    padding: 32px 160px 0 160px;
 }
 
 h1 {
@@ -328,8 +328,10 @@ h1 {
 
 .recipe-img {
     width: 100%;
-    border-radius: 10px;
     height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
 }
 
 
@@ -347,7 +349,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 6px;
-    background: gray; /*verändern*/
+    background: #efefef;
     padding: 6px 12px;
     border-radius: 8px;
     font-size: 14px;
@@ -375,7 +377,7 @@ h1 {
 }
 
 .ingredients li {
-    background: gray; /*verändern*/
+    background: #efefef;
     padding: 12px;
     margin-bottom: 10px;
     border-radius: 8px;
@@ -401,7 +403,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 6px;
-    background: gray; /*verändern*/
+    background: #efefef;
     padding: 6px 12px;
     border-radius: 8px;
     font-size: 14px;
@@ -476,6 +478,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 18px;
+}
+
+.submit-btn {
+    align-self: center;
 }
 
 .form-group {
