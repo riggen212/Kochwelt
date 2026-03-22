@@ -1,3 +1,9 @@
+@font-face {
+    font-family: "Raleway";
+    src: url(../assets/fonts/raleway/Raleway-Italic-VariableFont_wght.ttf) format(truetype),
+         url(../assets/fonts/raleway/Raleway-VariableFont_wght.ttf) format(truetype);
+}
+
 :root {
     --designColor: #403B3B;
     --buttonTextColor: #fff;
@@ -10,6 +16,7 @@
 }
 
 body {
+    font-family: "Raleway", sans-serif;
     margin: 0;
     color: var(--designColor);
     font-size: 16px;
