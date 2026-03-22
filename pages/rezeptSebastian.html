@@ -6,8 +6,9 @@
     <title>Rezept des Tages</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/styleSebastian.css">
+    <script src="../js/scriptSebastian.js" defer></script>
 </head>
-<body>
+<body onload="getSpanElements()">
 
    <header class="mainHeader">
         <div class="contentRestrain headerContent">
@@ -50,15 +51,15 @@
             <section class="contentRestrain recipeIngredients">
                 <div class="ingredientsCalculation">
                     <label for="">Zutaten für:</label>
-                    <input min="1" max="15" type="number">
-                    <button type="button">Portionen</button>
+                    <input min="1" max="15" type="number" id="factor">
+                    <button onclick="calculateIngredients()" type="button">Portionen</button>
                 </div>
-                <table>
+                <table id="ingredients">
                     <tr>
-                        <td><span>1</span> große Rinderroulade (aus der Oberschale, ca. 180-200g)</td>
+                        <td><span id="calculated">1</span> große Rinderroulade (aus der Oberschale, ca. 180-200g)</td>
                     </tr>
                     <tr>
-                        <td><span>2</span> Frühstücksspeck (durchwachsen)</td>
+                        <td><span id="calculated">2</span> Frühstücksspeck (durchwachsen)</td>
                     </tr>
                     <tr>
                         <td><span>1</span> Gewürzgurke</td>
@@ -76,7 +77,7 @@
                         <td><span>1</span> EL Tomatenmark</td>
                     </tr>
                     <tr>
-                        <td><span>100</span> ml Rotwein (trocken)</td>
+                        <td><span >100</span> ml Rotwein (trocken)</td>
                     </tr>
                     <tr>
                         <td><span>250</span> ml Rinderfond (oder Brühe)</td>
