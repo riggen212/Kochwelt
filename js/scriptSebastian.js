@@ -9,15 +9,12 @@ function getSpanElements() {
 
 
 function calculateIngredients() {
-    console.log(allSpanElements);
-    
-    const NUMBER = document.getElementById(`calculated`).textContent;
-    console.log(NUMBER);
-    let factor = document.getElementById(`factor`).value;
-    console.log(factor);
-    let result = NUMBER * factor;
-    console.log(result);
-    
-    document.getElementById("calculated").textContent = `${result}`;
+    allSpanElements.forEach((element, index) => {
+        const NUMBER = document.getElementById(`calculated`).textContent;
+        let factor = document.getElementById(`factor`).value;
+        let result = NUMBER * factor;
+        element.textContent = `${result}`;
+        index++;
+    })
 };
 
