@@ -11,7 +11,7 @@
     --buttonHover: #0ea90e;
     --backgroundSectionOtherRecipes: #EFEFEF;
     --imageBorderRadius: 8px;
-    --headerBoxShadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+    --headerBoxShadow: 0 3px 5px rgba(0, 0, 0, 0.1);
     --contentMargin: 0 auto;
 }
 
@@ -125,6 +125,7 @@ main {
 }
 
 button {
+    border: none;
     max-width: 200px;
     padding: 8px 16px;
     background-color: var(--navHover);
@@ -188,7 +189,7 @@ button:hover {
     display: flex;
     justify-content: center;
     margin: var(--contentMargin);
-    padding: 0 160px;
+    padding: 16px 160px;
     background-color: var(--designColor);
 }
 
@@ -262,11 +263,28 @@ button:hover {
 .ingredientAmount {
     margin: var(--contentMargin);
     padding: 8px 160px 16px 160px;
+    display: flex;
+    align-items: center;
+
+    input {
+        box-sizing: border-box;
+        width: 48px;
+        height: 32px;
+    }
+
+    button {
+        height: 32px;
+    }
+}
+
+.ingredients {
+    padding: 0 160px;
+    margin: var(--contentMargin);
 }
 
 .ingredientTable {
-    padding: 0 160px;
     width: 100%;
+    padding: 32px 0 32px 0;
 
     td {
         padding: 8px 4px;
@@ -280,6 +298,7 @@ button:hover {
 
 .recipePreparation {
     padding: 16px 160px;
+    margin: var(--contentMargin);
 
     .preparationContainer {
         display: flex;
