@@ -116,10 +116,37 @@ hr {
     }
 }
 
+/* privacy-police */
+.policyContent {
+    padding: 0 160px;
+    margin: var(--contentMargin);
+    display: flex;
+    flex-direction: column;
 
+    h1 {
+        margin: 24px 0 4px 0 !important;
+    }
 
+    .sectionHighlinePolicy {
+    padding: 24px 0 4px 0 !important;
+    }
 
+    .overviewHighline {
+    margin: 16px 0 4px 0 !important;
+    }
 
+    .listUl {
+    margin: 4px 0 16px 0;
+    }
 
-
-
+    .pageAnker {
+        color: var(--designColor);
+        font-size: 18px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+    .pageAnker:hover {
+        color: var(--navHover);
+    }
+}
