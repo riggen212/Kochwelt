@@ -176,7 +176,8 @@ button:hover {
     }
 
     figure {
-        display: flex;   
+        display: flex;
+        gap: 16px;  
     }
 
     img {
