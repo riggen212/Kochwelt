@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../assets/img/logo_small.png" type="image/x-icon">
+    <link rel="icon" href="./assets/img/logo_small.png" type="image/png">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Kontaktseite-Kochwelt</title>
+    <title>Kontakt | Kochwelt</title>
 </head>
 <body>
     <header class="mainHeader">
@@ -19,15 +19,39 @@
             <nav class="navBar">
                 <ul>
                     <li><a class="navLink" href="../index.html">Start</a></li>
-                    <li><a class="navLink" href="./recipeFabian.html">Rezept des Tages</a></li>
-                    <li><a class="navLink active" href="./contact.html">Kontakt</a></li>
-                    <li><a class="navLink" href="./impressum.html">Impressum</a></li>
+                    <li><a class="navLink" href="../pages/rezeptFabian.html">Rezept des Tages</a></li>
+                    <li><a class="navLink active" href="../pages/contact.html">Kontakt</a></li>
+                    <li><a class="navLink" href="../pages/impressum.html">Impressum</a></li>
                 </ul>
             </nav>
         </div>
-    </header>
-    <main>
+   </header>
+    <main class="contact-page contentRestrain">
+        <section class="contact-card">
+            <h1>Schreib uns eine Nachricht</h1>
 
+            <p class="contact-text">Du hast Fragen zu einem Rezept, möchtest uns Feedback geben oder suchst kulinarische Inspiration? Dann schreib uns gerne direkt über das Kontaktformular.</p>
+            
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input id="name" type="text" placeholder="Dein Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-Mail</label>
+                    <input id="email" type="email" placeholder="deine@email.de">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Deine Nachricht</label>
+                    <textarea id="message" type="text" placeholder="Schreib hier deine Nachricht..."></textarea>
+                </div>
+
+                <button class="submit-btn" type="submit">Abschicken</button>
+
+            </form>
+        </section>
     </main>
     <footer class="mainFooter">
         <div class="contentRestrain footerContent">
