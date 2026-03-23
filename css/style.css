@@ -188,6 +188,7 @@ button:hover {
 .mainFooter {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     margin: var(--contentMargin);
     padding: 16px 160px;
     background-color: var(--designColor);
@@ -219,9 +220,28 @@ button:hover {
         align-items: center;
         gap: 16px;
 
-        .socialMediaFooter{
+        .socialMediaImg{
             width: 132px;
         }
+    }
+}
+
+.legalContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+
+    p, a {
+        color: var(--buttonTextColor);
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: var(--navHover);
     }
 }
 
