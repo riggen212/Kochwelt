@@ -265,9 +265,9 @@ button:hover {
     display: flex;
     align-items: center;
 
-    input {
+    .numberInput{
         box-sizing: border-box;
-        width: 48px;
+        width: 60px;
         height: 32px;
     }
 
@@ -276,7 +276,7 @@ button:hover {
     }
 }
 
-.ingredients {
+.recipeIngredients {
     padding: 0 160px;
     margin: var(--contentMargin);
 }
@@ -525,8 +525,8 @@ label {
 input, textarea {
    /* width: 100%; */
     border: 1px solid #d8d8d8;
-    border-radius: 12px;
-    padding: 16px 18px;
+    /* border-radius: 12px; */
+    padding: 8px 0;
     font-size: 16px;
     /* font-family: inherit; */
     background: white;
