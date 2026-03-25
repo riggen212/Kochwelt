@@ -182,13 +182,14 @@ button:hover {
     }
 
     img {
-        width: 300px;
+        height: 200px;
+        object-fit: cover;
     }
 }
 
 .mainFooter {
     display: flex;
-    justify-content: center;
+    align-items: center;
     flex-direction: column;
     margin: var(--contentMargin);
     padding: 16px 160px;
