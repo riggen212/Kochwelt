@@ -309,7 +309,7 @@ button:hover {
 }
 
 .recipeIngredients {
-    padding: 0 160px;
+    padding: 0 160px; /* ändert Tabele von recipeSebastian.html */
     margin: var(--contentMargin);
 }
 
