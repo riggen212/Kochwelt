@@ -110,7 +110,8 @@ main {
     gap: 16px;
 
     .recipeImage {
-        width: 500px;
+        object-fit: cover;
+        width: 600px;
     }
 
     .recipeDescpription {
@@ -176,7 +177,8 @@ button:hover {
     }
 
     figure {
-        display: flex;   
+        display: flex;
+        gap: 16px;  
     }
 
     img {
@@ -187,6 +189,7 @@ button:hover {
 .mainFooter {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     margin: var(--contentMargin);
     padding: 16px 160px;
     background-color: var(--designColor);
@@ -218,9 +221,28 @@ button:hover {
         align-items: center;
         gap: 16px;
 
-        .socialMediaFooter{
+        .socialMediaImg{
             width: 132px;
         }
+    }
+}
+
+.legalContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+
+    p, a {
+        color: var(--buttonTextColor);
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: var(--navHover);
     }
 }
 
@@ -262,21 +284,31 @@ button:hover {
 .ingredientAmount {
     margin: var(--contentMargin);
     padding: 8px 160px 16px 160px;
-    display: flex;
-    align-items: center;
 
-    input {
+    label {
+        display: flex;
+        align-items: center;
+    }
+
+    .numberInput{
+        margin-left: 10px;
         box-sizing: border-box;
-        width: 48px;
+        width: 60px;
         height: 32px;
     }
 
     button {
         height: 32px;
     }
+
+    #error {
+        display: flex;
+        color: red;
+        padding-top: 8px;
+    }
 }
 
-.ingredients {
+.recipeIngredients {
     padding: 0 160px;
     margin: var(--contentMargin);
 }
@@ -525,8 +557,8 @@ label {
 input, textarea {
    /* width: 100%; */
     border: 1px solid #d8d8d8;
-    border-radius: 12px;
-    padding: 16px 18px;
+    /* border-radius: 12px; */
+    padding: 8px 0;
     font-size: 16px;
     /* font-family: inherit; */
     background: white;

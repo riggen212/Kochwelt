@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rezept Fabian</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../assets/img/logo_small.png" type="image/x-icon">
 </head>
 <body>
     <header class="mainHeader">
@@ -29,13 +30,13 @@
     <main>
         <article>
             <header class="articleHeader contentRestrain">
-                <h1>Champignons mit Rahmsauce</h1>
-                <img class="recipeImage" src="../assets/img/salad.jpg" alt="Image of salad with onions, olives and bread">
+                <h1>Chili con Carne</h1>
+                <img class="recipeImage" src="../assets/img/chili-con-carne.jpg" alt="Image of chili con carne">
                 <section class="recipeProperties contentRestrain">
                     <figure class="recipePropertyFigure">
                         <img class="recipePropertyImage" src="../assets/img/icons/clock-regular.svg" alt="An image of a regular clock">
                         <figcaption>
-                            15 Min.
+                            30 Min.
                         </figcaption>
                     </figure>
                     <figure class="recipePropertyFigure">
@@ -47,7 +48,7 @@
                     <figure class="recipePropertyFigure">
                         <img class="recipePropertyImage" src="../assets/img/icons/calendar-alt-regular.svg" alt="Image of a calendar">
                         <figcaption>
-                            28.09.2020
+                            17.03.2026
                         </figcaption>
                     </figure>
                 </section>
@@ -57,56 +58,124 @@
             <form class="ingredientAmount contentRestrain">
                 <label>
                     Zutaten für
-                    <input type="number" name="portions" value="4">
+                    <input id="inputAmount" class="numberInput" type="number" name="portions" placeholder="4" min ="1" max="10">
+                    <button type="button" onclick="determinePortion()">Portionen</button>
                 </label>
-                    <button>Portionen</button>
-               </form>
+                <span id="error"></span>
+            </form>
 
-            <section class="ingredients contentRestrain">
-                <table class="ingredientTable">
+            <section class="recipeIngredients contentRestrain">
+                <table id="ingredients" class="ingredientTable">
                     <tr>
                         <td>
-                            600g frische Champignons
+                            <span class="amountNumber" data-default="2">
+                                2
+                            </span>
+                            Zwiebeln
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            1 rote Zwiebel
+                            <span class="amountNumber" data-default="3">
+                                3
+                            </span>
+                            Knoblauchzehen
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            2 Knoblauchzehen
+                            <span class="amountNumber" data-default="1">
+                                1
+                            </span>
+                            Paprikaschote
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            1 EL Olivenöl
+                            <span class="amountNumber" data-default="2">
+                                2
+                            </span>
+                            Dosen Kidneybohnen (Abtropfgewicht ca. 
+                            <span class="amountNumber" data-default="240">
+                                240
+                            </span>
+                            g)
                         </td>
                     </tr>
                     <tr>
                         <td>
-                        250g Schlagsahne
+                            <span class="amountNumber" data-default="1">
+                                1 
+                            </span>
+                                Dose Mais (Abtropfgewicht ca. 
+                                <span class="amountNumber" data-default="280">
+                                    280
+                                </span>
+                                g)
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            100ml Gemüsebrühe
+                            <span class="amountNumber" data-default="800">
+                                800
+                            </span>
+                            g Rinderhackfleisch
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            2 EL gehackte Petersilie
+                            <span class="amountNumber" data-default="2">
+                                2
+                            </span>
+                            EL Tomatenmark
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            1 EL Frischkäse
+                            <span class="amountNumber" data-default="500">
+                                500
+                            </span>
+                            ml Rinderbrühe (oder Gemüsebrühe)
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            1 EL Aceto Balsamico
+                            <span class="amountNumber" data-default="800">
+                                800
+                            </span>
+                            g gehackte Tomaten (alternativ aus der Dose)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="amountNumber" data-default="1">
+                                1
+                            </span>
+                            TL Kreuzkümmel
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="amountNumber" data-default="2">
+                                2
+                            </span>
+                            EL Paprikapulver (edelsüß)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="amountNumber" data-default="1">
+                                1
+                            </span>
+                            TL Chilipulver
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="amountNumber" data-default="1">
+                                1
+                            </span>
+                            TL Zimt
                         </td>
                     </tr>
                     <tr>
@@ -123,22 +192,24 @@
                     <figure class="recipePreparationFigure">
                         <img class="recipePropertyImage" src="../assets/img/icons/clock-regular.svg" alt="An image of a regular clock">
                         <figcaption>
-                            ca. 15 Minuten
+                            ca. 10 Minuten
                         </figcaption>
                     </figure>
                     <figure class="recipePreparationFigure">
                             <img class="recipePropertyImage" src="../assets/img/icons/clock-regular.svg" alt="An image of a regular clock">   
                         <figcaption>
-                            Gesamtzeit: ca. 15 Minuten
+                            Gesamtzeit: ca. 30 Minuten
                         </figcaption>
                     </figure>
                 </div>
                 <p>
-                    Die Champignons werden in Scheiben geschnitten, die Zwiebel und der Knoblauch werden fein gehackt.
-                    Das Öl wird in einer großen Pfanne erhitzt und die Zwiebeln 2 Minuten angebraten. 
-                    Die Champignons und der Knoblauch werden in die Pfanne gegeben und 5 Minuten gebraten bis die Champignons leicht braun werden.
-                    Die Sahne, Gemüsebrühe und Kräuter werden untergerührt. Das ganze wird aufgekocht und bei mittlerer Hitze für 5 Minuten weiter gekocht.
-                    Der Frischkäse wird untergehoben und die Sauce wird mit Salz, Pfeffer und Aceto Balsamico abgeschmeckt. 
+                    Die Zwiebeln und den Knoblauch klein hacken, die Paprika würfeln und die Kidneybohnen und den Mais abtropfen lassen.
+                    Das Öl in der Pfanne erhitzen und das Hackfleich darin anbraten lassen.
+                    Die Zwiebeln und den Knoblauch hinzufügen und mit anbraten. Das Tomatenmark unterheben und kurz mit anbraten lassen. 
+                    Die Rinderbrühe, die gehackten Tomaten, die Paprika, die Kidnebohnen, den Mais und die Gewürze zugeben.
+                    Das Gericht bei mittlerer Hitze ca. 20 Minuten köcheln lassen.
+                    Das ganze mit Salz und Pfeffer abschmecken und servieren.
+                
                 </p>
             </section>
             <footer class="articleFooter contentRestrain">
@@ -162,16 +233,24 @@
 
             <div class="socialMedia">
                 <a href="https://www.facebook.com/?locale=de_DE" target="_blank">
-                    <img class="socialMediaFooter" src="../assets/img/find-us-on-facebook.svg" alt="Facebook Logo">
+                    <img class="socialMediaImg" src="../assets/img/find-us-on-facebook.svg" alt="Facebook Logo">
                 </a>
                 <a href="https://www.instagram.com/" target="_blank">
-                    <img class="socialMediaFooter" src="../assets/img/follow-us-on-instagram.svg" alt="Instagram Logo">
+                    <img class="socialMediaImg" src="../assets/img/follow-us-on-instagram.svg" alt="Instagram Logo">
                 </a>
                 <a href="https://x.com/" target="_blank">
-                    <img class="socialMediaFooter" src="../assets/img/follow-us-on-twitter.svg" alt="Twitter Logo">
+                    <img class="socialMediaImg" src="../assets/img/follow-us-on-twitter.svg" alt="Twitter Logo">
                 </a>
             </div>
         </div>
+
+        <div class="legalContainer">
+            <p>&copy; 2026 Kochwelt. Alle Rechte vorbehalten.</p>
+            <a href="./pages/impressum.html">Impressum</a>
+            <a href="./pages/privacy-policy.html">Datenschutzerklärung</a>
+            <a href="https://www.gaumenfreundin.de/chili-con-carne-rezept/" target="_blank">Zum Originalrezept</a>
+        </div>
    </footer>
+   <script src="../js/scriptFabian.js"></script>
 </body>
 </html>
