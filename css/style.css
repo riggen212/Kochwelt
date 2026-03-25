@@ -283,6 +283,7 @@ button:hover {
 }
 
 .ingredientAmount {
+    display: flex;
     margin: var(--contentMargin);
     padding: 8px 160px 16px 160px;
 
@@ -298,15 +299,24 @@ button:hover {
         height: 32px;
     }
 
+    .numberInput:focus-visible {
+        outline: none;  
+    }
+
     button {
         height: 32px;
     }
+}
 
-    #error {
-        display: flex;
-        color: red;
-        padding-top: 8px;
-    }
+#error {
+    margin: var(--contentMargin);
+    display: flex;
+    color: red;
+    padding: 0 160px 0 160px;
+}
+
+.borderError {
+    border: 2px solid red;
 }
 
 .recipeIngredients {

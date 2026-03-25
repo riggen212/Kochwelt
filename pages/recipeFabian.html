@@ -56,13 +56,22 @@
 
 
             <form class="ingredientAmount contentRestrain">
-                <label>
+                <label for="inputAmount">
                     Zutaten für
-                    <input id="inputAmount" class="numberInput" type="number" name="portions" placeholder="4" min ="1" max="10">
-                    <button type="button" onclick="determinePortion()">Portionen</button>
                 </label>
-                <span id="error"></span>
+                <input 
+                id="inputAmount" 
+                class="numberInput" 
+                type="number"
+                name="portions" 
+                aria-label="Anzahl der Portionen" 
+                value="4"
+                min="1" 
+                max="10" 
+                oninput="determinePortion()">
+                <button type="button" onclick="determinePortion()">Portionen</button>
             </form>
+            <span aria-describedby="error" id="error"></span>
 
             <section class="recipeIngredients contentRestrain">
                 <table id="ingredients" class="ingredientTable">
