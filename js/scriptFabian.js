@@ -1,15 +1,35 @@
-let defaultIngredients = [600, 1, 2, 1, 250, 100, 2, 1, 1];
-
 function determinePortion() {
-    let ingredients = document.getElementsByClassName("amountNumber");
+    let inputField = document.getElementById("inputAmount");
+    let inputValue = parseInt(inputField.value);
+   
+    inputValidation(inputValue);
+}
 
-    for (let i = 0; i < defaultIngredients.length; i++) {
+function inputValidation(inputValue) {
+    let valueInvalid = inputValue <= 0 || inputValue > 10 || isNaN(inputValue);
+    let error = document.getElementById("error");
 
-        let inputValue = parseInt(document.getElementById("inputAmount").value);
-
-        let newAmount = (defaultIngredients[i] / 4) * inputValue;
-
-        ingredients[i].innerHTML = newAmount;
+    if (valueInvalid) {
+        error.textContent = "Bitte geben Sie eine Zahl zwischen 1 und 10 ein.";
+        setDefaultValues();
+        return;
+    } else {
+        error.textContent = "";
+        const INGREDIENTS = document.getElementsByClassName("amountNumber");
+        calculateIngredients(INGREDIENTS, inputValue);
     }
 }
 
+function calculateIngredients(INGREDIENTS, inputValue) {
+    for (let i = 0; i < INGREDIENTS.length; i++) {
+        let newAmount = (INGREDIENTS[i].getAttribute("data-default") / 4) * inputValue;
+        INGREDIENTS[i].innerHTML = newAmount;
+    } 
+}
+
+function setDefaultValues() {
+    const INGREDIENTS = document.getElementsByClassName("amountNumber");
+    for (let i = 0; i < INGREDIENTS.length; i++) {
+        INGREDIENTS[i].innerHTML = INGREDIENTS[i].getAttribute("data-default");
+    }
+}
