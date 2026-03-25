@@ -4,6 +4,7 @@
 }
 
 :root {
+    --font: "Raleway", sans-serif;
     --designColor: #403B3B;
     --buttonTextColor: #fff;
     --navHover: #008000;
@@ -15,7 +16,7 @@
 }
 
 body {
-    font-family: "Raleway", sans-serif;
+    font-family: var(--font);
     margin: 0;
     color: var(--designColor);
     font-size: 16px;
@@ -125,6 +126,7 @@ main {
 }
 
 button {
+    font-family: var(--font);
     border: none;
     max-width: 200px;
     padding: 8px 16px;
