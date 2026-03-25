@@ -1,18 +1,17 @@
+const TABLE = document.getElementById(`ingredients`);
+const SPANELEMENTLIST = TABLE.querySelectorAll(`span`)
+
 let spanArray = [];
-let spanElement = [];
 
 function getSpanElements() {
-    const TABLE = document.getElementById(`ingredients`);
-    spanElement = TABLE.querySelectorAll(`span`);
-    spanArray = Array.from(spanElement).map(span => span.textContent.trim());
+    spanArray = Array.from(SPANELEMENTLIST).map(span => span.textContent.trim());
 } 
 
 function calculateIngredients() {
-    const factor = document.getElementById(`factor`).valueAsNumber;
-    
+    const FACTOR = document.getElementById(`factor`).valueAsNumber;   
     for (let i = 0; i < spanArray.length; i++) {
-        let result = spanArray[i] * factor;
-        spanElement[i].textContent = result;       
+        let result = spanArray[i] * FACTOR;
+        SPANELEMENTLIST[i].textContent = result;       
     }    
 };
 
