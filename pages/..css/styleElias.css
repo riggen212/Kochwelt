@@ -1,0 +1,124 @@
+:root {
+    --navHover: #008000;
+    --footerColor: #403B3B;
+    --backgroundSectionOtherRecipes: #EFEFEF;
+}
+
+body {
+    margin: 75px;
+    padding: 0px;
+}
+
+.contentRestrain {
+    max-width: 1440px;
+}
+
+header {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.headerimage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.preperation {
+    margin-top: 8px;
+    padding-bottom: 64px;
+    display: flex;
+    gap: 48px;
+}
+
+.preperation div {
+    padding: 5px;
+    background-color: rgb(218, 218, 218);
+    border-radius: 10px;
+}
+
+.preperation img {
+    width: 20px;
+    height: auto;
+    align-items: center;
+}
+
+.line {
+    padding: 1px;
+    background-color: rgb(218, 218, 218);
+}
+
+.ingredientsInput {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.ingredientsInput input {
+    width: 48 px;
+    height: 18px;
+}
+
+.ingredientsInput button {
+    width: 96px;
+    height: 18px;
+    background-color: #008000;
+    color: white;
+}
+
+.ingredients p {
+    white-space: nowrap;
+}
+
+.ingredients:nth-child(odd) {
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.ingredients:nth-child(even) {
+    padding: 10px;
+    background-color: rgb(218, 218, 218);
+    border-radius: 12px;
+}
+
+.recipes button:nth-child(odd) {
+    border: none;
+    background-color:#EFEFEF
+}
+
+.recipes button:nth-child(even) {
+    border: none;
+    background-color: rgb(218, 218, 218);
+}
+
+.zeitangaben {
+    display: flex;
+    gap: 48px;
+}
+
+.zeitangaben div {
+    padding: 5px;
+    background-color: rgb(218, 218, 218);
+    border-radius: 10px;
+}
+
+.zeitangaben img {
+    width: 20px;
+    height: auto;
+    align-items: center;
+}
+
+.profileIMG {
+    width: 100px;
+    height: auto;
+    border-radius: 70%;
+}
+
+.ContactPerson {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.ContactPerson p {
+    font-size: 24px;
+}
