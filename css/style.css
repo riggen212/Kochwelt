@@ -370,11 +370,6 @@ button:hover {
 }
 
 /* recipe.html ALEKS */
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif; /*verändern*/
-}
-
 .recipe-page {
     padding: 32px 160px 0 160px;
 }
@@ -389,6 +384,7 @@ h1 {
     object-fit: cover;
     border-radius: 10px;
     display: block;
+    margin: o auto;
 }
 
 
@@ -494,14 +490,6 @@ h1 {
 }
 
 /* contact.html ALEKS */
-
-body {
-    font-family: 'Times New Roman', Times, serif; /* verändern */
-    color: black; /* kann noch verändern */
-    background-size: cover;
-    background-position: center;
-}
-
 .contact-page {
     width: 100%;
     padding: 48px 24px;
@@ -554,18 +542,17 @@ label {
     color: black;
 }       
 
-input, textarea {
-   /* width: 100%; */
+.contact-input {
+    
     border: 1px solid #d8d8d8;
-    /* border-radius: 12px; */
-    padding: 8px 0;
+    border-radius: 8px; 
     font-size: 16px;
-    /* font-family: inherit; */
     background: white;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    padding: 10px;
 }
 
-input:focus, textarea:focus {
+.contact-input:focus {
     outline: none;
     border-color: #008000;
     box-shadow: 0 0 0 4px rgba(0, 128, 0, 0.12);
