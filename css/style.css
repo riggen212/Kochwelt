@@ -491,9 +491,6 @@ h1 {
 }
 
 /*  recipe_sebastian.html */
-main {
-    min-height: 100vh;
-}
 
 .recipeHeader {
     margin: var(--contentMargin);
@@ -543,11 +540,11 @@ hr {
         margin-bottom: 16px;
 
         input {
-            height: 33px;
+            height: 32px;
             padding: 0;
-            border: 1px solid black;
-            width: 160px;
-            margin-left: 4px;
+            width: 60px;
+            margin-left: 10px;
+            box-sizing: border-box;
         }
     }
 
