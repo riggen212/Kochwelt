@@ -722,4 +722,9 @@ textarea {
     resize: vertical;
 }
 
+/* thankyou.html*/
 
+.thankyouStyle {
+    text-align: center;
+    padding: 100px 0;
+}
