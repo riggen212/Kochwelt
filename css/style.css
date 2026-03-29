@@ -727,7 +727,7 @@ textarea {
     resize: vertical;
 }
 
-.submit-btn { /* zu verändern */
+.submit-btn { 
     border: none;
     background: #008000;
     color: white;
@@ -742,3 +742,116 @@ textarea {
 .submit-btn:hover {
     background: #006d00;
 }
+
+
+@media (max-width: 1130px) {
+    .headerContent, 
+    .recipe, 
+    .otherRecipes, 
+    .wokPan, 
+    .mainFooter, 
+    .articleHeader, 
+    .ingredientAmount, 
+    .recipeIngredients, 
+    .recipePreparation, 
+    .articleFooter,
+    .recipe-page,
+    .policyContent,
+    .recipeHeader {
+        padding-left: 80px !important;
+        padding-right: 80px !important;
+    }
+
+    .recipe .recipeImage {
+        width: 45%; 
+    }
+}
+
+@media (max-width: 840px) {
+    .headerContent, 
+    .recipe, 
+    .otherRecipes, 
+    .wokPan, 
+    .mainFooter, 
+    .articleHeader, 
+    .ingredientAmount, 
+    .recipeIngredients, 
+    .recipePreparation, 
+    .articleFooter,
+    .recipe-page,
+    .policyContent,
+    .recipeHeader {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+    .headerContent {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding-bottom: 16px;
+    }
+
+    .navBar {
+        align-self: center !important;
+    }
+
+    .footerContent {
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .recipe {
+        flex-direction: column;
+    }
+
+    .recipe .recipeImage {
+        width: 100%;
+    }
+
+    .otherRecipesDisplay {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+}
+
+
+.socialMedia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.socialMedia img {
+    max-width: 100%; 
+    height: auto;    
+    width: 32px;     
+}
+
+.recipePropertyImage, 
+.info-list img, 
+.preparation-info img, 
+.preperation img {
+    width: 16px !important;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 840px) {
+    .socialMedia {
+        margin-top: 16px;
+    }
+    
+    .socialMedia img {
+        width: 28px; 
+    }
+
+    .socialMedia a {
+        display: flex;
+        align-items: center;
+    }
+}
+
