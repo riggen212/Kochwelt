@@ -8,7 +8,7 @@ body {
     font-family: "Raleway", sans-serif;
     line-height: 1.6;
     color: #403B3B;
-    max-width: 1000px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -85,7 +85,17 @@ body {
     border-radius: 8px;
 }
 
-/* Erstellt von Sektion */
+.zeitangaben {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.zeitangaben img {
+    width: 20px;
+}
+
+
 .ContactPerson {
     display: flex;
     align-items: center;
@@ -98,4 +108,32 @@ body {
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.impressumDiv {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.impressumDiv h2 {
+    margin-top: 0;
+}
+
+.impressumDiv p {
+    margin: 10px 0;
+}
+
+.impressumDiv a {
+    color: #008000;
+    text-decoration: none;
+}
+
+.impressumDiv a:hover {
+    text-decoration: underline;
+}
+
+main {
+    min-height: 61vh !important;
 }

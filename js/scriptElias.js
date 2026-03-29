@@ -8,7 +8,6 @@ const baseAmounts = {
 
 
 function updateQuantities() {
-    // Portions-Input aus deinem HTML holen
     const inputField = document.getElementById('portionInput');
     const portions = parseInt(inputField.value);
 
