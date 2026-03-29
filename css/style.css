@@ -419,13 +419,27 @@ h1 {
 .portion-box {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0;
     margin: 20px 0;
 }
 
+.portion-box label {
+    margin-right: 12px;
+    white-space: nowrap;
+}
+
 .portion-box input {
-    width: 100px;
-    padding: 5px;
+    width: 140px;
+    height: 32px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border: 1px solid #d8d8d8;
+    border-right: none;
+}
+
+.portion-box button {
+    height: 32px;
+    padding: 0 20px;
 }
 
 .ingredients {
