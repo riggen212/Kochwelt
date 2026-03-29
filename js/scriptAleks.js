@@ -2,7 +2,7 @@ function formatFraction(value) {
     if (Number.isInteger(value)) return value;
 
     if (value === 0.25) return "1/4";
-    if (value === 0.5) return "1/2";
+    if (valu e === 0.5) return "1/2";
     if (value === 0.75) return "3/4";
 
     return value.toFixed(2);
