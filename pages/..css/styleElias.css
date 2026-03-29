@@ -137,3 +137,30 @@ body {
 main {
     min-height: 61vh !important;
 }
+
+
+@media (max-width: 1130px) {
+    body {
+        padding: 20px 80px;
+    }
+}
+
+@media (max-width: 840px) {
+    body {
+        padding: 20px 24px;
+    }
+
+    .preperation, .zeitangaben {
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    .ingredientsInput {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ingredients li {
+        font-size: 14px; 
+    }
+}
