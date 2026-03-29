@@ -313,6 +313,10 @@ button:hover {
     }
 }
 
+input:invalid {
+    border: 2px solid red;
+}
+
 .recipeIngredients {
     padding: 0 160px;
     margin: var(--contentMargin);
