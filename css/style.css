@@ -380,7 +380,7 @@ input:invalid {
 
 /* recipe.html ALEKS */
 
-.recipe-page {
+.recipe-page-aleks {
     margin: 0 auto;
     padding: 32px 160px 0 160px;
     max-width: 1440px;
@@ -744,7 +744,6 @@ textarea {
     resize: vertical;
 }
 
-<<<<<<< HEAD
 .submit-btn { 
     border: none;
     background: #008000;
@@ -756,9 +755,7 @@ textarea {
     cursor: pointer;
     margin-top: 8px;
 }
-=======
 /* thankyou.html*/
->>>>>>> Aleks
 
 .thankyouStyle {
     text-align: center;
