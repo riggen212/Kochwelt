@@ -35,3 +35,19 @@ function calculate() {
     document.getElementById('tomato').innerText = Math.round(400 * factor);
     document.getElementById('oil').innerText = Math.round(2 * factor);
 }
+
+function sendMail(event){
+    event.preventDefault();
+
+    fetch("https://formspree.io/f/xojpevdv", {
+        method: "POST",
+        body: new FormData(event.target),
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(() => {
+        window.location.href = "./thankyou.html";
+    }).catch((error) => {
+        console.log(error);
+    });
+}
