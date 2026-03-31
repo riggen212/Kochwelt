@@ -515,14 +515,15 @@ h1 {
     aside {
         display: flex;
         gap: 24px;
+        padding: 32px 0 0 0;
 
         figure {
             display: flex;
-            gap: 8px;
+            gap: 10px;
             align-items: center;
             background-color: #f0f0f0;
             margin-top: 8px;
-            padding: 4px 8px;
+            padding: 8px 4px;
             border-radius: 8px;
 
             img {
@@ -535,35 +536,45 @@ h1 {
 hr {
     border-top: 2px solid #f0f0f0;
     width: 100%;
-    margin: 56px 0 24px 0;
+    margin: 64px 0 8px 0;
 }
 
 .recipeData {
     display: flex;
     flex-direction: column;
 
-    .ingredientsCalculation {
+    #errorMessage {
         display: flex;
-        align-items: center;
-        margin-bottom: 16px;
+        color: red;
+        padding-top: 8px;
+    }
 
+    .ingredientsCalculation {
+    display: flex;
+    align-items: center;
+
+        label {
+            display: flex;
+            align-items: center;
+        }
         input {
             height: 32px;
-            padding: 0;
             width: 60px;
             margin-left: 10px;
             box-sizing: border-box;
         }
+
     }
 
     table  {
     border-spacing: 0 0;
+    padding: 48px 0 32px 0;
+
         tr {
         display: flex;
-        margin: 4px 0;
         padding: 8px 4px;
         }
-        
+    
         tr:nth-child(even) {
         background-color: #f0f0f0;
         border-radius: 8px;
@@ -576,11 +587,7 @@ hr {
         margin-top: 16px !important;
     }
 
-    .preparationHihline {
-        margin: 12px 0 4px 0;
-    }
-
-    .preparationStep {
+    p {
         margin: 0;
     }
 
@@ -608,8 +615,11 @@ hr {
     .createdBy {
         display: flex;
         align-items: center;
-        gap: 8px;
-        margin: 36px 0 24px 0;
+        gap: 32px;
+        margin-bottom: 32px;
+        figcaption {
+            font-size: 24px;
+        }
     }
 
     .profileLogo {
@@ -855,3 +865,29 @@ textarea {
     }
 }
 
+/* responive Sebastian-Rezeptseite */
+@media (max-width: 450px) {
+.recipeHeader aside {
+    flex: 1;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+}
+
+@media (max-width: 380px) {
+.recipeHeader h1 {
+    font-size: 36px;
+    text-align: center;
+}    
+}
+
+/* responsive privacy */
+@media (max-width: 560px) {
+    .policeContentHighline {
+        text-align: center;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+}
