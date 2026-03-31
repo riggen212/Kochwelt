@@ -3,6 +3,10 @@
     src: url(../assets/fonts/raleway/Raleway-VariableFont_wght.ttf) format(truetype);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --designColor: #403B3B;
     --buttonTextColor: #fff;
