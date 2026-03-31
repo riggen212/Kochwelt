@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,12 +49,14 @@
             </aside>
             <hr>
             <section class="contentRestrain recipeData">
-                <div class="ingredientsCalculation">
-                    <label for="">Zutaten für:</label>
-                    <input min="1" max="15" type="number" id="factor" value="1">
-                    <button onclick="inputValidation()" type="button">Portionen</button>
-                    <span id="errorMessage"></span>
-                </div>
+                <form class="ingredientsCalculation">
+                    <label>Zutaten für
+                        <input min="1" max="10" type="number" id="factor" value="1">
+                        <button onclick="inputValidation()" type="button">Portionen</button>
+                    </label>
+                </form>
+                <span id="errorMessage"></span>
+                
                 <table id="ingredients">
                     <tr>
                         <td><span id="calculated">1</span> große Rinderroulade (aus der Oberschale, ca. 180-200g)</td>
@@ -100,7 +102,7 @@
                     </tr>
                 </table>
             </section>
-            <articl class="contentRestrain preparation">
+            <article class="contentRestrain preparation">
                 <h2>Zubereitung</h2>
                 <div>
                     <figure>
@@ -112,16 +114,13 @@
                         <figcaption>Gesamtzeit: ca. 90-120 Minuten</figcaption>
                     </figure>
                 </div>
-                <h4 class="preparationHihline">Vorbereitung</h4>
-                    <p class="preparationStep">Roulade flachklopfen, salzen, pfeffern und mit Senf bestreichen. Zwiebeln und Gurke in Streifen schneiden. Mit Speck auf die Roulade geben, einrollen und mit Küchengarn oder Zahnstochern fixieren.</p>
-                <h4 class="preparationHihline">Anpraten</h4>
-                    <p class="preparationStep">Butterschmalz in einem kleinen Topf erhitzen, Roulade rundherum scharf anbraten und herausnehmen.</p>
-                <h4 class="preparationHihline">Schmoren</h4>
-                    <p class="preparationStep">Das gewürfelte Gemüse im Topf anrösten, Tomatenmark kurz mitbraten. Mit Rotwein und Rinderfond ablöschen. Roulade zurück in den Topf geben und bei niedriger Hitze ca. 90 Minuten schmoren.</p>
-                <h4 class="preparationHihline">Beilage</h4>
-                    <p class="preparationStep">Kartoffeln schälen und in Salzwasser ca. 20-25 Minuten kochen.</p>
-                <h4 class="preparationHihline">Soße</h4>
-                    <p class="preparationStep">Roulade herausnehmen. Die Soße durch ein Sieb passieren oder das Gemüse für eine sämigere Soße pürieren. Nach Belieben mit etwas Stärke binden und mit Salz/Pfeffer abschmecken.</p>
+                    <p>Als erstes die Roulade flachklopfen, salzen, pfeffern und mit Senf bestreichen. Danach Zwiebeln und Gurke in Streifen schneiden, anschließend mit Speck auf die Roulade geben,
+                        einrollen und mit Küchengarn oder Zahnstochern fixieren. Nun Butterschmalz in einem kleinen Topf erhitzen, Roulade rundherum scharf anbraten und herausnehmen.
+                        Jetzt kann das Gemüse gewürfelt werden und im Topf anrösten und das Tomatenmark kurz mitbraten. Mit Rotwein und Rinderfond ablöschen.
+                        Roulade zurück in den Topf geben und bei niedriger Hitze ca. 90 Minuten schmoren. Kartoffeln schälen und in Salzwasser ca. 20-25 Minuten kochen.
+                        Roulade herausnehmen. Die Soße durch ein Sieb passieren oder das Gemüse für eine sämigere Soße pürieren. Nach Belieben mit etwas Stärke binden und mit Salz/Pfeffer abschmecken.
+                    </p>
+                <h3>Rezept erstellt von</h3>
                 <figure class="createdBy">
                     <img class="profileLogo" src="../assets/img/profile.png" alt="">
                     <figcaption>Sebastian</figcaption>
