@@ -9,29 +9,35 @@
     <link rel="stylesheet" href="..css\styleElias.css">
 </head>
 
-
-<!-- logo and nav-bar -->
-<header class="mainHeader">
-    <div class="contentRestrain headerContent">
-        <figure class="fig">
-            <a href="./index.html">
-                <img class="logoCookingHat" src="../assets/img/logo_small.png" alt="Logo of a cooking hat">
-            </a>
-            <span>Kochwelt</span>
-        </figure>
-        
-        <nav class="navBar">
-            <ul>
-                <li><a class="navLink active" href="../index.html">Start</a></li>
-                <li><a class="navLink" href="../pages/recipe_fabian.html">Rezept des Tages</a></li>
-                <li><a class="navLink" href="../pages/contact.html">Kontakt</a></li>
-                <li><a class="navLink" href="../pages/impressum.html">Impressum</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
 <body>
+    <header class="mainHeader">
+        <div class="contentRestrain headerContent">
+            <figure class="fig">
+                <a href="../index.html">
+                    <img class="logoCookingHat" src="../assets/img/logo_small.png" alt="Logo of a cooking hat">
+                </a>
+                <span>Kochwelt</span>
+            </figure>
+
+            <button class="sidebarOpenBtn" id="btnOpenSidebar" onclick="openSidebar()">
+                <img class="svgIcon" src="../assets/img/hamburgerMenu.svg" alt="three dashes">
+            </button>
+
+            <nav id="navBar">
+                <ul>
+                    <li>
+                        <button id="btnCloseSidebar" class="sidebarCloseBtn" onclick="closeSidebar()">
+                            <img class="svgIcon" src="../assets/img/closeX.svg" alt="x-icon">
+                        </button>
+                    </li>
+                    <li><a class="navLink" href="../index.html">Start</a></li>
+                    <li><a class="navLink active" href="./recipe_fabian.html">Rezept des Tages</a></li>
+                    <li><a class="navLink" href="./contact.html">Kontakt</a></li>
+                    <li><a class="navLink" href="./impressum.html">Impressum</a></li>
+                </ul>
+            </nav>
+        </div>
+   </header>
     <h2>Griechischer Bauernsalat</h2>
     <figure>
         <img src="../assets/img/salad1.svg" class="headerimage" alt="Image of Salad">
@@ -48,7 +54,7 @@
     <div class="ingredientsInput">
         <p>Zutaten für</p>
         <input type="number" id="portionInput" value="4">
-        <button id="calcBtn">Portionen</button>
+        <button class="btn" id="calcBtn">Portionen</button>
     </div>
 
     <div class="recipes">
@@ -114,9 +120,8 @@
             </div>
         </div>
     </footer>
-
     <script src="../js/scriptElias.js"></script>
-
+    <script src="../js/scriptRespMenu.js"></script>
 </body>
 
 </html>
