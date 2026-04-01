@@ -17,16 +17,35 @@
                 </a>
                 <span>Kochwelt</span>
             </figure>
-            <nav class="navBar">
-                <ul class="listUl">
+
+            <!-- <button class="sidebarOpenBtn" id="btnOpenSidebar" onclick="openSidebar()">
+                <img class="svgIcon" src="../assets/img/hamburgerMenu.svg" alt="three dashes">
+            </button> -->
+            <!-- hamburger-menu -->
+            <input type="checkbox" id="click">
+            <label for="click">
+                <div class="hamburger-menu">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </label>
+
+            <nav id="navBar">
+                <ul>
+                    <!-- <li>
+                        <button id="btnCloseSidebar" class="sidebarCloseBtn" onclick="closeSidebar()">
+                            <img class="svgIcon" src="../assets/img/closeX.svg" alt="x-icon">
+                        </button>
+                    </li> -->
                     <li><a class="navLink" href="../index.html">Start</a></li>
-                    <li><a class="navLink " href="./recipe_fabian.html">Rezept des Tages</a></li>
+                    <li><a class="navLink active" href="./recipe_fabian.html">Rezept des Tages</a></li>
                     <li><a class="navLink" href="./contact.html">Kontakt</a></li>
                     <li><a class="navLink" href="./impressum.html">Impressum</a></li>
                 </ul>
             </nav>
         </div>
-    </header>
+   </header>
 
     <main>
         <article class="contentRestrain policyContent">

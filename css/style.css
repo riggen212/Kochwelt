@@ -133,7 +133,7 @@ img {
         display: block;
     }
 
-    nav {
+    /* nav {
         position: fixed;
         top: 0;
         right: -100%;
@@ -147,7 +147,7 @@ img {
 
     nav.show {
         right: 0;
-    }
+    } */
 
     nav ul {
         padding-left: 8px;
@@ -999,22 +999,101 @@ textarea {
     }
 } */
 
-/* responive Sebastian-Rezeptseite */
-@media (max-width: 450px) {
-.recipeHeader aside {
-    flex: 1;
-    align-items: center;
-    flex-wrap: wrap;
+/* hamburger-menu-recipe_sebastian */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
     justify-content: center;
-    gap: 8px;
-}
+    align-items: center;
+    gap: 6px;
+    width: 56px;
+    height: 48px;
+    background-color: #f0f0f0;
+    box-shadow: 0.5px 3px 3px 0.5px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.8px);
+    border: 2px solid rgba(0, 128, 0, 1);
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
 }
 
-@media (max-width: 380px) {
-.recipeHeader h1 {
-    font-size: 36px;
-    text-align: center;
-}    
+.hamburger-menu:hover {
+    background-color: var(--navHover);
+} 
+
+.line {
+    width: 28px;
+    height: 2px;
+    border: 2px solid rgba(0, 0, 0, 1);
+    border-radius: 4px;
+    background-color: black;
+}
+
+#click {
+    display: none;
+}
+
+#click:checked ~ nav {
+    right: 0px;
+    padding-right: 8px;
+}
+
+/* responive Sebastian-Rezeptseite */
+@media (max-width: 1020px) {
+    .headerContent,
+    .recipeHeader,
+    .policyContent {
+        padding: 0 80px;
+    }
+
+    .recipeHeader h1 {
+        margin-top: 32px;
+    }
+
+    .hamburger-menu {
+        display: flex!important;
+    }
+    #navBar {
+        position: fixed;
+        top: 124px;
+        right: -100%;
+        transition: right 400ms ease-out;
+        background: rgba(240, 240, 240, 0.37);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(11.8px);
+        -webkit-backdrop-filter: blur(11.8px);
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 620px) {
+    .headerContent,
+    .recipeHeader,
+    .policyContent {
+        padding: 0 24px;
+    }
+
+    .recipeHeader aside {
+        flex: 1;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .hamburger-menu {
+        width: 38px;
+        height: 32px;
+        gap: 4px;
+    }
+
+    .line {
+        width: 24px;
+        height: 2px;
+        border: 1px solid rgba(0, 0, 0, 1);
+    }
 }
 
 /* responsive privacy */
@@ -1025,3 +1104,11 @@ textarea {
         word-wrap: break-word;
     }
 }
+
+@media (max-width: 380px) {
+    .recipeHeader h1 {
+        font-size: 36px;
+        text-align: center;
+    }    
+}
+
