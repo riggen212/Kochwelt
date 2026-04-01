@@ -1002,10 +1002,6 @@ textarea {
 /* hamburger-menu-recipe_sebastian */
 .hamburger-menu {
     display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
     width: 56px;
     height: 48px;
     background-color: #f0f0f0;
@@ -1017,25 +1013,55 @@ textarea {
     cursor: pointer;
 }
 
-.hamburger-menu:hover {
-    background-color: var(--navHover);
-} 
-
-.line {
+.hamburger-menu span {
     width: 28px;
     height: 2px;
     border: 2px solid rgba(0, 0, 0, 1);
     border-radius: 4px;
     background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+.hamburger-menu span:nth-child(1) {
+    top: 25%;
+    transition: 150ms ease-in;
+}
+
+.hamburger-menu span:nth-child(3) {
+    top: 75%;
+    transition: 150ms ease-in;
+}
+
+.hamburger-menu:hover {
+    background-color: var(--navHover);
+} 
 
 #click {
     display: none;
 }
 
-#click:checked ~ nav {
+#click:checked ~ #navBar {
     right: 0px;
     padding-right: 8px;
+}
+#click:checked ~ .hamburger-menu span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: 400ms ease-in;
+}
+
+#click:checked ~ .hamburger-menu span:nth-child(2) {
+    opacity: 0;
+    transition: 100ms ease-in;
+}
+
+#click:checked ~ .hamburger-menu span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: 400ms ease-in;
 }
 
 /* responive Sebastian-Rezeptseite */
@@ -1057,7 +1083,7 @@ textarea {
         position: fixed;
         top: 124px;
         right: -100%;
-        transition: right 400ms ease-out;
+        transition: right 400ms ease-in-out;
         background: rgba(240, 240, 240, 0.37);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(11.8px);
@@ -1086,10 +1112,9 @@ textarea {
     .hamburger-menu {
         width: 38px;
         height: 32px;
-        gap: 4px;
     }
 
-    .line {
+    .hamburger-menu span {
         width: 24px;
         height: 2px;
         border: 1px solid rgba(0, 0, 0, 1);
