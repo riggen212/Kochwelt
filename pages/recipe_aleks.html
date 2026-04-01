@@ -16,10 +16,20 @@
                 </a>
                 <span>Kochwelt</span>
             </figure>
-            <nav class="navBar">
+
+            <button class="sidebarOpenBtn" id="btnOpenSidebar" onclick="openSidebar()">
+                <img class="svgIcon" src="../assets/img/hamburgerMenu.svg" alt="three dashes">
+            </button>
+
+            <nav id="navBar">
                 <ul>
+                    <li>
+                        <button id="btnCloseSidebar" class="sidebarCloseBtn" onclick="closeSidebar()">
+                            <img class="svgIcon" src="../assets/img/closeX.svg" alt="x-icon">
+                        </button>
+                    </li>
                     <li><a class="navLink" href="../index.html">Start</a></li>
-                    <li><a class="navLink" href="./recipe_fabian.html">Rezept des Tages</a></li>
+                    <li><a class="navLink active" href="./recipe_fabian.html">Rezept des Tages</a></li>
                     <li><a class="navLink" href="./contact.html">Kontakt</a></li>
                     <li><a class="navLink" href="./impressum.html">Impressum</a></li>
                 </ul>
@@ -58,7 +68,7 @@
             <div class="portion-box">
                 <label for="portion">Zutaten für</label>
                 <input id="portion" type="number" min="1" max="10" value="4" oninput="calculate()">
-                <button onclick="calculate()">Portionen</button>
+                <button class="btn" onclick="calculate()">Portionen</button>
             </div>
 
             <ul class="ingredients">
@@ -139,5 +149,6 @@
         </div>
     </footer>
    <script src="../js/script_aleks.js"></script>
+    <script src="../js/scriptRespMenu.js"></script>
 </body>
 </html>

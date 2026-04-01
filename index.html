@@ -17,8 +17,18 @@
                 </a>
                 <span>Kochwelt</span>
             </figure>
-            <nav class="navBar">
+
+            <button class="sidebarOpenBtn" id="btnOpenSidebar" onclick="openSidebar()">
+                <img class="svgIcon" src="./assets/img/hamburgerMenu.svg" alt="three dashes">
+            </button>
+
+            <nav id="navBar">
                 <ul>
+                    <li>
+                        <button id="btnCloseSidebar" class="sidebarCloseBtn" onclick="closeSidebar()">
+                            <img class="svgIcon" src="./assets/img/closeX.svg" alt="x-icon">
+                        </button>
+                    </li>
                     <li><a class="navLink active" href="./index.html">Start</a></li>
                     <li><a class="navLink" href="./pages/recipe_fabian.html">Rezept des Tages</a></li>
                     <li><a class="navLink" href="./pages/contact.html">Kontakt</a></li>
@@ -38,7 +48,7 @@
                     <h2>Chili con Carne</h2>
                     <p>Dies ist ein würziges Eintopfgericht aus der Tex-Mex-Küche, das hauptsächlich aus Hackfleisch, Bohnen, Tomaten, Chili und Gewürzen besteht. Es ist herzhaft,
                         leicht scharf und wird oft langsam gekocht, damit sich die Aromen gut entfalten. Typische Gewürze sind Kreuzkümmel, Paprika und Knoblauch.</p>                    
-                    <button onclick="window.location.href='pages/recipe_fabian.html';">Rezept öffnen</button>
+                    <button class="btn" onclick="window.location.href='pages/recipe_fabian.html';">Rezept öffnen</button>
                 </div>
             </section>
 
@@ -110,5 +120,6 @@
             </div>
         </div>
    </footer>
+   <script src="./js/scriptRespMenu.js"></script>
 </body>
 </html>
