@@ -874,7 +874,6 @@ textarea {
     resize: vertical;
 }
 
-<<<<<<< HEAD
 .submit-btn { 
     border: none;
     background: #008000;
@@ -886,9 +885,7 @@ textarea {
     cursor: pointer;
     margin-top: 8px;
 }
-=======
 /* thankyou.html*/
->>>>>>> Aleks
 
 .thankyouStyle {
     text-align: center;
