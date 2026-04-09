@@ -103,6 +103,14 @@ img {
     }
 }
 
+#overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    display: none;
+}
+
 .sidebarOpenBtn, .sidebarCloseBtn {
     display: none;
     background-color: transparent;
@@ -119,10 +127,6 @@ img {
 .sidebarOpenBtn:hover, .sidebarCloseBtn:hover {
     cursor: pointer;
     background-color: rgba(128, 128, 128, 0.5);
-}
-
-.svgIcon {
-
 }
 
 @media (max-width: 1020px) {
@@ -144,12 +148,16 @@ img {
         height: 100vh;
         z-index: 10;
         border-left: 1px solid var(--navHover);
-        transition: right 0.4s ease-in-out;
+        transition: right 0.3s ease-in-out;
         background-color: var(--backgroundSectionOtherRecipes);
     }
 
     nav.show {
         right: 0;
+    }
+
+    nav.show ~ #overlay {
+        display: block;
     }
 
     nav ul {
