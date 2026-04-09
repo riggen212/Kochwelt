@@ -110,12 +110,19 @@ img {
     align-items: center;
     width: 40px;
     height: 40px;
-    padding: 8px;
+    padding: 0;
     border: none;
+    border-radius: 100%;
+    background-color: rgba(128, 128, 128, 0.2);
 }
 
 .sidebarOpenBtn:hover, .sidebarCloseBtn:hover {
     cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+.svgIcon {
+
 }
 
 @media (max-width: 1020px) {
@@ -137,7 +144,7 @@ img {
         height: 100vh;
         z-index: 10;
         border-left: 1px solid var(--navHover);
-        transition: right 300ms ease-out;
+        transition: right 0.4s ease-in-out;
         background-color: var(--backgroundSectionOtherRecipes);
     }
 
@@ -333,18 +340,13 @@ main {
 
 @media(max-width: 760px) {
     .footerContent {
+        flex-direction: column;
+
         .socialMedia {
-            .socialMediaImg{
-                width: 48px;
-            }
+            width: 100%;
+            justify-content: space-evenly;
         }
     }
-}
-
-@media(max-width: 690px) {
-    .footerContent {
-        flex-direction: column;
-    }   
 }
 
 @media (max-width: 620px) {
@@ -370,7 +372,10 @@ main {
         }
 
         .socialMedia {
-            gap: 8px;
+
+            .socialMediaImg {
+                width: 48px;
+            }
         }
     }
 }
@@ -431,10 +436,6 @@ main {
     .articleHeader {
         padding: 32px 24px 0 24px;
 
-        .recipeProperties {
-            flex-direction: column;
-        }
-
         h1 {
             font-size: 24px;
         }
@@ -444,22 +445,17 @@ main {
 .recipeProperties {
     padding: 32px 0 64px 0;
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
     border-bottom: 2px solid var(--backgroundSectionOtherRecipes);
 
     .recipePropertyFigure {
         display: flex;
-        max-width: 104px;
+        max-width: fit-content;
         border-radius: var(--imageBorderRadius);
         padding: 8px 4px;
         gap: 10px;
         background-color: var(--backgroundSectionOtherRecipes);
-    }
-}
-
-@media(max-width: 620px) {
-    .recipeProperties {
-        flex-wrap: wrap;
     }
 }
 
@@ -544,11 +540,13 @@ input:invalid {
 
     .preparationContainer {
         display: flex;
+        flex-wrap: wrap;
         gap: 16px;
     }
 
     .recipePreparationFigure {
         display: flex;
+        max-width: fit-content;
         gap: 10px;
         background-color: var(--backgroundSectionOtherRecipes);
         padding: 8px 4px;
