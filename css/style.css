@@ -14,7 +14,7 @@
     --contentMargin: 0 auto;
     --contentPaddingDesktop: 32px 160px;
     --contentPaddingMobile: 32px 24px;
-
+    --articleHeaderPadding: 32px 160px 0 160px;
 }
 
 body {
@@ -158,10 +158,6 @@ img {
     .mainFooter {
         padding: 0 80px;
     }
-
-    .socialMedia {
-        flex-direction: column;
-    }
 }
 
 @media (max-width: 620px) {
@@ -280,8 +276,7 @@ main {
 
 .mainFooter {
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    justify-content: center;
     padding: 16px 160px;
     margin: var(--contentMargin);
     background-color: var(--designColor);
@@ -336,6 +331,22 @@ main {
     }
 }
 
+@media(max-width: 760px) {
+    .footerContent {
+        .socialMedia {
+            .socialMediaImg{
+                width: 48px;
+            }
+        }
+    }
+}
+
+@media(max-width: 690px) {
+    .footerContent {
+        flex-direction: column;
+    }   
+}
+
 @media (max-width: 620px) {
     
     .mainFooter {
@@ -360,9 +371,6 @@ main {
 
         .socialMedia {
             gap: 8px;
-            .socialMediaImg{
-                width: 82px;
-            }
         }
     }
 }
@@ -374,7 +382,7 @@ main {
     align-items: center;
     flex-direction: column;
     gap: 16px;
-    padding: 16px;
+    padding: 16px 0 16px 0;
 
     p, a {
         color: var(--buttonTextColor);
@@ -395,7 +403,8 @@ main {
 
 .articleHeader {
     margin: var(--contentMargin);
-    padding: 32px 160px 0 160px;
+    padding: var(--articleHeaderPadding);
+
     h1 {
         font-weight: bold;
         padding-bottom: 16px;
@@ -408,6 +417,30 @@ main {
     }
 }
 
+@media(max-width: 1020px) {
+    .articleHeader {
+        padding: 32px 80px 0 80px;
+
+        h1 {
+            font-size: 36px;
+        }
+    }
+}
+
+@media(max-width: 620px) {
+    .articleHeader {
+        padding: 32px 24px 0 24px;
+
+        .recipeProperties {
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+    }
+}
+
 .recipeProperties {
     padding: 32px 0 64px 0;
     display: flex;
@@ -416,12 +449,20 @@ main {
 
     .recipePropertyFigure {
         display: flex;
+        max-width: 104px;
         border-radius: var(--imageBorderRadius);
         padding: 8px 4px;
         gap: 10px;
         background-color: var(--backgroundSectionOtherRecipes);
     }
 }
+
+@media(max-width: 620px) {
+    .recipeProperties {
+        flex-wrap: wrap;
+    }
+}
+
 
 .ingredientAmount {
     margin: var(--contentMargin);
@@ -450,6 +491,18 @@ main {
     }
 }
 
+@media(max-width: 1020px) {
+    .ingredientAmount {
+        padding: 8px 80px 16px 80px;
+    }
+}
+
+@media(max-width: 620px) {
+    .ingredientAmount {
+        padding: 8px 24px 16px 24px;
+    }
+}
+
 input:invalid {
     border: 2px solid red;
 }
@@ -457,6 +510,18 @@ input:invalid {
 .recipeIngredients {
     padding: 0 160px;
     margin: var(--contentMargin);
+}
+
+@media(max-width: 1020px) {
+    .recipeIngredients {
+        padding: 0 80px;
+    }
+}
+
+@media(max-width: 620px) {
+    .recipeIngredients {
+        padding: 0 24px;
+    }
 }
 
 .ingredientTable {
@@ -495,6 +560,18 @@ input:invalid {
     }
 }
 
+@media(max-width: 1020px) {
+    .recipePreparation {
+        padding: 16px 80px;
+    }
+}
+
+@media(max-width: 620px) {
+    .recipePreparation {
+        padding: 16px 24px;
+    }
+}
+
 .articleFooter {
     margin: 0 auto;
     padding: 32px 160px;
@@ -512,6 +589,18 @@ input:invalid {
         figcaption {
             font-size: 24px;
         }
+    }
+}
+
+@media(max-width: 1020px) {
+    .articleFooter {
+        padding: 32px 80px;
+    }
+}
+
+@media(max-width: 620px) {
+    .articleFooter {
+        padding: 32px 24px;
     }
 }
 
