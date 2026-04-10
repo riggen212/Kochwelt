@@ -26,7 +26,6 @@ function updateNavbar(e) {
     else {
         navbarRef.removeAttribute("inert");
     }
-    console.log(isMobile);
 }
 
 updateNavbar(media)
