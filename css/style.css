@@ -149,7 +149,7 @@ img {
         height: 100vh;
         z-index: 10;
         border-left: 1px solid var(--navHover);
-        transition: right 0.3s ease-in-out;
+        transition: right 400ms ease-in-out;
         background-color: var(--backgroundSectionOtherRecipes);
     }
 
