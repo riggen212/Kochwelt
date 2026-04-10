@@ -2,7 +2,7 @@ function formatFraction(value) {
     if (Number.isInteger(value)) return value;
 
     if (value === 0.25) return "1/4";
-    if (value === 0.5) return "1/2";
+    if (valu e === 0.5) return "1/2";
     if (value === 0.75) return "3/4";
 
     return value.toFixed(2);
@@ -34,4 +34,20 @@ function calculate() {
     document.getElementById('garlic').innerText = Math.round(2 * factor);
     document.getElementById('tomato').innerText = Math.round(400 * factor);
     document.getElementById('oil').innerText = Math.round(2 * factor);
+}
+
+function sendMail(event){
+    event.preventDefault();
+
+    fetch("https://formspree.io/f/xojpevdv", {
+        method: "POST",
+        body: new FormData(event.target),
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(() => {
+        window.location.href = "./thankyou.html";
+    }).catch((error) => {
+        console.log(error);
+    });
 }

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezept des Tages</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="..css\styleElias.css">
+</head>
+
+<body>
+    <header class="mainHeader">
+        <div class="contentRestrain headerContent">
+            <figure class="fig">
+                <a href="../index.html">
+                    <img class="logoCookingHat" src="../assets/img/logo_small.png" alt="Logo of a cooking hat">
+                </a>
+                <span>Kochwelt</span>
+            </figure>
+
+            <button class="sidebarOpenBtn" id="btnOpenSidebar" onclick="openSidebar()">
+                <img class="svgIcon" src="../assets/img/hamburgerMenu.svg" alt="three dashes">
+            </button>
+
+            <nav id="navBar">
+                <ul>
+                    <li>
+                        <button id="btnCloseSidebar" class="sidebarCloseBtn" onclick="closeSidebar()">
+                            <img class="svgIcon" src="../assets/img/closeX.svg" alt="x-icon">
+                        </button>
+                    </li>
+                    <li><a class="navLink" href="../index.html">Start</a></li>
+                    <li><a class="navLink active" href="./recipe_fabian.html">Rezept des Tages</a></li>
+                    <li><a class="navLink" href="./contact.html">Kontakt</a></li>
+                    <li><a class="navLink" href="./impressum.html">Impressum</a></li>
+                </ul>
+            </nav>
+        </div>
+   </header>
+    <h2>Griechischer Bauernsalat</h2>
+    <figure>
+        <img src="../assets/img/salad1.svg" class="headerimage" alt="Image of Salad">
+    </figure>
+
+    <div class="preperation">
+        <div><img src="../assets/img/icons/clock_regular.svg" alt="">15m</div>
+        <div><img src="../assets/img/icons/brain_solid.svg" alt="">simple</div>
+        <div><img src="../assets/img/icons/calendar_alt_regular.svg" alt="">01.01.2026</div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="ingredientsInput">
+        <p>Zutaten für</p>
+        <input type="number" id="portionInput" value="4">
+        <button class="btn" id="calcBtn">Portionen</button>
+    </div>
+
+    <div class="recipes">
+        <ul class="ingredients">
+            <li><span>ein wenig</span> Olivenöl</li>
+            <li><span id="amount-meat">500</span>g gemischtes Hackfleisch</li>
+            <li><span id="amount-onion">1</span> Zwiebel</li>
+            <li><span id="amount-garlic">2</span> Knoblauchzehen</li>
+            <li><span>1 Bund</span> Petersilie</li>
+            <li><span id="amount-tomatoPaste">1</span> EL Tomatenmark</li>
+            <li><span id="amount-tomatoes">1</span> Dose geschälte Tomaten</li>
+            <li><span>etwas</span> Rotwein</li>
+            <li>Salz & Pfeffer</li>
+        </ul>
+    </div>
+
+    <h3>Zubereitung</h3>
+    <div class="zeitangaben">
+        <div><img src="../assets/img/icons/clock_regular.svg" alt="">ca. 15m</div>
+        <div><img src="../assets/img/icons/clock_regular.svg" alt="">Gesamtzeit: ca. 15m</div>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae inventore quo perspiciatis, totam dolor
+        harum consequuntur dolore vitae voluptatem culpa reprehenderit facilis asperiores magni nesciunt esse non
+        obcaecati ut, amet nam explicabo earum. Et incidunt facere, quam nesciunt, labore placeat fugit, minus minima
+        harum sint obcaecati voluptatem illum! Ipsa quam nihil hic iusto labore eaque natus vitae facilis quaerat porro,
+        consequuntur, voluptatibus non incidunt rem nisi enim earum quo ullam error laborum inventore ea asperiores.
+        Inventore ratione eaque deserunt vero cupiditate reiciendis porro vel perferendis explicabo accusantium deleniti
+        iure recusandae tenetur sapiente rem, dolorem amet beatae, mollitia, officia autem quae?</p>
+
+
+    <h4>Rezept erstellt von:</h4>
+    <div class="ContactPerson">
+        <img class="profileIMG" src="../assets/img/profile.png" alt="">
+        <p>Elias</p>
+    </div>
+
+
+    <!-- social media -->
+    <footer class="mainFooter">
+        <div class="contentRestrain footerContent">
+            <figure class="footerLogo">
+                <img class="logoCookingHat" src="../assets/img/logo_small_white.png" alt="Logo of a cooking hat">
+                <span>Kochwelt</span>
+            </figure>
+
+            <div class="legalContainer">
+                <p>&copy; 2026 Kochwelt. Alle Rechte vorbehalten.</p>
+                <a href="./pages/impressum.html">Impressum</a>
+                <a href="./pages/privacy_policy.html">Datenschutzerklärung</a>
+            </div>
+
+            <div class="socialMedia">
+                <a href="https://www.facebook.com/?locale=de_DE" target="_blank">
+                    <img class="socialMediaImg" src="../assets/img/facebook.svg" alt="Facebook Logo">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img class="socialMediaImg" src="../assets/img/instagram.svg" alt="Instagram Logo">
+                </a>
+                <a href="https://x.com/" target="_blank">
+                    <img class="socialMediaImg" src="../assets/img/twitter.svg" alt="Twitter Logo">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/scriptElias.js"></script>
+    <script src="../js/scriptRespMenu.js"></script>
+</body>
+
+</html>

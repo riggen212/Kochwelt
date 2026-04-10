@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rezept des Tages</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/styleSebastian.css">
-    <script src="../js/scriptSebastian.js" defer></script>
+    <link rel="shortcut icon" href="../assets/img/logo_small.png" type="image/x-icon">
+    <script src="../js/script_sebastian.js" defer></script>
+    <script src="../js/scriptRespMenu.js" defer></script>
 </head>
 <body onload="getSpanElements()">
 
@@ -18,12 +19,22 @@
                 </a>
                 <span>Kochwelt</span>
             </figure>
-            <nav class="navBar">
+
+            <button class="sidebarOpenBtn" id="btnOpenSidebar" onclick="openSidebar()">
+                <img class="svgIcon" src="../assets/img/hamburgerMenu.svg" alt="three dashes">
+            </button>
+
+            <nav id="navBar">
                 <ul>
+                    <li>
+                        <button id="btnCloseSidebar" class="sidebarCloseBtn" onclick="closeSidebar()">
+                            <img class="svgIcon" src="../assets/img/closeX.svg" alt="x-icon">
+                        </button>
+                    </li>
                     <li><a class="navLink" href="../index.html">Start</a></li>
-                    <li><a class="navLink active" href="./pages/rezeptFabian.html">Rezept des Tages</a></li>
-                    <li><a class="navLink" href="./pages/contact.html">Kontakt</a></li>
-                    <li><a class="navLink" href="./pages/impressum.html">Impressum</a></li>
+                    <li><a class="navLink active" href="./recipe_fabian.html">Rezept des Tages</a></li>
+                    <li><a class="navLink" href="./contact.html">Kontakt</a></li>
+                    <li><a class="navLink" href="./impressum.html">Impressum</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,27 +43,28 @@
    <main>
         <section class="contentRestrain recipeHeader">
             <h1>Rinderroulade</h1>
-            <img class="recipeOfDayImage" src="../assets/img/beef-roulades.jpg" alt="Picture of a salad">
+            <img class="recipeOfDayImage" src="../assets/img/beef_roulades.jpg" alt="Picture of a salad">
             <aside>
                 <figure>
-                    <img src="../assets/img/icons/clock-regular.svg" alt="">
+                    <img class="recipePropertyImage" src="../assets/img/icons/clock_regular.svg" alt="An image of a regular clock">
                     <figcaption>90-120 Min.</figcaption>
                 </figure>
                 <figure>
-                    <img src="../assets/img/icons/brain-solid.svg" alt="">
+                    <img class="recipePropertyImage" src="../assets/img/icons/brain_solid.svg" alt="Image of a brain">
                     <figcaption>middle</figcaption>
                 </figure>
                 <figure>
-                    <img src="../assets/img/icons/calendar-alt-regular.svg" alt="">
+                    <img class="recipePropertyImage" src="../assets/img/icons/calendar_alt_regular.svg" alt="Image of a calendar">
                     <figcaption>21.03.2026</figcaption>
                 </figure>
             </aside>
             <hr>
-            <section class="contentRestrain recipeIngredients">
+            <section class="contentRestrain recipeData">
                 <div class="ingredientsCalculation">
                     <label for="">Zutaten für:</label>
                     <input min="1" max="15" type="number" id="factor" value="1">
-                    <button onclick="calculateIngredients()" type="button">Portionen</button>
+                    <button class="btn" onclick="inputValidation()" type="button">Portionen</button>
+                    <span id="errorMessage"></span>
                 </div>
                 <table id="ingredients">
                     <tr>
@@ -103,11 +115,11 @@
                 <h2>Zubereitung</h2>
                 <div>
                     <figure>
-                        <img src="../assets/img/icons/clock-regular.svg" alt="">
+                        <img src="../assets/img/icons/clock_regular.svg" alt="">
                         <figcaption>ca. 90-120 Minuten</figcaption>
                     </figure>
                     <figure>
-                        <img src="../assets/img/icons/clock-regular.svg" alt="">
+                        <img src="../assets/img/icons/clock_regular.svg" alt="">
                         <figcaption>Gesamtzeit: ca. 90-120 Minuten</figcaption>
                     </figure>
                 </div>
@@ -132,22 +144,28 @@
    <footer class="mainFooter">
         <div class="contentRestrain footerContent">
             <figure class="footerLogo">
-                <img class="logoCookingHat" src="../assets/img/logo-small-with.png" alt="Logo of a cooking hat">
+                <img class="logoCookingHat" src="../assets/img/logo_small_white.png" alt="Logo of a cooking hat">
                 <span>Kochwelt</span>
             </figure>
 
+            <div class="legalContainer">
+                <p>&copy; 2026 Kochwelt. Alle Rechte vorbehalten.</p>
+                <a href="./impressum.html">Impressum</a>
+                <a href="./privacy_policy.html">Datenschutzerklärung</a>
+            </div>
+            
             <div class="socialMedia">
                 <a href="https://www.facebook.com/?locale=de_DE" target="_blank">
-                    <img class="socialMediaImg" src="../assets/img/find-us-on-facebook.svg" alt="Facebook Logo">
+                    <img class="socialMediaImg" src="../assets/img/facebook.svg" alt="Facebook Logo">
                 </a>
                 <a href="https://www.instagram.com/" target="_blank">
-                    <img class="socialMediaImg" src="../assets/img/follow-us-on-instagram.svg" alt="Instagram Logo">
+                    <img class="socialMediaImg" src="../assets/img/instagram.svg" alt="Instagram Logo">
                 </a>
                 <a href="https://x.com/" target="_blank">
-                    <img class="socialMediaImg" src="../assets/img/follow-us-on-twitter.svg" alt="Twitter Logo">
+                    <img class="socialMediaImg" src="../assets/img/twitter.svg" alt="Twitter Logo">
                 </a>
             </div>
         </div>
-   </footer>
+    </footer>
 </body>
 </html>

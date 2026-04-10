@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/img/logo_small.png" type="image/png">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script_aleks.js"></script>
     <title>Kontakt | Kochwelt</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
             <nav class="navBar">
                 <ul>
                     <li><a class="navLink" href="../index.html">Start</a></li>
-                    <li><a class="navLink" href="../pages/rezeptFabian.html">Rezept des Tages</a></li>
+                    <li><a class="navLink" href="../pages/recipe_fabian.html">Rezept des Tages</a></li>
                     <li><a class="navLink active" href="../pages/contact.html">Kontakt</a></li>
                     <li><a class="navLink" href="../pages/impressum.html">Impressum</a></li>
                 </ul>
@@ -27,7 +28,7 @@
         </div>
    </header>
 
-    <main class="contact-page contentRestrain">
+    <main class="contact-page">
         <section class="contact-card">
             <h1>Schreib uns eine Nachricht</h1>
 
@@ -35,7 +36,8 @@
             Du hast Fragen zu einem Rezept, möchtest uns Feedback geben oder suchst kulinarische Inspiration? 
             Dann schreib uns gerne direkt über das Kontaktformular.</p>
             
-            <form class="contact-form" action="#" method="POST">
+            <form class="contact-form" action="https://formspree.io/f/xojpevdv" method="POST" onsubmit="sendMail(event)">
+            
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input 
@@ -76,27 +78,27 @@
     <footer class="mainFooter">
         <div class="contentRestrain footerContent">
             <figure class="footerLogo">
-                <img class="logoCookingHat" src="../assets/img/logo_small.png" alt="Logo of a cooking hat">
+                <img class="logoCookingHat" src="../assets/img/logo_small_white.png" alt="Logo of a cooking hat">
                 <span>Kochwelt</span>
             </figure>
 
+            <div class="legalContainer">
+                <p>&copy; 2026 Kochwelt. Alle Rechte vorbehalten.</p>
+                <a href="./impressum.html">Impressum</a>
+                <a href="../privacy_policy.html">Datenschutzerklärung</a>
+            </div>
+
             <div class="socialMedia">
                 <a href="https://www.facebook.com/?locale=de_DE" target="_blank">
-                    <img class="socialMediaImg" src="../assets/img/find-us-on-facebook.svg" alt="Facebook Logo">
+                    <img class="socialMediaImg" src="../assets/img/facebook.svg" alt="Facebook Logo">
                 </a>
                 <a href="https://www.instagram.com/" target="_blank">
-                    <img class="socialMediaImg" src="../assets/img/follow-us-on-instagram.svg" alt="Instagram Logo">
+                    <img class="socialMediaImg" src="../assets/img/instagram.svg" alt="Instagram Logo">
                 </a>
                 <a href="https://x.com/" target="_blank">
-                    <img class="socialMediaImg" src="../assets/img/follow-us-on-twitter.svg" alt="Twitter Logo">
+                    <img class="socialMediaImg" src="../assets/img/twitter.svg" alt="Twitter Logo">
                 </a>
             </div>
-        </div>
-
-        <div class="legalContainer">
-            <p>&copy; 2026 Kochwelt. Alle Rechte vorbehalten.</p>
-            <a href="./impressum.html">Impressum</a>
-            <a href="./privacy-policy.html">Datenschutzerklärung</a>
         </div>
    </footer>
 </body>

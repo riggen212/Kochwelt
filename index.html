@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kochwelt</title>
     <link rel="shortcut icon" href="./assets/img/logo_small.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
+    <title>Kochwelt</title>
 </head>
 <body>
     <!-- logo and nav-bar -->
@@ -17,14 +17,26 @@
                 </a>
                 <span>Kochwelt</span>
             </figure>
-            <nav class="navBar">
+
+            <button class="sidebarOpenBtn" id="btnOpenSidebar" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navBar">
+                <img class="svgIcon" src="./assets/img/hamburgerMenu.svg" alt="three dashes">
+            </button>
+
+            <nav id="navBar">
                 <ul>
-                    <li><a class="navLink active" href="./index.html">Start</a></li>
-                    <li><a class="navLink" href="./pages/recipeFabian.html">Rezept des Tages</a></li>
+                    <li>
+                        <button id="btnCloseSidebar" class="sidebarCloseBtn" onclick="closeSidebar()" aria-label="close sidebar">
+                            <img class="svgIcon" src="./assets/img/closeX.svg" alt="x-icon">
+                        </button>
+                    </li>
+                    <li><a class="navLink active" aria-current="page" href="./index.html">Start</a></li>
+                    <li><a class="navLink" href="./pages/recipe_fabian.html">Rezept des Tages</a></li>
                     <li><a class="navLink" href="./pages/contact.html">Kontakt</a></li>
                     <li><a class="navLink" href="./pages/impressum.html">Impressum</a></li>
                 </ul>
             </nav>
+
+            <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
         </div>
    </header>
    <!-- display recipe -->
@@ -32,12 +44,13 @@
         <div>
             <section  class="contentRestrain recipe">
                 <figure>
-                    <img class="recipeImage" src="./assets/img/croissant.jpg" alt="Picture of a croissant">
+                    <img class="recipeImage" src="./assets/img/chili_con_carne.jpg" alt="Picture of chili con carne">
                 </figure>
                 <div class="recipeDescpription">
-                    <h2>Französiche Croissants</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, rerum molestiae delectus excepturi in voluptas aspernatur, tempore iusto vel eius magni eveniet deserunt ab. Id excepturi dolores adipisci laudantium recusandae.</p>                    
-                    <button onclick="window.location.href='./pages/recipeFabian.html'">Rezept öffnen</button>
+                    <h2>Chili con Carne</h2>
+                    <p>Dies ist ein würziges Eintopfgericht aus der Tex-Mex-Küche, das hauptsächlich aus Hackfleisch, Bohnen, Tomaten, Chili und Gewürzen besteht. Es ist herzhaft,
+                        leicht scharf und wird oft langsam gekocht, damit sich die Aromen gut entfalten. Typische Gewürze sind Kreuzkümmel, Paprika und Knoblauch.</p>                    
+                    <button class="btn" onclick="window.location.href='pages/recipe_fabian.html';">Rezept öffnen</button>
                 </div>
             </section>
 
@@ -47,22 +60,22 @@
                     <h2>Lust auf was Neues?</h2>
                     <div class="otherRecipesDisplay contentRestrain">
                         <figure>
-                            <a href="./pages/recipeSebastian.html">
-                                <img src="./assets/img/beef-roulades.jpg" alt="Beef Roulades">
+                            <a href="./pages/recipe_sebastian.html">
+                                <img src="./assets/img/beef_roulades.jpg" alt="Beef Roulades">
                             </a>
-                            <figcaption>free-text</figcaption>
+                            <figcaption>Rinderrouladen</figcaption>
                         </figure>
                         <figure>
-                            <a href="./pages/recipeAleks.html">
+                            <a href="./pages/recipe_aleks.html">
                                 <img src="./assets/img/spaghetti.jpg" alt="Spaghetti">
                             </a>
-                            <figcaption>free-text</figcaption>
+                            <figcaption>Spaghetti Bolognese</figcaption>
                         </figure>
                         <figure>
-                            <a href="./pages/recipeElias.html">
+                            <a href="./pages/recipe_elias.html">
                                 <img src="./assets/img/croissant.jpg" alt="Salad">
                             </a>
-                            <figcaption>free-text</figcaption>
+                            <figcaption>Salat</figcaption>
                         </figure>
                         
                     </div>
@@ -74,8 +87,8 @@
                 <figure>
                     <p>Auf diese Frage kann keine pauschale Antwort gegeben werden. Beide Kochutensilien haben ihre Stärken und Schwächen. Entscheidend ist, wie man das Gericht zubereiten möchte.
                        Benötigt man gleichmäßige Hitze, dann ist die Pfanne die erste Wahl. Sind hingegen hohe Temperaturen von Nöten, so eignet sich der WoK am besten.
-                       Die Pfanne ist zwar der Allrounder, aber hat man Appetit auf ein asiatisches Gericht, spielt der Wok seine Stärken voll aus. Möchte man dagegen Fleisch, Fisch oder Eierspeisen zubereiten, dann sollte man zur Pfanne greifen.
-                       Daher ist es von Vorteil, Pfanne als auch einen Wok in der Küchenausstattung zu haben. Somit ist man für jeden Hunger gewappnet.
+                       Die Pfanne ist zwar der Allrounder, aber hat man Appetit auf ein asiatisches Gericht, spielt der Wok seine Stärken voll aus. Möchte man dagegen Fleisch, Fisch oder Eierspeisen zubereiten,
+                       dann sollte man zur Pfanne greifen. Daher ist es von Vorteil, Pfanne als auch einen Wok in der Küchenausstattung zu haben. Somit ist man für jeden Hunger gewappnet.
                     </p>
                     <img src="./assets/img/wok.jpg" alt="Image of a wok pan with vegetables inside">
                 </figure>
@@ -85,29 +98,32 @@
    <!-- social media -->
    <footer class="mainFooter">
         <div class="contentRestrain footerContent">
-            <figure class="footerLogo">
-                <img class="logoCookingHat" src="./assets/img/logo-small-with.png" alt="Logo of a cooking hat">
-                <span>Kochwelt</span>
-            </figure>
-
+            <div class="logoAndLegal">
+                <figure class="footerLogo">
+                    <img class="logoCookingHat" src="./assets/img/logo_small_white.png" alt="Logo of a cooking hat">
+                    <span>Kochwelt</span>
+                </figure>
+    
+                <div class="legalContainer">
+                    <p>&copy; 2026 Kochwelt. Alle Rechte vorbehalten.</p>
+                    <a href="./pages/impressum.html">Impressum</a>
+                    <a href="./pages/privacy_policy.html">Datenschutzerklärung</a>
+                </div>
+            </div>
+            
             <div class="socialMedia">
                 <a href="https://www.facebook.com/?locale=de_DE" target="_blank">
-                    <img class="socialMediaImg" src="./assets/img/find-us-on-facebook.svg" alt="Facebook Logo">
+                    <img class="socialMediaImg" src="./assets/img/facebook(small).svg" alt="Facebook Logo">
                 </a>
                 <a href="https://www.instagram.com/" target="_blank">
-                    <img class="socialMediaImg" src="./assets/img/follow-us-on-instagram.svg" alt="Instagram Logo">
+                    <img class="socialMediaImg" src="./assets/img/instagram(small).svg" alt="Instagram Logo">
                 </a>
                 <a href="https://x.com/" target="_blank">
-                    <img class="socialMediaImg" src="./assets/img/follow-us-on-twitter.svg" alt="Twitter Logo">
+                    <img class="socialMediaImg" src="./assets/img/x(small).svg" alt="Twitter Logo">
                 </a>
             </div>
         </div>
-
-        <div class="legalContainer">
-            <p>&copy; 2026 Kochwelt. Alle Rechte vorbehalten.</p>
-            <a href="./pages/impressum.html">Impressum</a>
-            <a href="./pages/privacy-policy.html">Datenschutzerklärung</a>
-        </div>
    </footer>
+   <script src="./js/scriptRespMenu.js"></script>
 </body>
 </html>

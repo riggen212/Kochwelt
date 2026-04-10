@@ -4,60 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../assets/img/logo_small.png" type="image/x-icon">
     <title>Rezept des Tages | Kochwelt</title>
 </head>
-<body>
+<body class="recipe-aleks-page">
     <header class="mainHeader">
         <div class="contentRestrain headerContent">
             <figure class="fig">
-                <a href="./index.html">
+                <a href="../index.html">
                     <img class="logoCookingHat" src="../assets/img/logo_small.png" alt="Logo of a cooking hat">
                 </a>
                 <span>Kochwelt</span>
             </figure>
-            <nav class="navBar">
+
+            <button class="sidebarOpenBtn" id="btnOpenSidebar" onclick="openSidebar()">
+                <img class="svgIcon" src="../assets/img/hamburgerMenu.svg" alt="three dashes">
+            </button>
+
+            <nav id="navBar">
                 <ul>
-                    <li><a class="navLink active" href="./index.html">Start</a></li>
-                    <li><a class="navLink" href="./pages/rezeptFabian.html">Rezept des Tages</a></li>
-                    <li><a class="navLink" href="./pages/contact.html">Kontakt</a></li>
-                    <li><a class="navLink" href="./pages/impressum.html">Impressum</a></li>
+                    <li>
+                        <button id="btnCloseSidebar" class="sidebarCloseBtn" onclick="closeSidebar()">
+                            <img class="svgIcon" src="../assets/img/closeX.svg" alt="x-icon">
+                        </button>
+                    </li>
+                    <li><a class="navLink" href="../index.html">Start</a></li>
+                    <li><a class="navLink active" href="./recipe_fabian.html">Rezept des Tages</a></li>
+                    <li><a class="navLink" href="./contact.html">Kontakt</a></li>
+                    <li><a class="navLink" href="./impressum.html">Impressum</a></li>
                 </ul>
             </nav>
         </div>
    </header>
-    <main class="recipe-page contentRestrain">
-
+    <main class="recipe-page">
+        <section class="contentRestrain">
         <h1> Spaghetti Bolognese</h1>
         <!-- Hier Bild später ändern -->
         <img class="recipe-img" src="../assets/img/spaghetti.jpg" alt=""> 
-
-        <section class="recipe-info">
+        </section>
+        <section class="recipe-info contentRestrain">
 
             <ul class="info-list">
                 <li>
-                    <img src="../assets/img/icons/clock-regular.svg" alt="">
+                    <img src="../assets/img/icons/clock_regular.svg" alt="">
                     <span>30 Min.</span>
                 </li>
 
                 <li>
-                    <img src="../assets/img/icons/brain-solid.svg" alt="">
+                    <img src="../assets/img/icons/brain_solid.svg" alt="">
                     <span>mittel</span>
                 </li>     
 
                 <li>
-                    <img src="../assets/img/icons/calendar-alt-regular.svg" alt="">
+                    <img src="../assets/img/icons/calendar_alt_regular.svg" alt="">
                     <span>17.03.2026</span>
                 </li>    
             </ul>
 
         </section>
 
-        <section class="ingredients-section">
+        <section class="ingredients-section contentRestrain">
 
             <div class="portion-box">
                 <label for="portion">Zutaten für</label>
                 <input id="portion" type="number" min="1" max="10" value="4" oninput="calculate()">
-                <button onclick="calculate()">Portionen</button>
+                <button class="btn" onclick="calculate()">Portionen</button>
             </div>
 
             <ul class="ingredients">
@@ -71,18 +82,18 @@
             </ul>
         </section>
 
-        <section class="preparation-section">
+        <section class="preparation-section contentRestrain">
             <h2>Zubereitung</h2>
 
             <ul class="preparation-info">
 
                 <li class="info-item">
-                    <img src="../assets/img/icons/clock-regular.svg" alt="">
+                    <img src="../assets/img/icons/clock_regular.svg" alt="">
                     <span>ca. 30 Minuten</span>
                 </li>
 
                 <li class="info-item">
-                    <img src="../assets/img/icons/clock-regular.svg" alt="">
+                    <img src="../assets/img/icons/clock_regular.svg" alt="">
                     <span>Gesamtzeit ca. 30 Minuten</span>
                 </li>
 
@@ -100,43 +111,44 @@
 
         </section>
 
-        <section class="author-section">
+        <section class="author-section contentRestrain">
 
             <h3>Rezept erstellt von</h3>
 
             <div class="author-box">
-                <img class="author-img" src="../assets/Aleks.jpg" alt="Picture of the Author">
+                <img class="author-img" src="../assets/img/aleks.jpg" alt="Picture of the Author">
                 <span>Aleks</span>
             </div>
         </section>
 
     </main>
-    <footer class="mainFooter">
+   <footer class="mainFooter">
         <div class="contentRestrain footerContent">
             <figure class="footerLogo">
-                <img class="logoCookingHat" src="../assets/img/logo_small.png" alt="Logo of a cooking hat">
+                <img class="logoCookingHat" src="../assets/img/logo_small_white.png" alt="Logo of a cooking hat">
                 <span>Kochwelt</span>
             </figure>
 
+            <div class="legalContainer">
+                <p>&copy; 2026 Kochwelt. Alle Rechte vorbehalten.</p>
+                <a href="./impressum.html">Impressum</a>
+                <a href="./privacy_policy.html">Datenschutzerklärung</a>
+            </div>
+            
             <div class="socialMedia">
                 <a href="https://www.facebook.com/?locale=de_DE" target="_blank">
-                    <img class="socialMediaImg" src="../assets/img/find-us-on-facebook.svg" alt="Facebook Logo">
+                    <img class="socialMediaImg" src="../assets/img/facebook.svg" alt="Facebook Logo">
                 </a>
                 <a href="https://www.instagram.com/" target="_blank">
-                    <img class="socialMediaImg" src="../assets/img/follow-us-on-instagram.svg" alt="Instagram Logo">
+                    <img class="socialMediaImg" src="../assets/img/instagram.svg" alt="Instagram Logo">
                 </a>
                 <a href="https://x.com/" target="_blank">
-                    <img class="socialMediaImg" src="../assets/img/follow-us-on-twitter.svg" alt="Twitter Logo">
+                    <img class="socialMediaImg" src="../assets/img/twitter.svg" alt="Twitter Logo">
                 </a>
             </div>
         </div>
-
-        <div class="legalContainer">
-            <p>&copy; 2026 Kochwelt. Alle Rechte vorbehalten.</p>
-            <a href="./pages/impressum.html">Impressum</a>
-            <a href="./pages/privacy-policy.html">Datenschutzerklärung</a>
-        </div>
-   </footer>
-   <script src="../js/scriptAleks.js"></script>
+    </footer>
+   <script src="../js/script_aleks.js"></script>
+    <script src="../js/scriptRespMenu.js"></script>
 </body>
 </html>
