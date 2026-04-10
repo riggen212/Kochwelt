@@ -8,6 +8,7 @@ html {
 }
 
 :root {
+    --font: "Raleway", sans-serif;
     --designColor: #403B3B;
     --buttonTextColor: #fff;
     --navHover: #008000;
@@ -18,11 +19,11 @@ html {
     --contentMargin: 0 auto;
     --contentPaddingDesktop: 32px 160px;
     --contentPaddingMobile: 32px 24px;
-
+    --articleHeaderPadding: 32px 160px 0 160px;
 }
 
 body {
-    font-family: "Raleway", sans-serif;
+    font-family: var(--font);
     margin: 0;
     color: var(--designColor);
     font-size: 16px;
@@ -107,6 +108,14 @@ img {
     }
 }
 
+#overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    display: none;
+}
+
 .sidebarOpenBtn, .sidebarCloseBtn {
     display: none;
     background-color: transparent;
@@ -114,12 +123,15 @@ img {
     align-items: center;
     width: 40px;
     height: 40px;
-    padding: 8px;
+    padding: 0;
     border: none;
+    border-radius: 100%;
+    background-color: rgba(128, 128, 128, 0.2);
 }
 
 .sidebarOpenBtn:hover, .sidebarCloseBtn:hover {
     cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.5);
 }
 
 @media (max-width: 1020px) {
@@ -141,13 +153,17 @@ img {
         height: 100vh;
         z-index: 10;
         border-left: 1px solid var(--navHover);
-        transition: right 300ms ease-out;
+        transition: right 400ms ease-in-out;
         background-color: var(--backgroundSectionOtherRecipes);
     }
 
     nav.show {
         right: 0;
     } */
+
+    nav.show ~ #overlay {
+        display: block;
+    }
 
     nav ul {
         padding-left: 8px;
@@ -161,10 +177,6 @@ img {
 
     .mainFooter {
         padding: 0 80px;
-    }
-
-    .socialMedia {
-        flex-direction: column;
     }
 }
 
@@ -284,8 +296,7 @@ main {
 
 .mainFooter {
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    justify-content: center;
     padding: 16px 160px;
     margin: var(--contentMargin);
     background-color: var(--designColor);
@@ -296,24 +307,31 @@ main {
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    padding: 16px 0 16px 0;
 
-    p {
-        color: var(--buttonTextColor);
+    .logoAndLegal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-
+    
     .footerLogo {
         display: flex;
         align-items: center;
-
+        gap: 16px;
+        
         span {
             font-size: 32px;
             color: var(--buttonTextColor);
         }
-
+        
         .logoCookingHat {
             width: 64px;
-            padding-right: 16px;
         }
+    }
+
+    p {
+        color: var(--buttonTextColor);
     }
 
     .socialMedia {
@@ -322,7 +340,7 @@ main {
         gap: 16px;
 
         .socialMediaImg{
-            width: 132px;
+            width: 5em;
         }
     }
 }
@@ -330,6 +348,17 @@ main {
 @media (max-width: 1020px) {
     .mainFooter {
         padding: 0 80px;
+    }
+}
+
+@media(max-width: 760px) {
+    .footerContent {
+        flex-direction: column;
+
+        .socialMedia {
+            width: 100%;
+            justify-content: space-evenly;
+        }
     }
 }
 
@@ -356,9 +385,9 @@ main {
         }
 
         .socialMedia {
-            gap: 8px;
-            .socialMediaImg{
-                width: 82px;
+
+            .socialMediaImg {
+                width: 48px;
             }
         }
     }
@@ -371,7 +400,7 @@ main {
     align-items: center;
     flex-direction: column;
     gap: 16px;
-    padding: 16px;
+    padding: 16px 0 16px 0;
 
     p, a {
         color: var(--buttonTextColor);
@@ -392,7 +421,8 @@ main {
 
 .articleHeader {
     margin: var(--contentMargin);
-    padding: 32px 160px 0 160px;
+    padding: var(--articleHeaderPadding);
+
     h1 {
         font-weight: bold;
         padding-bottom: 16px;
@@ -405,14 +435,36 @@ main {
     }
 }
 
+@media(max-width: 1020px) {
+    .articleHeader {
+        padding: 32px 80px 0 80px;
+
+        h1 {
+            font-size: 36px;
+        }
+    }
+}
+
+@media(max-width: 620px) {
+    .articleHeader {
+        padding: 32px 24px 0 24px;
+
+        h1 {
+            font-size: 24px;
+        }
+    }
+}
+
 .recipeProperties {
     padding: 32px 0 64px 0;
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
     border-bottom: 2px solid var(--backgroundSectionOtherRecipes);
 
     .recipePropertyFigure {
         display: flex;
+        max-width: fit-content;
         border-radius: var(--imageBorderRadius);
         padding: 8px 4px;
         gap: 10px;
@@ -420,7 +472,9 @@ main {
     }
 }
 
+
 .ingredientAmount {
+    display: flex;
     margin: var(--contentMargin);
     padding: 8px 160px 16px 160px;
 
@@ -436,14 +490,35 @@ main {
         height: 32px;
     }
 
+    .numberInput:focus-visible {
+        outline: none;  
+    }
+
     button {
         height: 32px;
     }
+}
 
-    #error {
-        display: flex;
-        color: red;
-        padding-top: 8px;
+#error {
+    margin: var(--contentMargin);
+    display: flex;
+    color: red;
+    padding: 0 160px 0 160px;
+}
+
+.borderError {
+    border: 2px solid red;
+}
+
+@media(max-width: 1020px) {
+    .ingredientAmount {
+        padding: 8px 80px 16px 80px;
+    }
+}
+
+@media(max-width: 620px) {
+    .ingredientAmount {
+        padding: 8px 24px 16px 24px;
     }
 }
 
@@ -454,6 +529,18 @@ input:invalid {
 .recipeIngredients {
     padding: 0 160px;
     margin: var(--contentMargin);
+}
+
+@media(max-width: 1020px) {
+    .recipeIngredients {
+        padding: 0 80px;
+    }
+}
+
+@media(max-width: 620px) {
+    .recipeIngredients {
+        padding: 0 24px;
+    }
 }
 
 .ingredientTable {
@@ -476,11 +563,13 @@ input:invalid {
 
     .preparationContainer {
         display: flex;
+        flex-wrap: wrap;
         gap: 16px;
     }
 
     .recipePreparationFigure {
         display: flex;
+        max-width: fit-content;
         gap: 10px;
         background-color: var(--backgroundSectionOtherRecipes);
         padding: 8px 4px;
@@ -489,6 +578,18 @@ input:invalid {
 
     p {
         padding-top: 16px;
+    }
+}
+
+@media(max-width: 1020px) {
+    .recipePreparation {
+        padding: 16px 80px;
+    }
+}
+
+@media(max-width: 620px) {
+    .recipePreparation {
+        padding: 16px 24px;
     }
 }
 
@@ -509,6 +610,18 @@ input:invalid {
         figcaption {
             font-size: 24px;
         }
+    }
+}
+
+@media(max-width: 1020px) {
+    .articleFooter {
+        padding: 32px 80px;
+    }
+}
+
+@media(max-width: 620px) {
+    .articleFooter {
+        padding: 32px 24px;
     }
 }
 
