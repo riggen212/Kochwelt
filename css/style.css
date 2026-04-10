@@ -18,6 +18,10 @@
     --articleHeaderPadding: 32px 160px 0 160px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: var(--font);
     margin: 0;
@@ -212,9 +216,13 @@ main {
     padding: 32px 160px;
     gap: 16px;
 
+    .figureRecipeOfDay {
+        display: flex;
+    }
+
     .recipeImage {
         object-fit: cover;
-        width: 600px;
+        width: clamp(15vw, 30vw, 42vw);
     }
 
     .recipeDescpription {
@@ -222,8 +230,12 @@ main {
         flex-direction: column;
 
         p {
-            flex: 0.7;
+            padding-bottom: 16px;
         }
+    }
+
+    .btnRecipeOfDay {
+        margin-top: auto;
     }
 }
 
@@ -244,8 +256,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: var(--contentMargin);
-    padding: 32px 160px;
+    padding: 32px 0 32px 0;
     background-color: var(--backgroundSectionOtherRecipes);
 
     h2 {
@@ -256,6 +267,8 @@ main {
 
 .otherRecipesDisplay {
     width: 100%;
+    margin: var(--contentMargin);
+    padding: 0 160px 0 160px;
     display: flex;
     justify-content: space-between;
     
