@@ -503,11 +503,8 @@ input:invalid {
 }
 
 /* recipe.html ALEKS */
-
 .recipe-page {
-    margin: 0 auto;
     padding: 32px 160px 0 160px;
-    max-width: 1440px;
 }
 
 h1 {
@@ -520,7 +517,7 @@ h1 {
     object-fit: cover;
     border-radius: 10px;
     display: block;
-    margin: 0 auto;
+    margin: o auto;
 }
 
 
@@ -551,27 +548,13 @@ h1 {
 .portion-box {
     display: flex;
     align-items: center;
-    gap: 0;
+    gap: 10px;
     margin: 20px 0;
 }
 
-.portion-box label {
-    margin-right: 12px;
-    white-space: nowrap;
-}
-
 .portion-box input {
-    width: 140px;
-    height: 32px;
-    padding: 5px 10px;
-    box-sizing: border-box;
-    border: 1px solid #d8d8d8;
-    border-right: none;
-}
-
-.portion-box button {
-    height: 32px;
-    padding: 0 20px;
+    width: 100px;
+    padding: 5px;
 }
 
 .ingredients {
@@ -868,11 +851,9 @@ textarea {
     resize: vertical;
 }
 
-/* thankyou.html*/
 
-.thankyouStyle {
-    text-align: center;
-    padding: 100px 0;
+.submit-btn:hover {
+    background: #006d00;
 }
 
 
