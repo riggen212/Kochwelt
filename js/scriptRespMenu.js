@@ -1,32 +1,12 @@
-const navbarRef = document.getElementById("navBar");
-const openButton = document.getElementById("btnOpenSidebar");
-const media = window.matchMedia("(width < 1020px)");
-
-media.addEventListener("change", (e) => updateNavbar(e));
-
 function openSidebar() {
-    navbarRef.classList.add("show");
-    navbarRef.removeAttribute("inert");
-    openButton.setAttribute("aria-expanded", "true");
+    const navbarRef = document.getElementById("navBar");
 
+    navbarRef.classList.add("show");
+    console.log("Sidebar opened");
 }
 
 function closeSidebar() {
+    const navbarRef = document.getElementById("navBar");
     navbarRef.classList.remove("show");
-    navbarRef.setAttribute("inert", "");
-    openButton.setAttribute("aria-expanded", "false");
+    console.log("Sidebar closed");
 }
-
-function updateNavbar(e) {
-    const isMobile = e.matches;
-
-    if(isMobile) {
-        navbarRef.setAttribute("inert", "");
-    }
-    else {
-        navbarRef.removeAttribute("inert");
-    }
-    console.log(isMobile);
-}
-
-updateNavbar(media)
