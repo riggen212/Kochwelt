@@ -551,6 +551,10 @@ main {
     }
 }
 
+.calendarImage {
+    border-radius: 0px;
+}
+
 
 .ingredientAmount {
     display: flex;

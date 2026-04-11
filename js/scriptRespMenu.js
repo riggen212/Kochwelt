@@ -27,5 +27,3 @@ function updateNavbar(e) {
         navbarRef.removeAttribute("inert");
     }
 }
-
-updateNavbar(media)
