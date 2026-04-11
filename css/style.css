@@ -630,12 +630,13 @@ input:invalid {
     width: 100%;
     padding: 32px 0 32px 0;
 
-    td {
+    li {
+        list-style: none;
         padding: 8px 4px;
         border-radius: var(--imageBorderRadius);
     }
 
-    tr:nth-child(even) {
+    li:nth-child(even) {
         background-color: var(--backgroundSectionOtherRecipes);
     }
 }
