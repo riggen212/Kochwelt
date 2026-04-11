@@ -1006,13 +1006,14 @@ hr {
     background: #dcdcdc;
     border-radius: 18px;
     padding: 48px;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+    border: 1px solid var(--navHoverColor);
+    box-shadow: 0 12px 35px rgba(14, 169, 14, 0.25);
     /* backdrop-filter: blur(4px); */
 }
 
- h1 {
-    font-size: 48px;
-    margin-bottom: 16px;
+.contact-card h1 {
+    font-size: 28px;
+    line-height: 1.2;
 }
 
 .contact-text {
@@ -1083,9 +1084,34 @@ textarea {
 /* thankyou.html*/
 
 .thankyouStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 100px 0;
+    padding: 100px 24px;
 }
+
+.thankyou-card {
+    max-width: 560px;
+    width: 100%;
+    background: #dcdcdc;
+    border: 1px solid var(--navHoverColor);
+    border-radius: 18px;
+    padding: 48px;
+    box-shadow: 0 12px 35px rgba(14, 169, 14, 0.25);
+}
+
+.thankyou-card h1 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.thankyou-card p {
+    margin-bottom: 24px;
+}
+
+
 
 
 /* @media (max-width: 1130px) {
@@ -1387,7 +1413,7 @@ textarea {
     }
 
     .contact-card h1 {
-        font-size: 40px;
+        font-size: 30px;
     }
 }
 @media (max-width: 620px) {
@@ -1402,7 +1428,7 @@ textarea {
     }
 
     .contact-card h1 {
-        font-size: 32px;
+        font-size: 25px;
         margin-bottom: 16px;
     }
 
@@ -1426,7 +1452,7 @@ textarea {
     }
 
     .contact-card h1 {
-        font-size: 26px;
+        font-size: 19px;
         margin-bottom: 12px;
     }
 
