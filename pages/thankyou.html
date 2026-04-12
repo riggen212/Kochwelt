@@ -10,21 +10,34 @@
     <header class="mainHeader">
         <div class="contentRestrain headerContent">
             <figure class="fig">
-                <a href="./index.html">
+                <a href="../index.html">
                     <img class="logoCookingHat" src="../assets/img/logo_small.png" alt="Logo of a cooking hat">
                 </a>
                 <span>Kochwelt</span>
             </figure>
-            <nav class="navBar">
+
+            <button class="sidebarOpenBtn" id="btnOpenSidebar" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navBar">
+                <img class="svgIcon" src="../assets/img/hamburgerMenu.svg" alt="three dashes">
+            </button>
+
+            <nav id="navBar">
                 <ul>
-                    <li><a class="navLink" href="./index.html">Start</a></li>
-                    <li><a class="navLink" href="./pages/recipe_fabian.html">Rezept des Tages</a></li>
-                    <li><a class="navLink" href="./pages/contact.html">Kontakt</a></li>
-                    <li><a class="navLink" href="./pages/impressum.html">Impressum</a></li>
+                    <li>
+                        <button id="btnCloseSidebar" class="sidebarCloseBtn" onclick="closeSidebar()" aria-label="close sidebar">
+                            <img class="svgIcon" src="../assets/img/closeX.svg" alt="x-icon">
+                        </button>
+                    </li>
+                    <li><a class="navLink" href="../index.html">Start</a></li>
+                    <li><a class="navLink" aria-current="page" href="./recipe_fabian.html">Rezept des Tages</a></li>
+                    <li><a class="navLink" href="./contact.html">Kontakt</a></li>
+                    <li><a class="navLink" href="./impressum.html">Impressum</a></li>
                 </ul>
             </nav>
+
+            <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
         </div>
    </header>
+
     <main class="thankyouStyle">
             <div class="thankyou-card">
                 <h1>Danke für deine Nachricht!</h1>
@@ -35,31 +48,36 @@
                 </a>
         </div>
     </main>
-    <footer class="mainFooter">
+    
+   <footer class="mainFooter">
         <div class="contentRestrain footerContent">
-            <figure class="footerLogo">
-                <img class="logoCookingHat" src="../assets/img/logo_small_white.png" alt="Logo of a cooking hat">
-                <span>Kochwelt</span>
-            </figure>
-
+            <div class="logoAndLegal">
+                <figure class="footerLogo">
+                    <img class="logoCookingHat" src="../assets/img/logo_small_white.png" alt="Logo of a cooking hat">
+                    <span>Kochwelt</span>
+                </figure>
+    
+                <div class="legalContainer">
+                    <p>&copy; 2026 Kochwelt. Alle Rechte vorbehalten.</p>
+                    <a href="../pages/impressum.html">Impressum</a>
+                    <a href="../pages/privacy_policy.html">Datenschutzerklärung</a>
+                </div>
+            </div>
+            
             <div class="socialMedia">
                 <a href="https://www.facebook.com/?locale=de_DE" target="_blank">
-                    <img class="socialMediaImg" src="../assets/img/facebook.svg" alt="Facebook Logo">
+                    <img class="socialMediaImg" src="../assets/img/facebook(small).svg" alt="Facebook Logo">
                 </a>
                 <a href="https://www.instagram.com/" target="_blank">
-                    <img class="socialMediaImg" src="../assets/img/instagram.svg" alt="Instagram Logo">
+                    <img class="socialMediaImg" src="../assets/img/instagram(small).svg" alt="Instagram Logo">
                 </a>
                 <a href="https://x.com/" target="_blank">
-                    <img class="socialMediaImg" src="../assets/img/twitter.svg" alt="Twitter Logo">
+                    <img  class="socialMediaImg" src="../assets/img/x(small).svg" alt="Twitter Logo">
                 </a>
             </div>
         </div>
-
-        <div class="legalContainer">
-            <p>&copy; 2026 Kochwelt. Alle Rechte vorbehalten.</p>
-            <a href="./impressum.html">Impressum</a>
-            <a href="./privacy_policy.html">Datenschutzerklärung</a>
-        </div>
    </footer>
+
+    <script src="../js/scriptRespMenu.js"></script>
 </body>
 </html>

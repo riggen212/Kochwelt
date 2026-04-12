@@ -1,18 +1,3 @@
-:root {
-    --navHover: #008000;
-    --footerColor: #403B3B;
-    --backgroundSectionOtherRecipes: #EFEFEF;
-}
-
-body {
-    font-family: "Raleway", sans-serif;
-    line-height: 1.6;
-    color: #403B3B;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
 .headerimage {
     width: 100%;
     height: 300px;
@@ -110,45 +95,7 @@ body {
     object-fit: cover;
 }
 
-.impressumDiv {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 30px;
-}
-
-.impressumDiv h2 {
-    margin-top: 0;
-}
-
-.impressumDiv p {
-    margin: 10px 0;
-}
-
-.impressumDiv a {
-    color: #008000;
-    text-decoration: none;
-}
-
-.impressumDiv a:hover {
-    text-decoration: underline;
-}
-
-main {
-    min-height: 61vh !important;
-}
-
-
-@media (max-width: 1130px) {
-    body {
-        padding: 20px 80px;
-    }
-}
-
 @media (max-width: 840px) {
-    body {
-        padding: 20px 24px;
-    }
 
     .preperation, .zeitangaben {
         flex-wrap: wrap; 

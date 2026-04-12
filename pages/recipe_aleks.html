@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../assets/img/logo_small.png" type="image/x-icon">
-    <title>Rezept des Tages | Kochwelt</title>
+    <title>Rezept Aleks</title>
 </head>
+
 <body>
     <header class="mainHeader">
         <div class="contentRestrain headerContent">
@@ -29,47 +31,50 @@
                         </button>
                     </li>
                     <li><a class="navLink" href="../index.html">Start</a></li>
-                    <li><a class="navLink active" href="./recipe_fabian.html">Rezept des Tages</a></li>
+                    <li><a class="navLink" href="./recipe_fabian.html">Rezept des Tages</a></li>
                     <li><a class="navLink" href="./contact.html">Kontakt</a></li>
                     <li><a class="navLink" href="./impressum.html">Impressum</a></li>
                 </ul>
             </nav>
-        </div>
-   </header>
-    <main class="recipe-page-aleks">
-        <section class="contentRestrain">
-        <h1> Spaghetti Bolognese</h1>
-        <!-- Hier Bild später ändern -->
-        <img class="recipe-img" src="../assets/img/spaghetti.jpg" alt=""> 
-        </section>
-        <section class="recipe-info contentRestrain">
 
-            <ul class="info-list">
+            <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+        </div>
+    </header>
+
+    <main class="recipePageAleks">
+        <section class="contentRestrain">
+            <h1>Spaghetti Bolognese</h1>
+            <img class="recipeImg" src="../assets/img/spaghetti.jpg" alt="">
+        </section>
+
+        <section class="recipeInfo contentRestrain">
+            <ul class="infoList">
                 <li>
-                    <img src="../assets/img/icons/clock_regular.svg" alt="">
+                    <img class="recipePropertyImage"
+                        src="../assets/img/icons/clock_regular.svg" alt="">
                     <span>30 Min.</span>
                 </li>
-
                 <li>
-                    <img src="../assets/img/icons/brain_solid.svg" alt="">
+                    <img class="recipePropertyImage"
+                        src="../assets/img/icons/brain_solid.svg" alt="">
                     <span>mittel</span>
-                </li>     
-
+                </li>
                 <li>
-                    <img src="../assets/img/icons/calendar_alt_regular.svg" alt="">
+                    <img class="recipePropertyImage"
+                        src="../assets/img/icons/calendar_alt_regular.svg" alt="">
                     <span>17.03.2026</span>
-                </li>    
+                </li>
             </ul>
-
         </section>
 
-        <section class="ingredients-section contentRestrain">
-
-            <div class="portion-box">
-                <label for="portion">Zutaten für</label>
-                <input id="portion" type="number" min="1" max="10" value="4">
-                <button class="btn" onclick="calculate()">Portionen</button>
-            </div>
+        <section class="contentRestrain">
+            <form class="portionCalculation">
+                <label for="portion">
+                    Zutaten für
+                    <input id="portion" class="numberInput" type="number" min="1" max="10" value="4">
+                    <button class="btn" type="button" onclick="calculate()">Portionen</button>
+                </label>
+            </form>
 
             <ul class="ingredients">
                 <li><span id="spaghetti">400</span> g Spaghetti</li>
@@ -82,18 +87,18 @@
             </ul>
         </section>
 
-        <section class="preparation-section contentRestrain">
+        <section class="preparationSection contentRestrain">
             <h2>Zubereitung</h2>
 
-            <ul class="preparation-info">
+            <ul class="preparationInfo">
 
-                <li class="info-item">
-                    <img src="../assets/img/icons/clock_regular.svg" alt="">
+                <li class="infoItem">
+                    <img class="recipePropertyImage" src="../assets/img/icons/clock_regular.svg" alt="">
                     <span>ca. 30 Minuten</span>
                 </li>
 
-                <li class="info-item">
-                    <img src="../assets/img/icons/clock_regular.svg" alt="">
+                <li class="infoItem">
+                    <img class="recipePropertyImage" src="../assets/img/icons/clock_regular.svg" alt="">
                     <span>Gesamtzeit ca. 30 Minuten</span>
                 </li>
 
@@ -111,44 +116,47 @@
 
         </section>
 
-        <section class="author-section contentRestrain">
+        <section class="authorSection contentRestrain">
 
             <h3>Rezept erstellt von</h3>
 
-            <div class="author-box">
-                <img class="author-img" src="../assets/img/aleks.jpg" alt="Picture of the Author">
+            <div class="authorBox">
+                <img class="authorImg" src="../assets/img/aleks.jpg" alt="Picture of the Author">
                 <span class="authorName">Aleks</span>
             </div>
         </section>
-
     </main>
-   <footer class="mainFooter">
-        <div class="contentRestrain footerContent">
-            <figure class="footerLogo">
-                <img class="logoCookingHat" src="../assets/img/logo_small_white.png" alt="Logo of a cooking hat">
-                <span>Kochwelt</span>
-            </figure>
 
-            <div class="legalContainer">
-                <p>&copy; 2026 Kochwelt. Alle Rechte vorbehalten.</p>
-                <a href="./impressum.html">Impressum</a>
-                <a href="./privacy_policy.html">Datenschutzerklärung</a>
+    <footer class="mainFooter">
+        <div class="contentRestrain footerContent">
+            <div class="logoAndLegal">
+                <figure class="footerLogo">
+                    <img class="logoCookingHat" src="../assets/img/logo_small_white.png" alt="Logo of a cooking hat">
+                    <span>Kochwelt</span>
+                </figure>
+
+                <div class="legalContainer">
+                    <p>&copy; 2026 Kochwelt. Alle Rechte vorbehalten.</p>
+                    <a href="../pages/impressum.html">Impressum</a>
+                    <a href="../pages/privacy_policy.html">Datenschutzerklärung</a>
+                </div>
             </div>
-            
+
             <div class="socialMedia">
                 <a href="https://www.facebook.com/?locale=de_DE" target="_blank">
-                    <img class="socialMediaImg" src="../assets/img/facebook.svg" alt="Facebook Logo">
+                    <img class="socialMediaImg" src="../assets/img/facebook(small).svg" alt="Facebook Logo">
                 </a>
                 <a href="https://www.instagram.com/" target="_blank">
-                    <img class="socialMediaImg" src="../assets/img/instagram.svg" alt="Instagram Logo">
+                    <img class="socialMediaImg" src="../assets/img/instagram(small).svg" alt="Instagram Logo">
                 </a>
                 <a href="https://x.com/" target="_blank">
-                    <img class="socialMediaImg" src="../assets/img/twitter.svg" alt="Twitter Logo">
+                    <img class="socialMediaImg" src="../assets/img/x(small).svg" alt="Twitter Logo">
                 </a>
             </div>
         </div>
     </footer>
-   <script src="../js/script_aleks.js"></script>
+    <script src="../js/script_aleks.js"></script>
     <script src="../js/scriptRespMenu.js"></script>
 </body>
+
 </html>
