@@ -364,7 +364,7 @@ main {
 .ingredientAmount {
     display: flex;
     margin: var(--contentMargin);
-    padding: 8px 160px 16px 160px;
+    padding: 32px 160px 16px 160px;
 
     label {
         display: flex;
@@ -381,10 +381,8 @@ main {
 }
 
 #error {
-    margin: var(--contentMargin);
-    display: flex;
     color: red;
-    padding: 0 160px 0 160px;
+    padding-left: 160px;
 }
 
 .borderError {
@@ -615,8 +613,9 @@ input:invalid {
 }
 
 #errorMessage{
+    height: 19px;
+    padding-top: 16px;
     color: red;
-    padding: 0 0 0 80px;
 }
 
 hr {
@@ -632,7 +631,7 @@ hr {
     .ingredientsCalculation {
         display: flex;
         align-items: center;
-        margin-top: 8px;
+        margin-top: 32px;
 
         input {
             height: 32px;
@@ -1061,6 +1060,10 @@ textarea {
     .contactPage {
         padding: 0 80px;
     }
+
+    #error {
+        padding-left: 80px;
+    }
 }
 
 @media(max-width: 920px) {
@@ -1240,6 +1243,11 @@ textarea {
 
     .contactPerson figcaption {
     font-size: 20px;
+    }
+
+    #error {
+        display: flex;
+        padding-left: 24px;
     }
 }
 

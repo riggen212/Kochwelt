@@ -64,12 +64,13 @@
             </aside>
             <hr>
             <section class="contentRestrain recipeData">
-                <div class="ingredientsCalculation">
+                <Form class="ingredientsCalculation">
                     <label for="">Zutaten für</label>
                     <input min="1" max="15" type="number" id="factor" value="1">
                     <button class="btn" onclick="inputValidation()" type="button">Portionen</button>
-                </div>
-                    <span aria-describedby="error" id="errorMessage"></span>
+                </form>
+                <span aria-describedby="error" id="errorMessage"></span>
+
                 <table id="ingredients">
                     <tr>
                         <td><span id="calculated">1</span> große Rinderroulade (aus der Oberschale, ca. 180-200g)</td>

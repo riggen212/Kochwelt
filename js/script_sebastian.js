@@ -11,7 +11,7 @@ function inputValidation() {
     const FACTOR = document.getElementById(`factor`).valueAsNumber;
 
     if (FACTOR < 1 || FACTOR > 15 || isNaN(FACTOR)) {
-        errormessage.textContent = "Dies ist keine gültige Eingabe. Bitte geben Sie eine Zahl zwischen 1 und 15 ein.";
+        errormessage.textContent = "Bitte geben Sie eine Zahl zwischen 1 und 10 ein.";
     }
     else {
         errormessage.textContent = "";
