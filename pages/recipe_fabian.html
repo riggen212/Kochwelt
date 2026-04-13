@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="shortcut icon" href="../assets/img/logo_small.png" type="image/x-icon">
     <title>Rezept Fabian</title>
 </head>
+
 <body>
     <header class="mainHeader">
         <div class="contentRestrain headerContent">
@@ -17,19 +19,22 @@
                 <span>Kochwelt</span>
             </figure>
 
-            <button class="sidebarOpenBtn" id="btnOpenSidebar" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navBar">
+            <button class="sidebarOpenBtn" id="btnOpenSidebar" onclick="openSidebar()" aria-label="open sidebar"
+                aria-expanded="false" aria-controls="navBar">
                 <img class="svgIcon" src="../assets/img/hamburgerMenu.svg" alt="three dashes">
             </button>
 
             <nav id="navBar">
                 <ul>
                     <li>
-                        <button id="btnCloseSidebar" class="sidebarCloseBtn" onclick="closeSidebar()" aria-label="close sidebar">
+                        <button id="btnCloseSidebar" class="sidebarCloseBtn" onclick="closeSidebar()"
+                            aria-label="close sidebar">
                             <img class="svgIcon" src="../assets/img/closeX.svg" alt="x-icon">
                         </button>
                     </li>
                     <li><a class="navLink" href="../index.html">Start</a></li>
-                    <li><a class="navLink active" aria-current="page" href="./recipe_fabian.html">Rezept des Tages</a></li>
+                    <li><a class="navLink active" aria-current="page" href="./recipe_fabian.html">Rezept des Tages</a>
+                    </li>
                     <li><a class="navLink" href="./contact.html">Kontakt</a></li>
                     <li><a class="navLink" href="./impressum.html">Impressum</a></li>
                 </ul>
@@ -37,7 +42,7 @@
 
             <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
         </div>
-   </header>
+    </header>
 
     <main>
         <article>
@@ -46,19 +51,22 @@
                 <img class="recipeImage" src="../assets/img/chili_con_carne.jpg" alt="Image of chili con carne">
                 <section class="recipeProperties contentRestrain">
                     <figure class="recipePropertyFigure">
-                        <img class="recipePropertyImage" src="../assets/img/icons/clock_regular.svg" alt="An image of a regular clock">
+                        <img class="recipePropertyImage" src="../assets/img/icons/clock_regular.svg"
+                            alt="An image of a regular clock">
                         <figcaption>
                             30 Min.
                         </figcaption>
                     </figure>
                     <figure class="recipePropertyFigure">
-                        <img class="recipePropertyImage" src="../assets/img/icons/brain_solid.svg" alt="Image of a brain">
+                        <img class="recipePropertyImage" src="../assets/img/icons/brain_solid.svg"
+                            alt="Image of a brain">
                         <figcaption>
-                            simpel
+                            einfach
                         </figcaption>
                     </figure>
                     <figure class="recipePropertyFigure">
-                        <img class="recipePropertyImage calendarImage" src="../assets/img/icons/calendar_alt_regular.svg" alt="Image of a calendar">
+                        <img class="recipePropertyImage"
+                            src="../assets/img/icons/calendar_alt_regular.svg" alt="Image of a calendar">
                         <figcaption>
                             17.03.2026
                         </figcaption>
@@ -70,7 +78,8 @@
             <form class="ingredientAmount contentRestrain">
                 <label for="inputAmount">
                     Zutaten für
-                    <input id="inputAmount" class="numberInput" type="number" name="portions" placeholder="4" min ="1" max="10">
+                    <input id="inputAmount" class="numberInput" type="number" name="portions" placeholder="4" min="1"
+                        max="10">
                     <button class="btn" type="button" onclick="determinePortion()">Portionen</button>
                 </label>
             </form>
@@ -180,26 +189,31 @@
                 <h2>Zubereitung</h2>
                 <div class="preparationContainer">
                     <figure class="recipePreparationFigure">
-                        <img class="recipePropertyImage" src="../assets/img/icons/clock_regular.svg" alt="An image of a regular clock">
+                        <img class="recipePropertyImage" src="../assets/img/icons/clock_regular.svg"
+                            alt="An image of a regular clock">
                         <figcaption>
                             ca. 10 Minuten
                         </figcaption>
                     </figure>
                     <figure class="recipePreparationFigure">
-                            <img class="recipePropertyImage" src="../assets/img/icons/clock_regular.svg" alt="An image of a regular clock">   
+                        <img class="recipePropertyImage" src="../assets/img/icons/clock_regular.svg"
+                            alt="An image of a regular clock">
                         <figcaption>
                             Gesamtzeit: ca. 30 Minuten
                         </figcaption>
                     </figure>
                 </div>
                 <p>
-                    Die Zwiebeln und den Knoblauch klein hacken, die Paprika würfeln und die Kidneybohnen und den Mais abtropfen lassen.
+                    Die Zwiebeln und den Knoblauch klein hacken, die Paprika würfeln und die Kidneybohnen und den Mais
+                    abtropfen lassen.
                     Das Öl in der Pfanne erhitzen und das Hackfleich darin anbraten lassen.
-                    Die Zwiebeln und den Knoblauch hinzufügen und mit anbraten. Das Tomatenmark unterheben und kurz mit anbraten lassen. 
-                    Die Rinderbrühe, die gehackten Tomaten, die Paprika, die Kidnebohnen, den Mais und die Gewürze zugeben.
+                    Die Zwiebeln und den Knoblauch hinzufügen und mit anbraten. Das Tomatenmark unterheben und kurz mit
+                    anbraten lassen.
+                    Die Rinderbrühe, die gehackten Tomaten, die Paprika, die Kidnebohnen, den Mais und die Gewürze
+                    zugeben.
                     Das Gericht bei mittlerer Hitze ca. 20 Minuten köcheln lassen.
                     Das ganze mit Salz und Pfeffer abschmecken und servieren.
-                
+
                 </p>
             </section>
             <footer class="articleFooter contentRestrain">
@@ -214,21 +228,21 @@
         </article>
     </main>
 
-   <footer class="mainFooter">
+    <footer class="mainFooter">
         <div class="contentRestrain footerContent">
             <div class="logoAndLegal">
                 <figure class="footerLogo">
                     <img class="logoCookingHat" src="../assets/img/logo_small_white.png" alt="Logo of a cooking hat">
                     <span>Kochwelt</span>
                 </figure>
-    
+
                 <div class="legalContainer">
                     <p>&copy; 2026 Kochwelt. Alle Rechte vorbehalten.</p>
                     <a href="../pages/impressum.html">Impressum</a>
                     <a href="../pages/privacy_policy.html">Datenschutzerklärung</a>
                 </div>
             </div>
-            
+
             <div class="socialMedia">
                 <a href="https://www.facebook.com/?locale=de_DE" target="_blank">
                     <img class="socialMediaImg" src="../assets/img/facebook(small).svg" alt="Facebook Logo">
@@ -237,12 +251,14 @@
                     <img class="socialMediaImg" src="../assets/img/instagram(small).svg" alt="Instagram Logo">
                 </a>
                 <a href="https://x.com/" target="_blank">
-                    <img  class="socialMediaImg" src="../assets/img/x(small).svg" alt="Twitter Logo">
+                    <img class="socialMediaImg" src="../assets/img/x(small).svg" alt="Twitter Logo">
                 </a>
             </div>
         </div>
-   </footer>
-   <script src="../js/script_fabian.js"></script>
+    </footer>
+
+    <script src="../js/script_fabian.js"></script>
     <script src="../js/scriptRespMenu.js"></script>
 </body>
+
 </html>

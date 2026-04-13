@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
 </head>
 
 <body>
-   <header class="mainHeader">
+    <header class="mainHeader">
         <div class="contentRestrain headerContent">
             <figure class="fig">
                 <a href="../index.html">
@@ -17,24 +17,38 @@
                 </a>
                 <span>Kochwelt</span>
             </figure>
-            <nav class="navBar">
-                <ul class="listUl">
+
+            <button class="sidebarOpenBtn" id="btnOpenSidebar" onclick="openSidebar()" aria-label="open sidebar"
+                aria-expanded="false" aria-controls="navBar">
+                <img class="svgIcon" src="../assets/img/hamburgerMenu.svg" alt="three dashes">
+            </button>
+
+            <nav id="navBar">
+                <ul>
+                    <li>
+                        <button id="btnCloseSidebar" class="sidebarCloseBtn" onclick="closeSidebar()"
+                            aria-label="close sidebar">
+                            <img class="svgIcon" src="../assets/img/closeX.svg" alt="x-icon">
+                        </button>
+                    </li>
                     <li><a class="navLink" href="../index.html">Start</a></li>
-                    <li><a class="navLink " href="./recipe_fabian.html">Rezept des Tages</a></li>
+                    <li><a class="navLink" href="./recipe_fabian.html">Rezept des Tages</a></li>
                     <li><a class="navLink" href="./contact.html">Kontakt</a></li>
                     <li><a class="navLink" href="./impressum.html">Impressum</a></li>
                 </ul>
             </nav>
+
+            <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
         </div>
     </header>
 
     <main>
         <article class="contentRestrain policyContent">
             <section>
-                <h1 class="policeContentHighline">Datenschutzerklärung</h1>
+                <h1>Datenschutzerklärung</h1>
                 <p>Mit der folgenden Datenschutzerklärung möchten wir Sie darüber aufklären, welche Arten Ihrer personenbezogenen Daten (nachfolgend auch kurz als "Daten" bezeichnet) wir zu welchen Zwecken und in welchem Umfang verarbeiten. Die Datenschutzerklärung gilt für alle von uns durchgeführten Verarbeitungen personenbezogener Daten, sowohl im Rahmen der Erbringung unserer Leistungen als auch insbesondere auf unseren Webseiten, in mobilen Applikationen sowie innerhalb externer Onlinepräsenzen, wie z. B. unserer Social-Media-Profile (nachfolgend zusammenfassend bezeichnet als "Onlineangebot").
                     Die verwendeten Begriffe sind nicht geschlechtsspezifisch.</p>
-                <p>Stand: 22. März 2026</p>
+                <p>Stand: 12. April 2026</p>
             </section>
 
             <nav>
@@ -55,10 +69,10 @@
             <section>
                 <h2 class="sectionHighlinePolicy" id="m3">Verantwortlicher</h2>
                 <p>Sebastian Stock<br>
-                    Schönhagen<br>
                     Alte Dorfstraß 18<br>
-                    37318 Uder</p>
-                    <p>E-Mail-Adresse: <a href="mailto:basti212@gmx.de">basti212@gmx.de</a></p>
+                    37318 Uder OT Schönhagen
+                </p>
+                <p>E-Mail-Adresse: <a href="mailto:basti212@gmx.de">basti212@gmx.de</a></p>
             </section>
 
             <article>
@@ -188,38 +202,38 @@
                             <li><strong>Verarbeitung:</strong> "Verarbeitung" ist jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführte Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten. Der Begriff reicht weit und umfasst praktisch jeden Umgang mit Daten, sei es das Erheben, das Auswerten, das Speichern, das Übermitteln oder das Löschen. </li>
                         </ul>
             </article>
-
-            <aside>
-                <p class="pageAnker"><a href="https://datenschutz-generator.de/" title="Rechtstext von Dr. Schwenke - für weitere Informationen bitte anklicken." target="_blank" rel="noopener noreferrer nofollow">Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas Schwenke</a></p>
-            </aside>
         </article>
     </main>
 
-   <footer class="mainFooter">
+    <footer class="mainFooter">
         <div class="contentRestrain footerContent">
-            <figure class="footerLogo">
-                <img class="logoCookingHat" src="../assets/img/logo_small_white.png" alt="Logo of a cooking hat">
-                <span>Kochwelt</span>
-            </figure>
+            <div class="logoAndLegal">
+                <figure class="footerLogo">
+                    <img class="logoCookingHat" src="../assets/img/logo_small_white.png" alt="Logo of a cooking hat">
+                    <span>Kochwelt</span>
+                </figure>
 
-            <div class="legalContainer">
-                <p>&copy; 2026 Kochwelt. Alle Rechte vorbehalten.</p>
-                <a href="./impressum.html">Impressum</a>
-                <a href="../index.html">Hauptseite</a>
+                <div class="legalContainer">
+                    <p>&copy; 2026 Kochwelt. Alle Rechte vorbehalten.</p>
+                    <a href="../pages/impressum.html">Impressum</a>
+                    <a href="../pages/privacy_policy.html">Datenschutzerklärung</a>
+                </div>
             </div>
 
             <div class="socialMedia">
                 <a href="https://www.facebook.com/?locale=de_DE" target="_blank">
-                    <img class="socialMediaImg" src="../assets/img/facebook.svg" alt="Facebook Logo">
+                    <img class="socialMediaImg" src="../assets/img/facebook(small).svg" alt="Facebook Logo">
                 </a>
                 <a href="https://www.instagram.com/" target="_blank">
-                    <img class="socialMediaImg" src="../assets/img/instagram.svg" alt="Instagram Logo">
+                    <img class="socialMediaImg" src="../assets/img/instagram(small).svg" alt="Instagram Logo">
                 </a>
                 <a href="https://x.com/" target="_blank">
-                    <img class="socialMediaImg" src="../assets/img/twitter.svg" alt="Twitter Logo">
+                    <img class="socialMediaImg" src="../assets/img/x(small).svg" alt="Twitter Logo">
                 </a>
             </div>
         </div>
-   </footer>    
+    </footer>
+   
+   <script src="../js/scriptRespMenu.js"></script>
 </body>
 </html>
