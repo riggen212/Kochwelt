@@ -18,15 +18,15 @@
                 <span>Kochwelt</span>
             </figure>
 
-            <button class="sidebarOpenBtn" id="btnOpenSidebar" onclick="openSidebar()">
-                <img class="svgIcon" src="./assets/img/hamburgerMenu.svg" alt="three dashes">
+            <button class="sidebarOpenBtn" id="btnOpenSidebar" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navBar">
+                <img class="svgIcon" src="./assets/img/hamburgerMenu.svg" alt="open sidebar icon">
             </button>
 
             <nav id="navBar">
                 <ul>
                     <li>
-                        <button id="btnCloseSidebar" class="sidebarCloseBtn" onclick="closeSidebar()">
-                            <img class="svgIcon" src="./assets/img/closeX.svg" alt="x-icon">
+                        <button id="btnCloseSidebar" class="sidebarCloseBtn" onclick="closeSidebar()" aria-label="close sidebar">
+                            <img class="svgIcon" src="./assets/img/closeX.svg" alt="close sidebar icon">
                         </button>
                     </li>
                     <li><a class="navLink active" href="./index.html">Start</a></li>
@@ -41,14 +41,14 @@
    <main>
         <div>
             <section  class="contentRestrain recipe">
-                <figure>
+                <figure class="figureRecipeOfDay">
                     <img class="recipeImage" src="./assets/img/chili_con_carne.jpg" alt="Picture of chili con carne">
                 </figure>
                 <div class="recipeDescpription">
-                    <h2>Chili con Carne</h2>
+                    <h1 class="headline">Chili con Carne</h1>
                     <p>Dies ist ein würziges Eintopfgericht aus der Tex-Mex-Küche, das hauptsächlich aus Hackfleisch, Bohnen, Tomaten, Chili und Gewürzen besteht. Es ist herzhaft,
                         leicht scharf und wird oft langsam gekocht, damit sich die Aromen gut entfalten. Typische Gewürze sind Kreuzkümmel, Paprika und Knoblauch.</p>                    
-                    <button class="btn" onclick="window.location.href='pages/recipe_fabian.html';">Rezept öffnen</button>
+                    <button class="btn btnRecipeOfDay" onclick="window.location.href='pages/recipe_fabian.html';">Rezept öffnen</button>
                 </div>
             </section>
 
@@ -57,19 +57,19 @@
                 <section class="otherRecipes">
                     <h2>Lust auf was Neues?</h2>
                     <div class="otherRecipesDisplay contentRestrain">
-                        <figure>
+                        <figure class="figureOtherRecipes">
                             <a href="./pages/recipe_sebastian.html">
                                 <img src="./assets/img/beef_roulades.jpg" alt="Beef Roulades">
                             </a>
                             <figcaption>Rinderrouladen</figcaption>
                         </figure>
-                        <figure>
+                        <figure class="figureOtherRecipes">
                             <a href="./pages/recipe_aleks.html">
                                 <img src="./assets/img/spaghetti.jpg" alt="Spaghetti">
                             </a>
                             <figcaption>Spaghetti Bolognese</figcaption>
                         </figure>
-                        <figure>
+                        <figure class="figureOtherRecipes">
                             <a href="./pages/recipe_elias.html">
                                 <img src="./assets/img/croissant.jpg" alt="Salad">
                             </a>

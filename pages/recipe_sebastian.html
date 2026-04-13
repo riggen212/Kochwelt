@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rezept des Tages</title>
+    <title>Rezept Sebastian</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../assets/img/logo_small.png" type="image/x-icon">
     <script src="../js/script_sebastian.js" defer></script>
-    <script src="../js/scriptRespMenu.js" defer></script>
 </head>
-<body onload="getSpanElements()">
 
-   <header class="mainHeader">
+<body onload="getSpanElements()">
+    <header class="mainHeader">
         <div class="contentRestrain headerContent">
             <figure class="fig">
                 <a href="../index.html">
@@ -20,9 +19,10 @@
                 <span>Kochwelt</span>
             </figure>
 
-            <!-- <button class="sidebarOpenBtn" id="btnOpenSidebar" onclick="openSidebar()">
+            <button class="sidebarOpenBtn" id="btnOpenSidebar" onclick="openSidebar()" aria-label="open sidebar"
+                aria-expanded="false" aria-controls="navBar">
                 <img class="svgIcon" src="../assets/img/hamburgerMenu.svg" alt="three dashes">
-            </button> -->
+            </button>
             <!-- hamburger-menu -->
             <input type="checkbox" id="click">
             <label class="hamburger-menu" for="click">
@@ -33,19 +33,22 @@
 
             <nav id="navBar">
                 <ul>
-                    <!-- <li>
-                        <button id="btnCloseSidebar" class="sidebarCloseBtn" onclick="closeSidebar()">
+                    <li>
+                        <button id="btnCloseSidebar" class="sidebarCloseBtn" onclick="closeSidebar()"
+                            aria-label="close sidebar">
                             <img class="svgIcon" src="../assets/img/closeX.svg" alt="x-icon">
                         </button>
-                    </li> -->
+                    </li>
                     <li><a class="navLink" href="../index.html">Start</a></li>
-                    <li><a class="navLink active" href="./recipe_fabian.html">Rezept des Tages</a></li>
+                    <li><a class="navLink" href="./recipe_fabian.html">Rezept des Tages</a></li>
                     <li><a class="navLink" href="./contact.html">Kontakt</a></li>
                     <li><a class="navLink" href="./impressum.html">Impressum</a></li>
                 </ul>
             </nav>
+
+            <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
         </div>
-   </header>
+    </header>
 
    <main>
         <section class="contentRestrain recipeHeader">
@@ -67,14 +70,12 @@
             </aside>
             <hr>
             <section class="contentRestrain recipeData">
-                <form class="ingredientsCalculation">
-                    <label>Zutaten für
-                        <input min="1" max="10" type="number" id="factor" value="1">
-                        <button class="btn" onclick="inputValidation()" type="button">Portionen</button>
-                    </label>
-                </form>
-                <span id="errorMessage"></span>
-                
+                <div class="ingredientsCalculation">
+                    <label for="">Zutaten für</label>
+                    <input min="1" max="15" type="number" id="factor" value="1">
+                    <button class="btn" onclick="inputValidation()" type="button">Portionen</button>
+                </div>
+                    <span aria-describedby="error" id="errorMessage"></span>
                 <table id="ingredients">
                     <tr>
                         <td><span id="calculated">1</span> große Rinderroulade (aus der Oberschale, ca. 180-200g)</td>
@@ -132,36 +133,40 @@
                         <figcaption>Gesamtzeit: ca. 90-120 Minuten</figcaption>
                     </figure>
                 </div>
-                    <p>Als erstes die Roulade flachklopfen, salzen, pfeffern und mit Senf bestreichen. Danach Zwiebeln und Gurke in Streifen schneiden, anschließend mit Speck auf die Roulade geben,
-                        einrollen und mit Küchengarn oder Zahnstochern fixieren. Nun Butterschmalz in einem kleinen Topf erhitzen, Roulade rundherum scharf anbraten und herausnehmen.
-                        Jetzt kann das Gemüse gewürfelt werden und im Topf anrösten und das Tomatenmark kurz mitbraten. Mit Rotwein und Rinderfond ablöschen.
-                        Roulade zurück in den Topf geben und bei niedriger Hitze ca. 90 Minuten schmoren. Kartoffeln schälen und in Salzwasser ca. 20-25 Minuten kochen.
-                        Roulade herausnehmen. Die Soße durch ein Sieb passieren oder das Gemüse für eine sämigere Soße pürieren. Nach Belieben mit etwas Stärke binden und mit Salz/Pfeffer abschmecken.
-                    </p>
+                <p>Zuerst die Roulade flachklopfen, salzen, pfeffern und mit Senf bestreichen. Anschließend Zwiebeln und Gurken in feine Streifen schneiden
+                    und zusammen mit dem Speck auf der Roulade verteilen. Die Roulade sorgfältig einrollen und mit Küchengarn oder Zahnstochern fixieren,
+                    damit sie beim Braten ihre Form behält. In einem kleinen Topf Butterschmalz erhitzen und die Roulade darin rundherum scharf anbraten,
+                    sodass sie eine schöne goldbraune Kruste bekommt. Nach dem Anbraten die Roulade aus dem Topf nehmen und beiseite stellen.
+                    Im selben Topf das gewürfelte Gemüse anrösten, sodass es angenehme Röstaromen entwickelt. Das Tomatenmark kurz mitbraten, bis es etwas karamellisiert,
+                    und anschließend mit Rotwein und Rinderfond ablöschen. Die Roulade zurück in den Topf legen, mit der Flüssigkeit übergießen und alles bei niedriger Hitze
+                    etwa 90 Minuten schmoren lassen. In der Zwischenzeit die Kartoffeln schälen und in Salzwasser etwa 20-25 Minuten kochen, bis sie weich sind.
+                    Nach der Schmorzeit die Roulade vorsichtig aus dem Topf nehmen. Die Soße entweder durch ein Sieb passieren, um das Gemüse zu entfernen, oder für eine sämigere Konsistenz das Gemüse pürieren.
+                    Wer eine dickere Soße bevorzugt, kann diese nach Belieben mit etwas Stärke binden und mit Salz und Pfeffer abschmecken.
+                    Die fertige Roulade mit der sämigen Soße und den gekochten Kartoffeln servieren – ein perfektes Gericht für gemütliche Stunden.
+                </p>
                 <h3>Rezept erstellt von</h3>
                 <figure class="createdBy">
-                    <img class="profileLogo" src="../assets/img/profile.png" alt="">
+                    <img src="../assets/img/sebastian.jpg" alt="">
                     <figcaption>Sebastian</figcaption>
                 </figure>
             </article>
         </section>
    </main>
 
-   <footer class="mainFooter">
+    <footer class="mainFooter">
         <div class="contentRestrain footerContent">
             <div class="logoAndLegal">
                 <figure class="footerLogo">
                     <img class="logoCookingHat" src="../assets/img/logo_small_white.png" alt="Logo of a cooking hat">
                     <span>Kochwelt</span>
                 </figure>
-    
                 <div class="legalContainer">
                     <p>&copy; 2026 Kochwelt. Alle Rechte vorbehalten.</p>
                     <a href="../pages/impressum.html">Impressum</a>
                     <a href="../pages/privacy_policy.html">Datenschutzerklärung</a>
                 </div>
             </div>
-            
+
             <div class="socialMedia">
                 <a href="https://www.facebook.com/?locale=de_DE" target="_blank">
                     <img class="socialMediaImg" src="../assets/img/facebook(small).svg" alt="Facebook Logo">
@@ -170,10 +175,12 @@
                     <img class="socialMediaImg" src="../assets/img/instagram(small).svg" alt="Instagram Logo">
                 </a>
                 <a href="https://x.com/" target="_blank">
-                    <img  class="socialMediaImg" src="../assets/img/x(small).svg" alt="Twitter Logo">
+                    <img class="socialMediaImg" src="../assets/img/x(small).svg" alt="Twitter Logo">
                 </a>
             </div>
         </div>
-   </footer>
+    </footer>
+
+    <script src="../js/scriptRespMenu.js"></script>
 </body>
 </html>
