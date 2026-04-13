@@ -303,7 +303,8 @@ main {
 }
 
 .recipePropertyImage {
-    width: 15px;
+    width: 16px;
+    height: 16px;
     border-radius: 0px;
 }
 
@@ -361,7 +362,7 @@ main {
 
 .ingredientAmount {
     margin: var(--contentMargin);
-    padding: 8px 160px 16px 160px;
+    padding: 32px 160px 16px 160px;
 
     label {
         display: flex;
@@ -375,12 +376,11 @@ main {
     button {
         height: 32px;
     }
+}
 
 #error {
-    margin: var(--contentMargin);
-    display: flex;
     color: red;
-    padding: 0 160px 0 160px;
+    padding-left: 160px;
 }
 
 .borderError {
@@ -489,7 +489,8 @@ input:invalid {
     list-style: none;
     padding: 32px 0 64px 0;
     display: flex;
-    gap: 12px;
+    flex-wrap: wrap;
+    gap: 16px;
     border-bottom: 1px solid #ddd;
     margin: 0;
 }
@@ -531,6 +532,7 @@ input:invalid {
     list-style: none;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
     margin: 0;
 }
@@ -591,6 +593,7 @@ input:invalid {
 
     aside {
         display: flex;
+        flex-wrap: wrap;
         gap: 16px;
         padding-top: 32px;
 
@@ -600,6 +603,7 @@ input:invalid {
             align-items: center;
             background-color: #f0f0f0;
             margin-top: 8px;
+            padding: 8px 4px;
             padding: 8px 4px;
             border-radius: 8px;
 
@@ -611,8 +615,9 @@ input:invalid {
 }
 
 #errorMessage{
+    height: 19px;
+    padding-top: 16px;
     color: red;
-    padding: 0 0 0 80px;
 }
 
 hr {
@@ -634,7 +639,7 @@ hr {
     .ingredientsCalculation {
         display: flex;
         align-items: center;
-        margin-top: 8px;
+        margin-top: 32px;
 
         input {
             height: 32px;
@@ -718,7 +723,7 @@ hr {
 
 .headerimage {
     width: 100%;
-    height: 300px;
+    height: 200px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 32px;
@@ -747,7 +752,7 @@ hr {
 .ingredientsInput {
     display: flex;
     align-items: center;
-    margin: 8px 0 48px 0;
+    margin: 32px 0 32px 0;
 }
 
 .ingredientsInput label {
@@ -763,9 +768,12 @@ hr {
     margin-left: 10px;
 }
 
+.ingredientsList ul {
+    padding-top: 0 !important;
+}
+
 .ingredients {
     list-style: none;
-    padding: 0;
 }
 
 .preperationHighline {
@@ -786,14 +794,6 @@ hr {
 .contactPerson figcaption {
     font-size: 24px;
 }
-
-.profileIMG {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
 
 /* privacy_police */
 .policyContent {
@@ -850,10 +850,11 @@ hr {
     }
 }
 
-.contact-page {
+.contactPage {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 32px 0 32px 0;
 }
 
 .contact-card {
@@ -957,7 +958,6 @@ textarea {
     background-color: #f0f0f0;
     padding: 48px;
     border-radius: 18px;
-    margin-top: 30px;
     max-width: 845px;
     border: 1px solid var(--navHoverColor);
     box-shadow: 0 12px 35px rgba(14, 169, 14, 0.25);
@@ -1063,17 +1063,16 @@ textarea {
         padding: 32px 80px 0 80px;
     }
 
-    .ingredients li {
-        padding: 9px;
-        margin-bottom: 5px;
-    }
-
     .policyContent {
         padding: 0 80px;
     }
 
-    .contact-page {
+    .contactPage {
         padding: 0 80px;
+    }
+
+    #error {
+        padding-left: 80px;
     }
 }
 
@@ -1156,7 +1155,7 @@ textarea {
     }
 
     .ingredientAmount {
-        padding: 8px 24px 16px 24px;
+        padding: 32px 24px 16px 24px;
     }
 
     .recipeIngredients {
@@ -1183,7 +1182,7 @@ textarea {
         font-size: 20px !important;
     }
 
-    .contact-page {
+    .contactPage {
         padding: 32px 24px;
     }
 
@@ -1227,14 +1226,6 @@ textarea {
         margin-bottom: 16px;
     }
 
-    .recipeImg {
-        height: 160px;
-    }
-
-    .infoList {
-        padding-bottom: 32px;
-    }
-
     .authorBox img {
         width: 88px;
         height: 88px;
@@ -1248,8 +1239,8 @@ textarea {
     }
 
     .createdBy img {
-        width: 88px;
-        height: 88px;
+        width: 88px !important;
+        height: 88px !important;
     }
 
     .policyContent {
@@ -1258,6 +1249,15 @@ textarea {
 
     .impressumDiv {
         padding: 24px;
+    }
+
+    .contactPerson figcaption {
+    font-size: 20px;
+    }
+
+    #error {
+        display: flex;
+        padding-left: 24px;
     }
 }
 
@@ -1317,23 +1317,7 @@ textarea {
         margin-bottom: 12px;
     }
 
-    .recipeImg {
-        height: 130px;
-    }
-    .infoList {
-        display: flex;
-        justify-content: space-between;
-        gap: 7px;
-        flex-wrap: wrap;
-    }
-    .infoList,
-    .preparationInfo {
-        flex-wrap: wrap;
-        gap: 7px;
-    }
-
-    .infoList li,
-    .preparationInfo li {
+    .infoList li {
         font-size: 12px;
         padding: 6px 8px;
     }
@@ -1355,15 +1339,19 @@ textarea {
     }
 
     .authorBox img, .createdBy img, .profileImg {
-        width: 60px;
-        height: 60px;
+        width: 60px !important;
+        height: 60px !important;
     }
 
-    .authorName, .createdBy figcaption {
+    .authorName, .createdBy figcaption, .imageRecipeFooter figcaption {
         font-size: 18px !important;
     }
 
     .impressumDiv {
         padding: 16px;
+    }
+
+    .contactPerson figcaption {
+        font-size: 18px;
     }
 }
