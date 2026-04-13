@@ -13,9 +13,8 @@
     --imageBorderRadius: 8px;
     --headerBoxShadow: 0 3px 5px rgba(0, 0, 0, 0.1);
     --contentMargin: 0 auto;
-    --contentPaddingDesktop: 32px 160px;
-    --contentPaddingMobile: 32px 24px;
-    --articleHeaderPadding: 32px 160px 0 160px;
+    --contentPaddingTopBottom: clamp(8px, (2.727px + 2.273vw), 32px);
+    --contentPaddingLeftRight: clamp(24px, (-14.86px + 12.142vw), 160px)
 }
 
 * {
@@ -54,12 +53,12 @@ img {
         display: flex;
         justify-content: space-between;
         margin: var(--contentMargin);
-        padding: 0 160px;
+        padding: 0 var(--contentPaddingLeftRight);
         align-items: center;
     }
 
     .fig {
-        padding: 16px 0 16px 0;
+        padding: var(--contentPaddingTopBottom) 0 var(--contentPaddingTopBottom) 0;
         display: flex;
         gap: 16px;
         align-items: center;
@@ -85,7 +84,7 @@ img {
 
     li {
         list-style: none;
-                padding-bottom: 3px;
+        padding-bottom: 5px;
     }
 
     .navLink {
@@ -134,12 +133,17 @@ img {
     background-color: rgba(128, 128, 128, 0.5);
 }
 
+.recipePage {
+    padding: var(--contentPaddingTopBottom) var(--contentPaddingLeftRight) var(--contentPaddingTopBottom) var(--contentPaddingLeftRight);
+    margin: 0 auto;
+}
+
 main {
     min-height: 100vh;
     flex: 1;
 
     h2 {
-        padding-bottom: 16px;
+        padding-bottom: var(--contentPaddingTopBottom);
     }
 }
 
@@ -147,7 +151,7 @@ main {
     display: flex;
     justify-content: space-between;
     margin: var(--contentMargin);
-    padding: 32px 160px;
+    padding: var(--contentPaddingTopBottom) var(--contentPaddingLeftRight);
     gap: 16px;
 
     .figureRecipeOfDay {
@@ -168,7 +172,7 @@ main {
         }
 
         p {
-            padding-bottom: 16px;
+            padding-bottom: var(--contentPaddingTopBottom);
         }
     }
 }
@@ -177,7 +181,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 32px 0 32px 0;
+    padding: var(--contentPaddingTopBottom) var(--contentPaddingLeftRight) var(--contentPaddingTopBottom) var(--contentPaddingLeftRight);
     background-color: var(--backgroundSectionOtherRecipes);
 
     h2 {
@@ -188,7 +192,6 @@ main {
 .otherRecipesDisplay {
     width: 100%;
     margin: var(--contentMargin);
-    padding: 0 160px 0 160px;
     display: flex;
     gap: 8px;
     justify-content: space-between;
@@ -215,7 +218,7 @@ main {
 
 .wokPan {
     margin: var(--contentMargin);
-    padding: 32px 160px;
+    padding: var(--contentPaddingTopBottom) var(--contentPaddingLeftRight);
 
     h2 {
         text-align: center;
@@ -236,7 +239,7 @@ main {
 .mainFooter {
     display: flex;
     justify-content: center;
-    padding: 16px 160px;
+    padding: var(--contentPaddingTopBottom) var(--contentPaddingLeftRight);
     margin: var(--contentMargin);
     background-color: var(--designColor);
 }
@@ -246,7 +249,6 @@ main {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 0 16px 0;
 
     .logoAndLegal {
         display: flex;
@@ -258,6 +260,7 @@ main {
         display: flex;
         align-items: center;
         gap: 16px;
+        filter: drop-shadow(2px 8px 3px black);
         
         span {
             font-size: 32px;
@@ -278,6 +281,16 @@ main {
         align-items: center;
         gap: 16px;
 
+        a {
+            filter: drop-shadow(2px 4px 6px black);
+        }
+
+        a:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(2px 4px 6px white);
+            transition: transform 0.3s ease-in-out;
+        }
+
         .socialMediaImg{
             width: 5em;
         }
@@ -289,7 +302,7 @@ main {
     align-items: center;
     flex-direction: column;
     gap: 16px;
-    padding: 16px 0 16px 0;
+    padding: var(--contentPaddingTopBottom) 0 var(--contentPaddingTopBottom) 0;
 
     p, a {
         color: var(--buttonTextColor);
@@ -298,6 +311,7 @@ main {
     }
 
     a:hover {
+        filter: drop-shadow(2px 4px 6px black);
         text-decoration: underline;
         color: var(--navHoverColor);
     }
@@ -330,8 +344,6 @@ main {
 }
 
 .articleHeader {
-    margin: var(--contentMargin);
-    padding: var(--articleHeaderPadding);
 
     h1 {
         font-weight: bold;
@@ -346,7 +358,7 @@ main {
 }
 
 .recipeProperties {
-    padding: 32px 0 64px 0;
+    padding: var(--contentPaddingTopBottom) 0 64px 0;
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
@@ -393,28 +405,22 @@ input:invalid {
     border: 2px solid red;
 }
 
-.recipeIngredients {
-    padding: 0 160px;
-    margin: var(--contentMargin);
-}
-
 .ingredientTable {
     width: 100%;
     padding: 32px 0 32px 0;
 
-    td {
+    li {
+        list-style: none;
         padding: 8px 4px;
         border-radius: var(--imageBorderRadius);
     }
 
-    tr:nth-child(even) {
+    li:nth-child(even) {
         background-color: var(--backgroundSectionOtherRecipes);
     }
 }
 
 .recipePreparation {
-    padding: 16px 160px;
-    margin: var(--contentMargin);
 
     .preparationContainer {
         display: flex;
@@ -432,13 +438,8 @@ input:invalid {
     }
 
     p {
-        padding-top: 16px;
+        padding-top: var(--contentPaddingTopBottom);
     }
-}
-
-.articleFooter {
-    margin: 0 auto;
-    padding: 32px 160px;
 }
 
 .imageRecipeFooter {
@@ -452,6 +453,7 @@ input:invalid {
 }
 
 .profileImg {
+    filter: drop-shadow(2px 4px 6px black);
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -473,7 +475,7 @@ input:invalid {
 
 .recipePageAleks {
     margin: 0 auto;
-    padding: 32px 160px 0 160px;
+    /* padding: 32px 160px 0 160px; */
     max-width: 1440px;
 }
 .recipePageAleks h1 {
@@ -570,6 +572,7 @@ input:invalid {
 }
 
 .authorBox img {
+    filter: drop-shadow(2px 4px 6px black);
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -581,7 +584,7 @@ input:invalid {
 
 .recipeHeader {
     margin: var(--contentMargin);
-    padding: 32px 160px 0 160px;
+    padding: var(--contentPaddingTopBottom) var(--contentPaddingLeftRight) 0 var(--contentPaddingLeftRight);
 
     h1 {
         margin-bottom: 16px;
@@ -595,7 +598,7 @@ input:invalid {
         display: flex;
         flex-wrap: wrap;
         gap: 16px;
-        padding-top: 32px;
+        padding-top: var(--contentPaddingTopBottom);
 
         figure {
             display: flex;
@@ -660,7 +663,7 @@ hr {
 .preparation {
 
     h3 {
-        padding-top: 32px;
+        padding-top: var(--contentPaddingTopBottom);
     }
 
     p {
@@ -702,6 +705,7 @@ hr {
     }
 
     .createdBy img {
+        filter: drop-shadow(2px 4px 6px black);
         border-radius: 50%;
         width: 100px;
         height: 100px;
@@ -891,7 +895,6 @@ label {
 }       
 
 .contact-input {
-    
     border: 1px solid #d8d8d8;
     border-radius: 8px; 
     font-size: 16px;
@@ -978,11 +981,6 @@ textarea {
 }
 
 @media (max-width: 1020px) {
-    .mainHeader {
-        .headerContent {
-            padding: 0 80px;
-        }
-    }
 
     .sidebarOpenBtn, .sidebarCloseBtn {
         display: block;
@@ -1021,36 +1019,9 @@ textarea {
         display: none;
     }
 
-    .mainFooter {
-        padding: 0 80px;
-    }
-
-    .recipe {
-        padding: 32px 80px;
-    }
-
-    .recipePreparation {
-        padding: 16px 80px;
-    }
-
-    .otherRecipesDisplay {
-        padding: 0 80px 0 80px;
-    }
-
-    .wokPan {
-        padding: 32px 80px;
-    }
-
-    .recipeIngredients {
-        padding: 0 80px;
-    }
-    
-    .articleFooter {
-        padding: 32px 80px;
-    }
-
-    .recipePageAleks, .recipeHeader, .articleHeader, .ingredientAmount {
-        padding: 32px 80px 0 80px;
+    .ingredients li {
+        padding: 9px;
+        margin-bottom: 5px;
     }
 
     .policyContent {
@@ -1086,7 +1057,6 @@ textarea {
 @media (max-width: 620px) {
     .mainHeader {
         .headerContent {
-            padding: 0 24px;
 
             .fig {
                 span {
@@ -1100,28 +1070,7 @@ textarea {
         }
     }
 
-    .recipe {
-        padding: 24px 24px;
-    }
-
-    .recipePreparation {
-        padding: 16px 24px;
-    }
-
-    .otherRecipesDisplay{
-        padding: 0 24px 0 24px;
-    }
-
-    .wokPan {
-        padding: 32px 24px;
-    }
-
-    .mainFooter {
-        padding: 0 24px;
-    }
-
     .footerContent {
-
         .footerLogo {
             .logoCookingHat {
                 width: 32px;
@@ -1144,21 +1093,7 @@ textarea {
         }
     }
 
-    .ingredientAmount {
-        padding: 32px 24px 16px 24px;
-    }
-
-    .recipeIngredients {
-        padding: 0 24px;
-    }
-
-    .articleFooter {
-        padding: 32px 24px;
-    }
-
     .articleHeader, .recipeHeader {
-        padding: 32px 24px 0 24px;
-
         h1 {
             font-size: 24px;
         }
