@@ -376,7 +376,7 @@ main {
 .ingredientAmount {
     display: flex;
     margin: var(--contentMargin);
-    padding: 32px 160px 16px 160px;
+    padding: 32px var(--contentPaddingLeftRight) 16px var(--contentPaddingLeftRight);
 
     label {
         display: flex;
@@ -394,7 +394,7 @@ main {
 
 #error {
     color: red;
-    padding-left: 160px;
+    padding-left: var(--contentPaddingLeftRight);
 }
 
 .borderError {
