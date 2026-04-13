@@ -13,7 +13,7 @@
     --imageBorderRadius: 8px;
     --headerBoxShadow: 0 3px 5px rgba(0, 0, 0, 0.1);
     --contentMargin: 0 auto;
-    --contentPaddingTopBottom: clamp(8px, (2.727px + 2.273vw), 32px);
+    --contentPaddingTopBottom: clamp(8px, (-14.86px + 12.142vw), 32px);
     --contentPaddingLeftRight: clamp(24px, (-14.86px + 12.142vw), 160px)
 }
 
@@ -84,7 +84,7 @@ img {
 
     li {
         list-style: none;
-        padding-bottom: 5px;
+        padding-bottom: 4px;
     }
 
     .navLink {
@@ -577,6 +577,7 @@ input:invalid {
     height: 100px;
     border-radius: 50%;
     display: block;
+    object-fit: cover;
 }
 .authorName {
     font-size: 24px;
@@ -709,6 +710,7 @@ hr {
         border-radius: 50%;
         width: 100px;
         height: 100px;
+        object-fit: cover;
     }
 
     .createdBy figcaption {
