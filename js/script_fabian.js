@@ -14,12 +14,12 @@ function inputValidation(inputValue, inputField) {
         inputField.classList.add("borderError");
         setDefaultValues();
         return;
-    } else {
-        error.textContent = "";
-        inputField.classList.remove("borderError");
-        const INGREDIENTS = document.getElementsByClassName("amountNumber");
-        calculateIngredients(INGREDIENTS, inputValue);
     }
+    
+    error.textContent = "";
+    inputField.classList.remove("borderError");
+    const INGREDIENTS = document.getElementsByClassName("amountNumber");
+    calculateIngredients(INGREDIENTS, inputValue);
 }
 
 function calculateIngredients(INGREDIENTS, inputValue) {
