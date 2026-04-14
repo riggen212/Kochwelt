@@ -864,9 +864,8 @@ hr {
     padding: var(--contentPaddingTopBottom) var(--contentPaddingLeftRight);
 }
 
-.contact-card {
-    /* max-width: 560px; */
-    max-width: 100vw;
+.contactCard {
+    max-width: 560px;
     background: #dcdcdc;
     border-radius: 18px;
     padding: 48px;
@@ -874,29 +873,29 @@ hr {
     box-shadow: var(--zero) 12px 35px rgba(14, 169, 14, 0.25);
 }
 
-.contact-card h1 {
+.contactCard h1 {
     font-size: 28px;
     line-height: 1.2;
 }
 
-.contact-text {
+.contactText {
     font-size: 16px;
     line-height: 1.3;
     color: darkslategray;
     margin-bottom: 32px;
 }
 
- .contact-form {
+ .contactForm {
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
 
-.submit-btn {
+.submitBtn {
     align-self: center;
 }
 
-.form-group {
+.formGroup {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -908,7 +907,7 @@ label {
     color: black;
 }       
 
-.contact-input {
+.contactInput {
     border: 1px solid #d8d8d8;
     border-radius: 8px; 
     font-size: 16px;
@@ -917,7 +916,7 @@ label {
     padding: 10px;
 }
 
-.contact-input:focus {
+.contactInput:focus {
     outline: none;
     border-color: #008000;
     box-shadow: var(--zero) var(--zero) var(--zero) 4px rgba(var(--zero), 128, var(--zero), 0.12);
@@ -951,13 +950,13 @@ textarea {
     box-shadow: var(--zero) 12px 35px rgba(14, 169, 14, 0.25);
 }
 
-.thankyou-card h1 {
+.thankyouCard h1 {
     font-size: 28px;
     line-height: 1.2;
     margin-bottom: 16px;
 }
 
-.thankyou-card p {
+.thankyouCard p {
     margin-bottom: 24px;
 }
 
@@ -1109,16 +1108,16 @@ textarea {
         font-size: 20px !important;
     }
 
-    .contact-card h1 {
+    .contactCard h1 {
         font-size: 25px;
         margin-bottom: 16px;
     }
 
-    .contact-text {
+    .contactText {
         margin-bottom: 24px;
     }
 
-    .submit-btn {
+    .submitBtn {
         width: 100%;
     }
 
@@ -1176,36 +1175,36 @@ textarea {
         }
     }
 
-    .contact-card {
+    .contactCard {
         /* max-width: 320px; */
         padding: 20px;
         /* border-radius: 14px; */
     }
 
-    .contact-card h1 {
+    .contactCard h1 {
         font-size: 19px;
         margin-bottom: 12px;
     }
 
-    .contact-text {
+    .contactText {
         font-size: 15px;
         margin-bottom: 20px;
     }
 
-    .form-group label {
+    .formGroup label {
         font-size: 15px;
     }
 
-    .contact-input {
+    .contactInput {
         font-size: 15px;
         padding: 10px 12px;
     }
 
-    textarea.contact-input {
+    textarea.contactInput {
         min-height: 100px;
     }
 
-    .submit-btn {
+    .submitBtn {
         font-size: 16px;
         padding: 14px 18px;
     }
