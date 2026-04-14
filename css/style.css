@@ -470,7 +470,7 @@ input:invalid {
 
 .portionCalculation {
     display: flex;
-    margin: var(--contentMargin);
+    margin-top: 32px;
     padding: 8px var(--zero) 16px var(--zero);
 }
 .portionCalculation label {
@@ -964,9 +964,10 @@ textarea {
     background-color: #f0f0f0;
     padding: var(--contentPaddingTopBottom);
     border-radius: 18px;
-    /* max-width: 845px; */
+    max-width: 1140px;
     border: 1px solid var(--navHoverColor);
     box-shadow: 0px 12px 35px rgba(14, 169, 14, 0.25);
+    hyphens: auto;
 }
 
 .impressumDiv h2 {
@@ -1035,10 +1036,6 @@ textarea {
         display: none;
     }
 
-    .ingredients li {
-        padding: 9px;
-        margin-bottom: 5px;
-    }
 }
 
 @media(max-width: 920px) {
@@ -1254,7 +1251,7 @@ textarea {
     }
 
     .impressumDiv {
-        padding: 16px;
+        padding:12px;
     }
 
     .contactPerson figcaption {
