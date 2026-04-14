@@ -13,11 +13,12 @@ function inputValidation(inputValue) {
         error.textContent = "Bitte geben Sie eine Zahl zwischen 1 und 10 ein.";
         setDefaultValues();
         return;
-    } else {
-        error.textContent = "";
-        const INGREDIENTS = document.getElementsByClassName("amountNumber");
-        calculateIngredients(INGREDIENTS, inputValue);
     }
+    
+    error.textContent = "";
+    inputField.classList.remove("borderError");
+    const INGREDIENTS = document.getElementsByClassName("amountNumber");
+    calculateIngredients(INGREDIENTS, inputValue);
 }
 
 function calculateIngredients(INGREDIENTS, inputValue) {

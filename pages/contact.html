@@ -42,18 +42,19 @@
     </header>
 
     <main class="contactPage">
-        <section class="contact-card">
+        <section class="contactCard">
             <h1>Schreib uns eine Nachricht</h1>
 
-            <p class="contact-text">
+            <p class="contactText">
             Du hast Fragen zu einem Rezept, möchtest uns Feedback geben oder suchst kulinarische Inspiration? 
             Dann schreib uns gerne direkt über das Kontaktformular.</p>
             
-            <form class="contact-form" action="#" method="POST">
-                <div class="form-group">
+            <form class="contactForm" action="https://formspree.io/f/xojpevdv" method="POST" onsubmit="sendMail(event)">
+            
+                <div class="formGroup">
                     <label for="name">Name</label>
                     <input 
-                        class="contact-input"
+                        class="contactInput"
                         id="name"
                         name="name"
                         type="text"
@@ -61,10 +62,10 @@
                         required>
                 </div>
 
-                <div class="form-group">
+                <div class="formGroup">
                     <label for="email">E-Mail</label>
                     <input 
-                        class="contact-input"
+                        class="contactInput"
                         id="email"
                         name="email"
                         type="email"
@@ -72,10 +73,10 @@
                         required>
                 </div>
 
-                <div class="form-group">
+                <div class="formGroup">
                     <label for="message">Deine Nachricht</label>
                     <textarea 
-                        class="contact-input"
+                        class="contactInput"
                         id="message"
                         name="message"
                         placeholder="Schreib hier deine Nachricht..."
