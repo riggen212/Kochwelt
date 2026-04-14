@@ -247,8 +247,6 @@ main {
 .mainFooter {
     display: flex;
     justify-content: center;
-    padding: var(--contentPaddingTopBottom) var(--contentPaddingLeftRight);
-    margin: var(--contentMargin);
     background-color: var(--designColor);
 }
 
@@ -257,6 +255,8 @@ main {
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    padding: var(--contentPaddingTopBottom) var(--contentPaddingLeftRight);
+    margin: var(--contentMargin);
 
     .logoAndLegal {
         display: flex;
