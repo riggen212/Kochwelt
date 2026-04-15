@@ -70,9 +70,10 @@
             <form class="portionCalculation">
                 <label for="portion">
                     Zutaten für
-                    <input id="portion" class="numberInput" type="number" min="1" max="10" value="4">
+                    <input id="portion" class="numberInput" type="number" min="1" max="4" value="2">
                     <button class="btn" type="button" onclick="calculate()">Portionen</button>
                 </label>
+                <span id="errorMessage" class="errorMessage" style="color: red; display: none;">Bitte geben Sie eine Zahl zwischen 1 und 4 ein.</span>
             </form>
 
             <ul class="ingredients">
