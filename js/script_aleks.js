@@ -10,6 +10,16 @@ function formatFraction(value) {
 function calculate() {
     let portionInput = parseInt(document.getElementById('portion').value, 10);
 
+    let errorMessage = document.getElementById('errorMessage');
+
+    if (isNaN(portionInput) || portionInput < 1 || portionInput > 4) {
+        errorMessage.style.display = "block";
+        return;
+    } else {
+        errorMessage.style.display = "none";
+    }
+
+
     if (isNaN(portionInput)) {
         portionInput = 1;
     }
@@ -18,8 +28,8 @@ function calculate() {
         portionInput = 1;
     }
 
-    if (portionInput > 10) {
-        portionInput = 10;
+    if (portionInput > 4) {
+        portionInput = 4;
     }
 
     document.getElementById('portion').value = portionInput;
