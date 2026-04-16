@@ -1,4 +1,4 @@
-const TABLE = document.getElementById(`ingredients`);
+const TABLE = document.getElementById(`ingredientsElements`);
 const SPANELEMENTLIST = TABLE.querySelectorAll(`span`);
 let errormessage = document.getElementById(`errorMessage`);
 let spanArray = [];

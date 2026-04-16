@@ -418,8 +418,8 @@ input:invalid {
 
 #ingredients {
     width: 100%;
-    margin: var(--zero);
-    padding: var(--paddingIngredientList);
+    margin-top: var(--zero);
+    padding: 16px 0 32px 0;
 
     li {
         list-style: none;
@@ -620,7 +620,6 @@ input:invalid {
             gap: 10px;
             align-items: center;
             background-color: #f0f0f0;
-            margin-top: 8px;
             padding: 8px 4px;
             padding: 8px 4px;
             border-radius: 8px;
@@ -664,20 +663,23 @@ hr {
             padding: 4px;
             width: 60px;
             margin-left: 10px;
-            box-sizing: border-box;
         }
 
+        button {
+            height: 32px;
+        }
     }
 
-    table  {
+    ul  {
     border-spacing: var(--zero) var(--zero);
-    padding: 48px var(--zero);
-        tr {
+    padding: 36px var(--zero);
+    margin: var(--zero);
+        li {
         display: flex;
         padding: 8px 4px;
         }
 
-        tr:nth-child(even) {
+        li:nth-child(even) {
             background-color: #f0f0f0;
             border-radius: 8px;
         }
@@ -685,13 +687,8 @@ hr {
 }
 
 .preparation {
-
-    h3 {
-        padding-top: var(--contentPaddingTopBottom);
-    }
-
     p {
-        padding: 16px var(--zero) 16px var(--zero);
+        padding-top: var(--contentPaddingTopBottom);
     }
 
     .preparationHihline {

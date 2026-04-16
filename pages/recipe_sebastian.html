@@ -23,13 +23,6 @@
                 aria-expanded="false" aria-controls="navBar">
                 <img class="svgIcon" src="../assets/img/hamburgerMenu.svg" alt="three dashes">
             </button>
-            <!-- hamburger-menu -->
-            <input type="checkbox" id="click">
-            <label class="hamburger-menu" for="click">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </label>
 
             <nav id="navBar">
                 <ul>
@@ -40,7 +33,8 @@
                         </button>
                     </li>
                     <li><a class="navLink" href="../index.html">Start</a></li>
-                    <li><a class="navLink" href="./recipe_fabian.html">Rezept des Tages</a></li>
+                    <li><a class="navLink active" aria-current="page" href="./recipe_fabian.html">Rezept des Tages</a>
+                    </li>
                     <li><a class="navLink" href="./contact.html">Kontakt</a></li>
                     <li><a class="navLink" href="./impressum.html">Impressum</a></li>
                 </ul>
@@ -77,50 +71,61 @@
                 </form>
                 <span aria-describedby="error" id="errorMessage"></span>
 
-                <table id="ingredients">
-                    <tr>
-                        <td><span id="calculated">1</span> große Rinderroulade (aus der Oberschale, ca. 180-200g)</td>
-                    </tr>
-                    <tr>
-                        <td><span id="calculated">2</span> Frühstücksspeck (durchwachsen)</td>
-                    </tr>
-                    <tr>
-                        <td><span id="calculated">1</span> Gewürzgurke</td>
-                    </tr>
-                    <tr>
-                        <td><span id="calculated">1</span> kleine Zwiebel</td>
-                    </tr>
-                    <tr>
-                        <td><span id="calculated">2</span> TL mittelscharfer Senf</td>
-                    </tr>
-                    <tr>
-                        <td><span id="calculated">1</span> EL Butterschmalz oder Öl</td>
-                    </tr>
-                    <tr>
-                        <td><span id="calculated">1</span> EL Tomatenmark</td>
-                    </tr>
-                    <tr>
-                        <td><span id="calculated">100</span> ml Rotwein (trocken)</td>
-                    </tr>
-                    <tr>
-                        <td><span id="calculated">250</span> ml Rinderfond (oder Brühe)</td>
-                    </tr>
-                    <tr>
-                        <td><span id="calculated">1</span> Lorbeerblatt</td>
-                    </tr>
-                    <tr>
-                        <td><span id="calculated">1</span> Nelke</td>
-                    </tr>
-                    <tr>
-                        <td><span id="calculated">250</span> g Kartoffeln (festkochend)</td>
-                    </tr>
-                    <tr>
-                        <td>etwas Stärke oder Soßenbinder</td>
-                    </tr>
-                    <tr>
-                        <td>Salz und Pfeffer</td>
-                    </tr>
-                </table>
+                <ul id="ingredientsElements">
+                    <li>
+                        <span id="calculated">1</span>
+                        große Rinderroulade (aus der Oberschale, ca. 180-200g)
+                    </li>
+                    <li>
+                        <span id="calculated">2</span>
+                        Frühstücksspeck (durchwachsen)
+                    </li>
+                    <li>
+                        <span id="calculated">1</span>
+                        Gewürzgurke
+                    </li>
+                    <li>
+                        <span id="calculated">1</span>
+                        kleine Zwiebel
+                    </li>
+                    <li>
+                        <span id="calculated">2</span>
+                        TL mittelscharfer Senf
+                    </li>
+                    <li>
+                        <span id="calculated">1</span>
+                        EL Butterschmalz oder Öl
+                    </li>
+                    <li>
+                        <span id="calculated">1</span>
+                        EL Tomatenmark
+                    </li>
+                    <li>
+                        <span id="calculated">100</span>
+                            ml Rotwein (trocken)
+                        </li>
+                    <li>
+                        <span id="calculated">250</span>
+                        ml Rinderfond (oder Brühe)
+                    </li>
+                    <li>
+                        <span id="calculated">1</span>
+                        Lorbeerblatt
+                    </li>
+                    <li>
+                        <span id="calculated">1</span>
+                        Nelke</li>
+                    <li>
+                        <span id="calculated">250</span>
+                        g Kartoffeln (festkochend)
+                    </li>
+                    <li>
+                        etwas Stärke oder Soßenbinder
+                    </li>
+                    <li>
+                        Salz und Pfeffer
+                    </li>
+                </ul>
             </section>
             <article class="contentRestrain preparation">
                 <h2>Zubereitung</h2>
