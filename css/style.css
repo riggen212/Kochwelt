@@ -1105,10 +1105,6 @@ textarea {
         }
     }
 
-    .recipePageAleks {
-        padding: 32px 24px 0 24px;
-    }
-
     .createdBy figcaption {
         font-size: 20px !important;
     }
@@ -1138,13 +1134,8 @@ textarea {
         height: 88px;
     }
 
-    .recipePageAleks {
-        padding: 24px 24px 0 24px;
-    }
-
     .recipePageAleks h1 {
-        font-size: 32px;
-        margin-bottom: 16px;
+        font-size: 24px;
     }
 
     .authorBox img {
@@ -1216,10 +1207,6 @@ textarea {
 }
 
 @media (max-width: 430px) {
-    .recipePageAleks {
-        padding: 20px 24px 0 24px;
-    }
-
     .recipePageAleks h1 {
         font-size: 24px;
         margin-bottom: 12px;
