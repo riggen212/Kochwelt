@@ -65,58 +65,60 @@
             <hr>
             <section class="contentRestrain recipeData">
                 <Form class="ingredientsCalculation">
-                    <label for="">Zutaten für</label>
-                    <input min="1" max="15" type="number" id="factor" value="1">
-                    <button class="btn" onclick="inputValidation()" type="button">Portionen</button>
+                    <label>
+                        Zutaten für
+                        <input min="1" max="10" type="number" id="numberInput" value="1" aria-placeholder="4" value="Portionen">                 
+                        <button class="btn" onclick="inputValidation()" type="button">Portionen</button>
+                    </label>
                 </form>
-                <span aria-describedby="error" id="errorMessage"></span>
+                <span id="errorMessage"></span>
 
                 <ul id="ingredientsElements">
                     <li>
-                        <span id="calculated">1 </span>
+                        <span>1 </span>
                         große Rinderroulade (aus der Oberschale, ca. 180-200g)
                     </li>
                     <li>
-                        <span id="calculated">2</span>
+                        <span>2</span>
                          Frühstücksspeck (durchwachsen)
                     </li>
                     <li>
-                        <span id="calculated">1</span>
+                        <span>1</span>
                          Gewürzgurke
                     </li>
                     <li>
-                        <span id="calculated">1</span>
+                        <span>1</span>
                          kleine Zwiebel
                     </li>
                     <li>
-                        <span id="calculated">2</span>
+                        <span>2</span>
                          TL mittelscharfer Senf
                     </li>
                     <li>
-                        <span id="calculated">1</span>
+                        <span>1</span>
                         EL Butterschmalz oder Öl
                     </li>
                     <li>
-                        <span id="calculated">1</span>
+                        <span>1</span>
                         EL Tomatenmark
                     </li>
                     <li>
-                        <span id="calculated">100</span>
+                        <span>100</span>
                             ml Rotwein (trocken)
                         </li>
                     <li>
-                        <span id="calculated">250</span>
+                        <span>250</span>
                         ml Rinderfond (oder Brühe)
                     </li>
                     <li>
-                        <span id="calculated">1</span>
+                        <span>1</span>
                         Lorbeerblatt
                     </li>
                     <li>
-                        <span id="calculated">1</span>
+                        <span>1</span>
                         Nelke</li>
                     <li>
-                        <span id="calculated">250</span>
+                        <span>250</span>
                         g Kartoffeln (festkochend)
                     </li>
                     <li>

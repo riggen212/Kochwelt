@@ -8,9 +8,9 @@ function getSpanElements() {
 }
 
 function inputValidation() {
-    const FACTOR = document.getElementById(`factor`).valueAsNumber;
+    const FACTOR = document.getElementById(`numberInput`).valueAsNumber;
 
-    if (FACTOR < 1 || FACTOR > 15 || isNaN(FACTOR)) {
+    if (FACTOR < 1 || FACTOR > 10 || isNaN(FACTOR)) {
         errormessage.textContent = "Bitte geben Sie eine Zahl zwischen 1 und 10 ein.";
     }
     else {
