@@ -8,31 +8,32 @@
     <title>Kontakt | Kochwelt</title>
 </head>
 <body>
+    <a class="skipLink" href="#mainContent">Zum Inhalt springen</a>
     <header class="mainHeader">
         <div class="contentRestrain headerContent">
             <figure class="fig">
                 <a href="../index.html">
-                    <img class="logoCookingHat" src="../assets/img/logo_small.png" alt="Logo of a cooking hat">
+                    <img class="logoCookingHat" src="../assets/img/logo_small.png" alt="Kochmützen-Logo">
                 </a>
-                <span>Kochwelt</span>
+                <figcaption>Kochwelt</figcaption>
             </figure>
 
-            <button class="sidebarOpenBtn" id="btnOpenSidebar" onclick="openSidebar()" aria-label="open sidebar"
+            <button class="sidebarOpenBtn" id="btnOpenSidebar" onclick="openSidebar()" aria-label="Menü öffnen"
                 aria-expanded="false" aria-controls="navBar">
-                <img class="svgIcon" src="../assets/img/hamburgerMenu.svg" alt="three dashes">
+                <img class="svgIcon" src="../assets/img/hamburgerMenu.svg" alt="">
             </button>
 
             <nav id="navBar">
                 <ul>
                     <li>
                         <button id="btnCloseSidebar" class="sidebarCloseBtn" onclick="closeSidebar()"
-                            aria-label="close sidebar">
-                            <img class="svgIcon" src="../assets/img/closeX.svg" alt="x-icon">
+                            aria-label="Menü schließen">
+                            <img class="svgIcon" src="../assets/img/closeX.svg" alt="">
                         </button>
                     </li>
                     <li><a class="navLink" href="../index.html">Start</a></li>
                     <li><a class="navLink" href="./recipe_fabian.html">Rezept des Tages</a></li>
-                    <li><a class="navLink active" href="./contact.html">Kontakt</a></li>
+                    <li><a class="navLink active" href="./contact.html" aria-current="page">Kontakt</a></li>
                     <li><a class="navLink" href="./impressum.html">Impressum</a></li>
                 </ul>
             </nav>
@@ -41,7 +42,7 @@
         </div>
     </header>
 
-    <main class="contactPage">
+    <main id="mainContent" class="contactPage">
         <section class="contactCard">
             <h1>Schreib uns eine Nachricht</h1>
 
@@ -92,8 +93,8 @@
         <div class="contentRestrain footerContent">
             <div class="logoAndLegal">
                 <figure class="footerLogo">
-                    <img class="logoCookingHat" src="../assets/img/logo_small_white.png" alt="Logo of a cooking hat">
-                    <span>Kochwelt</span>
+                    <img class="logoCookingHat" src="../assets/img/logo_small_white.png" alt="Kochmützen-Logo">
+                    <figcaption>Kochwelt</figcaption>
                 </figure>
 
                 <div class="legalContainer">
@@ -104,14 +105,14 @@
             </div>
 
             <div class="socialMedia">
-                <a href="https://www.facebook.com/?locale=de_DE" target="_blank">
-                    <img class="socialMediaImg" src="../assets/img/facebook(small).svg" alt="Facebook Logo">
+                <a href="https://www.facebook.com/?locale=de_DE" target="_blank" rel="noopener noreferrer" aria-label="Facebook in neuem Tab öffnen">
+                    <img class="socialMediaImg" src="../assets/img/facebook(small).svg" alt="">
                 </a>
-                <a href="https://www.instagram.com/" target="_blank">
-                    <img class="socialMediaImg" src="../assets/img/instagram(small).svg" alt="Instagram Logo">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram in neuem Tab öffnen">
+                    <img class="socialMediaImg" src="../assets/img/instagram(small).svg" alt="">
                 </a>
-                <a href="https://x.com/" target="_blank">
-                    <img class="socialMediaImg" src="../assets/img/x(small).svg" alt="Twitter Logo">
+                <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X in neuem Tab öffnen">
+                    <img class="socialMediaImg" src="../assets/img/x(small).svg" alt="">
                 </a>
             </div>
         </div>
