@@ -474,7 +474,7 @@ input:invalid {
 .portionCalculation {
     display: flex;
     margin-top: 32px;
-    padding: 8px var(--zero) 16px var(--zero);
+    padding: var(--zero) var(--zero) 16px var(--zero);
 }
 .portionCalculation label {
     display: flex;
@@ -568,11 +568,7 @@ input:invalid {
 }
 
 .preparationSection p {
-    padding: 16px var(--zero) 16px var(--zero);
-}
-
-.authorSection {
-    margin-top: 48px;
+    padding-top: 32px;
 }
 
 .authorBox {
@@ -580,7 +576,6 @@ input:invalid {
     align-items: center;
     gap: 16px;
     margin-top: 10px;
-    margin-bottom: 32px;
 }
 
 .authorBox img {
@@ -684,6 +679,10 @@ hr {
             border-radius: 8px;
         }
     }
+
+    ul span {
+        margin-right: 4px;
+    }
 }
 
 .preparation {
@@ -758,11 +757,12 @@ hr {
     background-color: #f0f0f0; 
     padding: 8px 4px;
     border-radius: 8px;
-    gap: 8px;
+    gap: 6px;
 }
 
 .preperation img {
     width: 16px;
+    height: 16px;
     border-radius: var(--zero);
 }
 
@@ -781,24 +781,20 @@ hr {
     width: 60px;
     height: 32px;
     padding: 4px;
-    border: 1px solid #ccc;
     margin-left: 10px;
 }
 
 .ingredientsList ul {
-    padding-top: var(--zero) !important;
-}
-
-.ingredients {
-    list-style: none;
+    padding-top: 24px !important;
+    margin: var(--zero) !important;
 }
 
 .preperationHighline {
     padding: 48px var(--zero) 16px var(--zero);
 }
 
-.recipedescription {
-    padding: 16px var(--zero) 48px var(--zero);
+.recipeDescription {
+    padding: 32px var(--zero) var(--zero) var(--zero);
 }
 
 .contactPerson {
