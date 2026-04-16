@@ -7,40 +7,29 @@ function formatFraction(value) {
 
     return value.toFixed(2);
 }
+
 function calculate() {
     let portionInput = parseInt(document.getElementById('portion').value, 10);
-
     let errorMessage = document.getElementById('errorMessage');
-
+    let inputField = document.getElementById('portion');
     if (isNaN(portionInput) || portionInput < 1 || portionInput > 4) {
         errorMessage.style.display = "block";
+        inputField.classList.add("borderError");
         return;
-    } else {
-        errorMessage.style.display = "none";
     }
 
-
-    if (isNaN(portionInput)) {
-        portionInput = 1;
-    }
-
-    if (portionInput < 1) {
-        portionInput = 1;
-    }
-
-    if (portionInput > 4) {
-        portionInput = 4;
-    }
-
+    errorMessage.style.display = "none";
     document.getElementById('portion').value = portionInput;
-
+    inputField.classList.remove("borderError");
     let basePortion = 4;
     let factor = portionInput / basePortion;
 
     document.getElementById('spaghetti').innerText = Math.round(400 * factor);
     document.getElementById('meat').innerText = Math.round(400 * factor);
+
     let onionValue = 1 * factor;
     document.getElementById('onion').innerText = formatFraction(onionValue);
+
     document.getElementById('garlic').innerText = Math.round(2 * factor);
     document.getElementById('tomato').innerText = Math.round(400 * factor);
     document.getElementById('oil').innerText = Math.round(2 * factor);
