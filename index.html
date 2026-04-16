@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,28 +8,29 @@
     <title>Kochwelt</title>
 </head>
 <body>
+    <a class="skipLink" href="#mainContent">Zum Inhalt springen</a>
     <!-- logo and nav-bar -->
    <header class="mainHeader">
         <div class="contentRestrain headerContent">
             <figure class="fig">
                 <a href="./index.html">
-                    <img class="logoCookingHat" src="./assets/img/logo_small.png" alt="Logo of a cooking hat">
+                    <img class="logoCookingHat" src="./assets/img/logo_small.png" alt="Kochmützen-Logo">
                 </a>
-                <span>Kochwelt</span>
+                <figcaption>Kochwelt</figcaption>
             </figure>
 
-            <button class="sidebarOpenBtn" id="btnOpenSidebar" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navBar">
-                <img class="svgIcon" src="./assets/img/hamburgerMenu.svg" alt="open sidebar icon">
+            <button class="sidebarOpenBtn" id="btnOpenSidebar" onclick="openSidebar()" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navBar">
+                <img class="svgIcon" src="./assets/img/hamburgerMenu.svg" alt="">
             </button>
 
             <nav id="navBar">
                 <ul>
                     <li>
-                        <button id="btnCloseSidebar" class="sidebarCloseBtn" onclick="closeSidebar()" aria-label="close sidebar">
-                            <img class="svgIcon" src="./assets/img/closeX.svg" alt="close sidebar icon">
+                        <button id="btnCloseSidebar" class="sidebarCloseBtn" onclick="closeSidebar()" aria-label="Menü schließen">
+                            <img class="svgIcon" src="./assets/img/closeX.svg" alt="">
                         </button>
                     </li>
-                    <li><a class="navLink active" href="./index.html">Start</a></li>
+                    <li><a class="navLink active" href="./index.html" aria-current="page">Start</a></li>
                     <li><a class="navLink" href="./pages/recipe_fabian.html">Rezept des Tages</a></li>
                     <li><a class="navLink" href="./pages/contact.html">Kontakt</a></li>
                     <li><a class="navLink" href="./pages/impressum.html">Impressum</a></li>
@@ -38,17 +39,17 @@
         </div>
    </header>
    <!-- display recipe -->
-   <main>
+   <main id="mainContent">
         <div>
             <section  class="contentRestrain recipe">
                 <figure class="figureRecipeOfDay">
-                    <img class="recipeImage" src="./assets/img/chili_con_carne.jpg" alt="Picture of chili con carne">
+                    <img class="recipeImage" src="./assets/img/chili_con_carne.jpg" alt="Schüssel mit Chili con Carne auf einem Holzbrett, daneben Brot und Löffel">
                 </figure>
                 <div class="recipeDescpription">
                     <h1 class="headline">Chili con Carne</h1>
                     <p>Dies ist ein würziges Eintopfgericht aus der Tex-Mex-Küche, das hauptsächlich aus Hackfleisch, Bohnen, Tomaten, Chili und Gewürzen besteht. Es ist herzhaft,
-                        leicht scharf und wird oft langsam gekocht, damit sich die Aromen gut entfalten. Typische Gewürze sind Kreuzkümmel, Paprika und Knoblauch.</p>                    
-                    <button class="btn btnRecipeOfDay" onclick="window.location.href='pages/recipe_fabian.html';">Rezept öffnen</button>
+                    leicht scharf und wird oft langsam gekocht, damit sich die Aromen gut entfalten. Typische Gewürze sind Kreuzkümmel, Paprika und Knoblauch.</p>                    
+                    <a class="btn btnRecipeOfDay" href="./pages/recipe_fabian.html">Rezept öffnen</a>
                 </div>
             </section>
 
@@ -59,21 +60,21 @@
                     <div class="otherRecipesDisplay contentRestrain">
                         <figure class="figureOtherRecipes">
                             <a href="./pages/recipe_sebastian.html">
-                                <img src="./assets/img/beef_roulades.jpg" alt="Beef Roulades">
+                                <img src="./assets/img/beef_roulades.jpg" alt="Rinderroulade mit Soße, Kartoffeln und Gemüse auf einem Teller">
                             </a>
                             <figcaption>Rinderrouladen</figcaption>
                         </figure>
                         <figure class="figureOtherRecipes">
                             <a href="./pages/recipe_aleks.html">
-                                <img src="./assets/img/spaghetti.jpg" alt="Spaghetti">
+                                <img src="./assets/img/spaghetti.jpg" alt="Spaghetti Bolognese mit Hackfleischsoße, Parmesan und Kräutern auf einem Teller">
                             </a>
                             <figcaption>Spaghetti Bolognese</figcaption>
                         </figure>
                         <figure class="figureOtherRecipes">
                             <a href="./pages/recipe_elias.html">
-                                <img src="./assets/img/croissant.jpg" alt="Salad">
+                                <img src="./assets/img/croissant.jpg" alt="Griechischer Bauernsalat">
                             </a>
-                            <figcaption>Salat</figcaption>
+                            <figcaption>Griechischer Bauernsalat</figcaption>
                         </figure>
                         
                     </div>
@@ -82,14 +83,14 @@
 
             <section class="contentRestrain wokPan">
                 <h2>Pfanne vs Wok - Was ist besser?</h2>
-                <figure>
+                <div class="wokPanContent">
                     <p>Auf diese Frage kann keine pauschale Antwort gegeben werden. Beide Kochutensilien haben ihre Stärken und Schwächen. Entscheidend ist, wie man das Gericht zubereiten möchte.
                        Benötigt man gleichmäßige Hitze, dann ist die Pfanne die erste Wahl. Sind hingegen hohe Temperaturen von Nöten, so eignet sich der WoK am besten.
                        Die Pfanne ist zwar der Allrounder, aber hat man Appetit auf ein asiatisches Gericht, spielt der Wok seine Stärken voll aus. Möchte man dagegen Fleisch, Fisch oder Eierspeisen zubereiten,
                        dann sollte man zur Pfanne greifen. Daher ist es von Vorteil, Pfanne als auch einen Wok in der Küchenausstattung zu haben. Somit ist man für jeden Hunger gewappnet.
                     </p>
-                    <img src="./assets/img/wok.jpg" alt="Image of a wok pan with vegetables inside">
-                </figure>
+                    <img src="./assets/img/wok.jpg" alt="Wokpfanne mit Gemüse">
+                </div>
             </section>
         </div>
    </main>
@@ -98,8 +99,8 @@
         <div class="contentRestrain footerContent">
             <div class="logoAndLegal">
                 <figure class="footerLogo">
-                    <img class="logoCookingHat" src="./assets/img/logo_small_white.png" alt="Logo of a cooking hat">
-                    <span>Kochwelt</span>
+                    <img class="logoCookingHat" src="./assets/img/logo_small_white.png" alt="Kochmützen-Logo">
+                    <figcaption>Kochwelt</figcaption>
                 </figure>
     
                 <div class="legalContainer">
@@ -110,14 +111,14 @@
             </div>
             
             <div class="socialMedia">
-                <a href="https://www.facebook.com/?locale=de_DE" target="_blank">
-                    <img class="socialMediaImg" src="./assets/img/facebook(small).svg" alt="Facebook Logo">
+                <a href="https://www.facebook.com/?locale=de_DE" target="_blank" rel="noopener noreferrer" aria-label="Facebook in neuem Tab öffnen">
+                    <img class="socialMediaImg" src="./assets/img/facebook(small).svg" alt="">
                 </a>
-                <a href="https://www.instagram.com/" target="_blank">
-                    <img class="socialMediaImg" src="./assets/img/instagram(small).svg" alt="Instagram Logo">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram in neuem Tab öffnen">
+                    <img class="socialMediaImg" src="./assets/img/instagram(small).svg" alt="">
                 </a>
-                <a href="https://x.com/" target="_blank">
-                    <img class="socialMediaImg" src="./assets/img/x(small).svg" alt="Twitter Logo">
+                <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X in neuem Tab öffnen">
+                    <img class="socialMediaImg" src="./assets/img/x(small).svg" alt="">
                 </a>
             </div>
         </div>
