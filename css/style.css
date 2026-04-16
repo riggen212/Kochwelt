@@ -627,9 +627,9 @@ input:invalid {
 }
 
 #errorMessage{
-    height: 19px;
-    padding-top: 16px;
+    display: flex;
     color: red;
+    padding-left: var(--contentPaddingLeftRight);
 }
 
 hr {
@@ -645,7 +645,7 @@ hr {
     #errorMessage {
         display: flex;
         color: red;
-        padding-top: 8px;
+        padding-left: var(--contentPaddingLeftRight);
     }
 
     .ingredientsCalculation {

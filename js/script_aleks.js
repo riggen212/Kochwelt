@@ -12,7 +12,7 @@ function calculate() {
     let portionInput = parseInt(document.getElementById('portion').value, 10);
     let errorMessage = document.getElementById('errorMessage');
     let inputField = document.getElementById('portion');
-    if (isNaN(portionInput) || portionInput < 1 || portionInput > 4) {
+    if (isNaN(portionInput) || portionInput < 1 || portionInput > 10) {
         errorMessage.style.display = "block";
         inputField.classList.add("borderError");
         return;
