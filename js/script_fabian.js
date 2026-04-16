@@ -2,10 +2,10 @@ function determinePortion() {
     let inputField = document.getElementById("inputAmount");
     let inputValue = parseInt(inputField.value);
    
-    inputValidation(inputValue);
+    inputValidation(inputValue, inputField);
 }
 
-function inputValidation(inputValue) {
+function inputValidation(inputValue, inputField) {
     let valueInvalid = inputValue <= 0 || inputValue > 10 || isNaN(inputValue);
     let error = document.getElementById("error");
 
