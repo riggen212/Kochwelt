@@ -405,7 +405,6 @@ main {
 
 #error {
     color: red;
-    padding-left: var(--contentPaddingLeftRight);
 }
 
 .borderError {
