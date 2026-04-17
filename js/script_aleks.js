@@ -9,10 +9,10 @@ function formatFraction(value) {
 }
 
 function calculate() {
-    let portionInput = parseInt(document.getElementById('portion').value, 10);
+    let portionInput = parseInt(document.getElementById('portion').value, 4);
     let errorMessage = document.getElementById('errorMessage');
     let inputField = document.getElementById('portion');
-    if (isNaN(portionInput) || portionInput < 1 || portionInput > 10) {
+    if (isNaN(portionInput) || portionInput < 1 || portionInput > 4) {
         errorMessage.style.display = "block";
         inputField.classList.add("borderError");
         return;
