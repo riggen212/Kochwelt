@@ -1269,3 +1269,6 @@ button:focus-visible {
 html {
     scroll-behavior: smooth;
 }
+.borderError {
+    border: 2px solid red;
+}
