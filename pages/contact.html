@@ -20,7 +20,7 @@
 
             <button class="sidebarOpenBtn" id="btnOpenSidebar" onclick="openSidebar()" aria-label="Menü öffnen"
                 aria-expanded="false" aria-controls="navBar">
-                <img class="svgIcon" src="../assets/img/hamburgerMenu.svg" alt="">
+                <img class="svgIcon" src="../assets/img/hamburgerMenu.svg" alt="" aria-hidden="true">
             </button>
 
             <nav id="navBar">
@@ -28,7 +28,7 @@
                     <li>
                         <button id="btnCloseSidebar" class="sidebarCloseBtn" onclick="closeSidebar()"
                             aria-label="Menü schließen">
-                            <img class="svgIcon" src="../assets/img/closeX.svg" alt="">
+                            <img class="svgIcon" src="../assets/img/closeX.svg" alt="" aria-hidden="true">
                         </button>
                     </li>
                     <li><a class="navLink" href="../index.html">Start</a></li>
@@ -38,7 +38,7 @@
                 </ul>
             </nav>
 
-            <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+            <div id="overlay" onclick="closeSidebar()" aria-hidden="true" tabindex="-1"></div>
         </div>
     </header>
 
@@ -46,11 +46,11 @@
         <section class="contactCard">
             <h1>Schreib uns eine Nachricht</h1>
 
-            <p class="contactText">
+            <p class="contactText" id="contactIntro">
             Du hast Fragen zu einem Rezept, möchtest uns Feedback geben oder suchst kulinarische Inspiration? 
             Dann schreib uns gerne direkt über das Kontaktformular.</p>
             
-            <form class="contactForm" action="https://formspree.io/f/xojpevdv" method="POST" onsubmit="sendMail(event)">
+            <form class="contactForm" action="https://formspree.io/f/xojpevdv" method="POST" onsubmit="sendMail(event)" aria-describedby="contactIntro">
             
                 <div class="formGroup">
                     <label for="name">Name</label>
@@ -60,7 +60,8 @@
                         name="name"
                         type="text"
                         placeholder="Dein Name"
-                        required>
+                        required
+                        autocomplete="name">
                 </div>
 
                 <div class="formGroup">
@@ -71,7 +72,8 @@
                         name="email"
                         type="email"
                         placeholder="deine@email.de"
-                        required>
+                        required
+                        autocomplete="email">
                 </div>
 
                 <div class="formGroup">
@@ -81,6 +83,7 @@
                         id="message"
                         name="message"
                         placeholder="Schreib hier deine Nachricht..."
+                        rows="6"
                         required></textarea>
                 </div>
 
@@ -106,13 +109,13 @@
 
             <div class="socialMedia">
                 <a href="https://www.facebook.com/?locale=de_DE" target="_blank" rel="noopener noreferrer" aria-label="Facebook in neuem Tab öffnen">
-                    <img class="socialMediaImg" src="../assets/img/facebook(small).svg" alt="">
+                    <img class="socialMediaImg" src="../assets/img/facebook(small).svg" alt="" aria-hidden="true">
                 </a>
                 <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram in neuem Tab öffnen">
-                    <img class="socialMediaImg" src="../assets/img/instagram(small).svg" alt="">
+                    <img class="socialMediaImg" src="../assets/img/instagram(small).svg" alt="" aria-hidden="true">
                 </a>
                 <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X in neuem Tab öffnen">
-                    <img class="socialMediaImg" src="../assets/img/x(small).svg" alt="">
+                    <img class="socialMediaImg" src="../assets/img/x(small).svg" alt="" aria-hidden="true">
                 </a>
             </div>
         </div>

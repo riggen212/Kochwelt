@@ -20,14 +20,14 @@
             </figure>
 
             <button class="sidebarOpenBtn" id="btnOpenSidebar" onclick="openSidebar()" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navBar">
-                <img class="svgIcon" src="../assets/img/hamburgerMenu.svg" alt="">
+                <img class="svgIcon" src="../assets/img/hamburgerMenu.svg" alt="" aria-hidden="true">
             </button>
 
             <nav id="navBar">
                 <ul>
                     <li>
                         <button id="btnCloseSidebar" class="sidebarCloseBtn" onclick="closeSidebar()" aria-label="Menü schließen">
-                            <img class="svgIcon" src="../assets/img/closeX.svg" alt="">
+                            <img class="svgIcon" src="../assets/img/closeX.svg" alt="" aria-hidden="true">
                         </button>
                     </li>
                     <li><a class="navLink" href="../index.html">Start</a></li>
@@ -37,7 +37,7 @@
                 </ul>
             </nav>
 
-            <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+            <div id="overlay" onclick="closeSidebar()" aria-hidden="true" tabindex="-1"></div>
         </div>
     </header>
 
@@ -145,13 +145,13 @@
 
             <div class="socialMedia">
                 <a href="https://www.facebook.com/?locale=de_DE" target="_blank" rel="noopener noreferrer" aria-label="Facebook in neuem Tab öffnen">
-                    <img class="socialMediaImg" src="../assets/img/facebook(small).svg" alt="">
+                    <img class="socialMediaImg" src="../assets/img/facebook(small).svg" alt="" aria-hidden="true">
                 </a>
                 <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram in neuem Tab öffnen">
-                    <img class="socialMediaImg" src="../assets/img/instagram(small).svg" alt="">
+                    <img class="socialMediaImg" src="../assets/img/instagram(small).svg" alt="" aria-hidden="true">
                 </a>
                 <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X in neuem Tab öffnen">
-                    <img class="socialMediaImg" src="../assets/img/x(small).svg" alt="">
+                    <img class="socialMediaImg" src="../assets/img/x(small).svg" alt="" aria-hidden="true">
                 </a>
             </div>
         </div>
