@@ -1270,3 +1270,7 @@ button:focus-visible {
     outline: 3px solid green;
     outline-offset: 4px;
 }
+
+html {
+    scroll-behavior: smooth;
+}
