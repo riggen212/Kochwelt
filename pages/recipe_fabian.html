@@ -78,7 +78,7 @@
             <form class="ingredientAmount contentRestrain">
                 <label>
                     Zutaten für
-                    <input oninput="inputValidation()" id="inputAmount"
+                    <input id="inputAmount"
                     class="numberInput" 
                     type="number" 
                     name="portions" 
@@ -87,7 +87,7 @@
                     min="1" 
                     max="10">
                     
-                    <button class="btn" type="button" onclick="determinePortion()">Portionen</button>
+                    <button id="calculationButton" class="btn" type="button" onclick="calculateIngredients()">Portionen</button>
                 </label>
                 <span id="error"></span>
             </form>
