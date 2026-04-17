@@ -14,10 +14,13 @@
     --imageBorderRadius: 8px;
     --headerBoxShadow: var(--zero) 3px 5px rgba(var(--zero), var(--zero), var(--zero), 0.1);
     --contentMargin: var(--zero) auto;
-    --contentPaddingTopBottom: clamp(8px, (-14.86px + 12.142vw), 32px);
-    --contentPaddingLeftRight: clamp(24px, (-14.86px + 12.142vw), 160px);
+    --contentPaddingTopBottom: clamp(8px, calc(-14.86px + 12.142vw), 32px);
+    --contentPaddingLeftRight: clamp(24px, calc(-14.86px + 12.142vw), 160px);
     --paddingIngredientList: var(--zero) var(--zero) 32px var(--zero);
     --overlayBackground: rgba(var(--zero), var(--zero), var(--zero), 0.5);
+    --recipeImageWidth: clamp(250px, 40vw, 600px);
+    --otherRecipesDisplayImage: clamp(150px, 25vw, 250px);
+    --logoCookingHatWidth: clamp(32px, calc(23.143px + 2.768vw), 63px);
 }
 
 * {
@@ -72,7 +75,7 @@ img {
     }
 
     .logoCookingHat {
-        width: 64px;
+        width: var(--logoCookingHatWidth);
     }
 
     #navBar {
@@ -167,7 +170,7 @@ main {
 
     .recipeImage {
         object-fit: cover;
-        width: clamp(250px, 40vw, 600px);
+        width: var(--recipeImageWidth);
     }
 
     .recipeDescpription {
@@ -215,7 +218,7 @@ main {
     
     img {
         object-fit: cover;
-        width: clamp(150px, 25vw, 250px);
+        width: var(--otherRecipesDisplayImage);
         aspect-ratio: 1/1;
     }
 
@@ -276,7 +279,7 @@ main {
         }
         
         .logoCookingHat {
-            width: 64px;
+            width: var(--logoCookingHatWidth);
         }
     }
 
@@ -1069,19 +1072,11 @@ textarea {
                     font-size: 16px;
                 }
             }
-            
-            .logoCookingHat {
-                width: 32px;
-            }
         }
     }
 
     .footerContent {
         .footerLogo {
-            .logoCookingHat {
-                width: 32px;
-            }
-
             figcaption {
                 font-size: 16px;
             }
