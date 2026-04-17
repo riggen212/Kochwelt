@@ -24,7 +24,7 @@
                 <img class="svgIcon" src="../assets/img/hamburgerMenu.svg" alt="three dashes">
             </button>
 
-            <nav id="navBar">
+            <nav id="navBar" aria-label="Page navigation">
                 <ul>
                     <li>
                         <button id="btnCloseSidebar" class="sidebarCloseBtn" onclick="closeSidebar()"
@@ -47,8 +47,8 @@
    <main>
         <section class="contentRestrain recipeHeader">
             <h1>Rinderroulade</h1>
-            <img class="recipeOfDayImage" src="../assets/img/beef_roulades.jpg" alt="Picture of a salad">
-            <aside>
+            <img class="recipeOfDayImage" src="../assets/img/beef_roulades.jpg" alt="a picture of a beef roulade">
+            <aside aria-label="properties of the recipe">
                 <figure>
                     <img class="recipePropertyImage" src="../assets/img/icons/clock_regular.svg" alt="An image of a regular clock">
                     <figcaption>90-120 Min.</figcaption>
@@ -67,13 +67,13 @@
                 <Form class="ingredientsCalculation">
                     <label>
                         Zutaten für
-                        <input min="1" max="10" type="number" id="numberInput" value="1" aria-placeholder="4" value="Portionen">                 
+                        <input min="1" max="10" type="number" id="numberInput" value="1" value="Portionen">                 
                         <button class="btn" onclick="inputValidation()" type="button">Portionen</button>
                     </label>
                 </form>
                 <span id="errorMessage"></span>
 
-                <ul id="ingredientsElements">
+                <ul id="ingredientsElements" aria-label="list of the ingredients">
                     <li>
                         <span>1 </span>
                         große Rinderroulade (aus der Oberschale, ca. 180-200g)
@@ -133,11 +133,11 @@
                 <h2>Zubereitung</h2>
                 <div>
                     <figure>
-                        <img src="../assets/img/icons/clock_regular.svg" alt="">
+                        <img src="../assets/img/icons/clock_regular.svg" alt="An image of a regular clock">
                         <figcaption>ca. 90-120 Minuten</figcaption>
                     </figure>
                     <figure>
-                        <img src="../assets/img/icons/clock_regular.svg" alt="">
+                        <img src="../assets/img/icons/clock_regular.svg" alt="An image of a regular clock">
                         <figcaption>Gesamtzeit: ca. 90-120 Minuten</figcaption>
                     </figure>
                 </div>
@@ -154,7 +154,7 @@
                 </p>
                 <h3>Rezept erstellt von</h3>
                 <figure class="createdBy">
-                    <img src="../assets/img/sebastian.jpg" alt="">
+                    <img src="../assets/img/sebastian.jpg" alt="Photo by the recipe author">
                     <figcaption>Sebastian</figcaption>
                 </figure>
             </article>
