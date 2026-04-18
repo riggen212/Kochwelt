@@ -14,10 +14,20 @@
     --imageBorderRadius: 8px;
     --headerBoxShadow: var(--zero) 3px 5px rgba(var(--zero), var(--zero), var(--zero), 0.1);
     --contentMargin: var(--zero) auto;
-    --contentPaddingTopBottom: clamp(8px, (-14.86px + 12.142vw), 32px);
-    --contentPaddingLeftRight: clamp(24px, (-14.86px + 12.142vw), 160px);
+    --contentPaddingTopBottom: clamp(8px, calc(-14.86px + 12.142vw), 32px);
+    --contentPaddingLeftRight: clamp(24px, calc(-14.86px + 12.142vw), 160px);
     --paddingIngredientList: var(--zero) var(--zero) 32px var(--zero);
     --overlayBackground: rgba(var(--zero), var(--zero), var(--zero), 0.5);
+    --recipeImageWidth: clamp(250px, 40vw, 600px);
+    --otherRecipesDisplayImage: clamp(150px, 25vw, 250px);
+    --logoCookingHatWidth: clamp(32px, calc(23.143px + 2.768vw), 63px);
+    --figcaptionFontSize: clamp(1.00rem, calc(0.714rem + 1.429vw), 2.00rem);
+    --socialMediaImgWidth: clamp(48px, calc(38.857px + 2.857vw), 80px);
+    --profileImageWidth: clamp(60px, calc(48.571px + 3.571vw), 100px);
+    --profileImageHeight: clamp(60px, calc(48.571px + 3.571vw), 100px);
+    --headlineFontSize: clamp(1.5rem, 2.5rem, 2rem);
+    --createdByFigcaptionFontSize: clamp(1.13rem, calc(1.018rem + 0.536vw), 1.50rem);
+    --footerFontSize: clamp(0.75rem, calc(0.679rem + 0.357vw), 1.00rem);   
 }
 
 * {
@@ -67,12 +77,12 @@ img {
         align-items: center;
 
         figcaption {
-            font-size: 32px;
+            font-size: var(--figcaptionFontSize);
         }
     }
 
     .logoCookingHat {
-        width: 64px;
+        width: var(--logoCookingHatWidth);
     }
 
     #navBar {
@@ -167,7 +177,7 @@ main {
 
     .recipeImage {
         object-fit: cover;
-        width: clamp(250px, 40vw, 600px);
+        width: var(--recipeImageWidth);
     }
 
     .recipeDescpription {
@@ -175,7 +185,7 @@ main {
         flex-direction: column;
 
         .headline {
-            font-size: clamp(1.5rem, 2.5rem, 2rem);
+            font-size: var(--headlineFontSize);
         }
 
         p {
@@ -215,7 +225,7 @@ main {
     
     img {
         object-fit: cover;
-        width: clamp(150px, 25vw, 250px);
+        width: var(--otherRecipesDisplayImage);
         aspect-ratio: 1/1;
     }
 
@@ -271,12 +281,12 @@ main {
         filter: drop-shadow(2px 8px 3px black);
         
         figcaption {
-            font-size: 32px;
+            font-size: var(--figcaptionFontSize);
             color: var(--buttonTextColor);
         }
         
         .logoCookingHat {
-            width: 64px;
+            width: var(--logoCookingHatWidth);
         }
     }
 
@@ -300,7 +310,7 @@ main {
         }
 
         .socialMediaImg{
-            width: 5em;
+            width: var(--socialMediaImgWidth);
         }
     }
 }
@@ -314,7 +324,7 @@ main {
 
     p, a {
         color: var(--buttonTextColor);
-        font-size: 16px;
+        font-size: var(--footerFontSize);
         text-decoration: none;
     }
 
@@ -355,8 +365,8 @@ main {
 }
 
 .articleHeader {
-
     h1 {
+        font-size: var(--headlineFontSize);
         font-weight: bold;
         padding-bottom: 16px;
     }
@@ -455,14 +465,14 @@ input:invalid {
     gap: 16px;
 
     figcaption {
-        font-size: 24px;
+        font-size: var(--figcaptionFontSize);
     }
 }
 
 .profileImg {
     filter: drop-shadow(2px 4px 6px black);
-    width: 100px;
-    height: 100px;
+    width: var(--profileImageWidth);
+    height: var(--profileImageHeight);
     border-radius: 50%;
 }
 
@@ -575,14 +585,14 @@ input:invalid {
 
 .authorBox img {
     filter: drop-shadow(2px 4px 6px black);
-    width: 100px;
-    height: 100px;
+    width: var(--profileImageWidth);
+    height: var(--profileImageHeight);
     border-radius: 50%;
     display: block;
     object-fit: cover;
 }
 .authorName {
-    font-size: 24px;
+    font-size: var(--figcaptionFontSize);
 }
 
 .recipeHeader {
@@ -590,6 +600,7 @@ input:invalid {
     padding: var(--contentPaddingTopBottom) var(--contentPaddingLeftRight) var(--zero) var(--contentPaddingLeftRight);
 
     h1 {
+        font-size: var(--headlineFontSize);
         margin-bottom: 16px;
     }
 
@@ -727,13 +738,13 @@ hr {
     .createdBy img {
         filter: drop-shadow(2px 4px 6px black);
         border-radius: 50%;
-        width: 100px;
-        height: 100px;
+        width: var(--profileImageWidth);
+        height: var(--profileImageHeight);
         object-fit: cover;
     }
 
     .createdBy figcaption {
-        font-size: 24px;
+        font-size: var(--createdByFigcaptionFontSize);
     }
 }
 
@@ -805,7 +816,7 @@ hr {
 }
 
 .contactPerson figcaption {
-    font-size: 24px;
+    font-size: var(--figcaptionFontSize);
 }
 
 /* privacy_police */
@@ -881,7 +892,7 @@ hr {
 }
 
 .contactCard h1 {
-    font-size: 28px;
+    font-size: var(--headlineFontSize);
     line-height: 1.2;
 }
 
@@ -909,7 +920,6 @@ hr {
 }
 
 label {
-    font-size: 16px;
     font-weight: 700;
     color: black;
 }
@@ -917,7 +927,6 @@ label {
 .contactInput {
     border: 1px solid #d8d8d8;
     border-radius: 8px;
-    font-size: 16px;
     background: white;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
     padding: 10px;
@@ -1061,56 +1070,7 @@ textarea {
 }
 
 @media (max-width: 620px) {
-    .mainHeader {
-        .headerContent {
-
-            .fig {
-                figcaption {
-                    font-size: 16px;
-                }
-            }
-            
-            .logoCookingHat {
-                width: 32px;
-            }
-        }
-    }
-
-    .footerContent {
-        .footerLogo {
-            .logoCookingHat {
-                width: 32px;
-            }
-
-            figcaption {
-                font-size: 16px;
-            }
-        }
-
-        .legalContainer p, .legalContainer a {
-            font-size: 12px;
-        }
-
-        .socialMedia {
-
-            .socialMediaImg {
-                width: 48px;
-            }
-        }
-    }
-
-    .articleHeader, .recipeHeader {
-        h1 {
-            font-size: 24px;
-        }
-    }
-
-    .createdBy figcaption {
-        font-size: 20px !important;
-    }
-
     .contactCard h1 {
-        font-size: 25px;
         margin-bottom: 16px;
     }
 
@@ -1120,43 +1080,6 @@ textarea {
 
     .submitBtn {
         width: 100%;
-    }
-
-    .imageRecipeFooter {
-
-        figcaption {
-            font-size: 20px;
-        }
-    }
-
-    .profileImg {
-        width: 88px;
-        height: 88px;
-    }
-
-    .recipePageAleks h1 {
-        font-size: 24px;
-    }
-
-    .authorBox img {
-        width: 88px;
-        height: 88px;
-    }
-    .authorName {
-        font-size: 20px;
-    }
-
-    .createdBy figcaption {
-        font-size: 20px;
-    }
-
-    .createdBy img {
-        width: 88px !important;
-        height: 88px !important;
-    }
-
-    .contactPerson figcaption {
-    font-size: 20px;
     }
 }
 
@@ -1172,27 +1095,19 @@ textarea {
     }
 
     .contactCard {
-        /* max-width: 320px; */
         padding: 20px;
-        /* border-radius: 14px; */
     }
 
     .contactCard h1 {
-        font-size: 19px;
         margin-bottom: 12px;
     }
 
     .contactText {
-        font-size: 15px;
         margin-bottom: 20px;
     }
 
-    .formGroup label {
-        font-size: 15px;
-    }
 
     .contactInput {
-        font-size: 15px;
         padding: 10px 12px;
     }
 
@@ -1201,53 +1116,21 @@ textarea {
     }
 
     .submitBtn {
-        font-size: 16px;
         padding: 14px 18px;
     }
 }
 
 @media (max-width: 430px) {
     .recipePageAleks h1 {
-        font-size: 24px;
         margin-bottom: 12px;
-    }
-
-    .infoList li {
-        font-size: 12px;
-        padding: 6px 8px;
-    }
-    .portioBbox label {
-        width: 100%;
-        margin-right: 0;
-    }
-
-    .portionBox input {
-        width: 100px;
-    }
-
-    .portionBox button {
-        padding: 0 14px;
     }
 
     .preparationSection p {
         line-height: 1.4;
     }
 
-    .authorBox img, .createdBy img, .profileImg {
-        width: 60px !important;
-        height: 60px !important;
-    }
-
-    .authorName, .createdBy figcaption, .imageRecipeFooter figcaption {
-        font-size: 18px !important;
-    }
-
     .impressumDiv {
-        padding:12px;
-    }
-
-    .contactPerson figcaption {
-        font-size: 18px;
+        padding: 12px;
     }
 }
 /* Barierefreiheit Änderungen */
