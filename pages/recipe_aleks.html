@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../assets/img/logo_small.png" type="image/x-icon">
+    <script src="../js/script_aleks.js" defer></script>
+    <script src="../js/scriptRespMenu.js" defer></script>
     <title>Rezept Aleks</title>
 </head>
 <body>
@@ -75,7 +77,7 @@
                     <button class="btn" type="button" onclick="calculate()" aria-label="Portionen berechnen">Portionen</button>
                 </label>               
             </form>
-            <span id="errorMessage" class="errorMessage" aria-live="polite">Bitte geben Sie eine Zahl zwischen 1 und 4 ein.</span>
+            <span id="error" aria-live="polite" style="display: none;">Bitte geben Sie eine Zahl zwischen 1 und 4 ein.</span>
 
             <ul class="ingredients">
                 <li><span id="spaghetti">400</span> g Spaghetti</li>
@@ -145,19 +147,17 @@
 
             <div class="socialMedia">
                 <a href="https://www.facebook.com/?locale=de_DE" target="_blank" rel="noopener noreferrer" aria-label="Facebook in neuem Tab öffnen">
-                    <img class="socialMediaImg" src="../assets/img/facebook(small).svg" aria-hidden="true">
+                    <img class="socialMediaImg" src="../assets/img/facebook(small).svg" alt="" aria-hidden="true">
                 </a>
                 <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram in neuem Tab öffnen">
-                    <img class="socialMediaImg" src="../assets/img/instagram(small).svg" aria-hidden="true">
+                    <img class="socialMediaImg" src="../assets/img/instagram(small).svg" alt="" aria-hidden="true">
                 </a>
                 <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X in neuem Tab öffnen">
-                    <img class="socialMediaImg" src="../assets/img/x(small).svg" aria-hidden="true">
+                    <img class="socialMediaImg" src="../assets/img/x(small).svg" alt="" aria-hidden="true">
                 </a>
             </div>
         </div>
     </footer>
-    <script src="../js/script_aleks.js"></script>
-    <script src="../js/scriptRespMenu.js"></script>
 </body>
 
 </html>
