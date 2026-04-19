@@ -9,7 +9,7 @@ function formatFraction(value) {
 }
 
 function calculate() {
-    let portionInput = parseInt(document.getElementById('portion').value, 4);
+    let portionInput = parseInt(document.getElementById('portion').value,);
     let errorMessage = document.getElementById('error');
     let inputField = document.getElementById('portion');
     if (isNaN(portionInput) || portionInput < 1 || portionInput > 4) {
