@@ -1122,6 +1122,7 @@ textarea {
 
 @media (max-width: 430px) {
     .recipePageAleks h1 {
+        font-size: var(--headlineFontSize);
         margin-bottom: 12px;
     }
 
