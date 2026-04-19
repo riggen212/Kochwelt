@@ -24,6 +24,7 @@ function inputValidation() {
         error.setAttribute("aria-hidden", "false");
         error.setAttribute("aria-labelledby", errorMessage);
         inputField.value = "";
+        inputField.classList.add("borderError");
         
         return;
     }
@@ -31,6 +32,7 @@ function inputValidation() {
     error.textContent = "";
     error.setAttribute("aria-hidden", "true");
     error.removeAttribute("aria-labelledby");
+    inputField.classList.remove("borderError");
 
 }
 
