@@ -35,6 +35,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 22px;
+}
+
 body {
     font-family: var(--font);
     margin: var(--zero);
@@ -325,6 +329,7 @@ main {
     padding: var(--contentPaddingTopBottom) var(--zero) var(--contentPaddingTopBottom) var(--zero);
 
     p, a {
+        text-align: center;
         color: var(--buttonTextColor);
         font-size: var(--footerFontSize);
         text-decoration: none;
