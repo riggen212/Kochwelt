@@ -19,13 +19,18 @@ function inputValidation() {
     let valueInvalid = inputValue <= 0 || inputValue > 10;
 
     if (valueInvalid) {
-        error.textContent = "Bitte geben Sie eine Zahl zwischen 1 und 10 ein. Die Rezeptangaben werden auf eine Menge von 4 Portionen gesetzt.";
+        const errorMessage = "Bitte geben Sie eine Zahl zwischen 1 und 10 ein. Die Rezeptangaben werden auf eine Menge von 4 Portionen gesetzt.";
+        error.textContent = errorMessage;
+        error.setAttribute("aria-hidden", "false");
+        error.setAttribute("aria-labelledby", errorMessage);
         inputField.value = "";
         
         return;
     }
 
     error.textContent = "";
+    error.setAttribute("aria-hidden", "true");
+    error.removeAttribute("aria-labelledby");
 
 }
 

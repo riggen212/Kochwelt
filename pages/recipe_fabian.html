@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../assets/img/logo_small.png" type="image/x-icon">
     <title>Rezept Fabian</title>
+    <script src="../js/script_fabian.js" defer></script>
+    <script src="../js/scriptRespMenu.js" defer></script>
 </head>
 
 <body>
@@ -82,8 +84,8 @@
                     <input id="inputAmount" class="numberInput" type="number" name="portions" aria-placeholder="4" placeholder="4" min="1" max="10">
                     <button for="inputAmount" id="calculationButton" class="btn" type="button" onclick="calculateIngredients()">Portionen</button>
                 </label>
-                <span id="error"></span>
             </form>
+            <span id="error" aria-hidden="true"></span>
 
             <section class="recipeIngredients contentRestrain">
                 <ul id="ingredients">
@@ -256,9 +258,6 @@
             </div>
         </div>
     </footer>
-
-    <script src="../js/script_fabian.js"></script>
-    <script src="../js/scriptRespMenu.js"></script>
 </body>
 
 </html>

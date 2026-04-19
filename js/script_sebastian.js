@@ -1,6 +1,6 @@
 const TABLE = document.getElementById(`ingredientsElements`);
 const SPANELEMENTLIST = TABLE.querySelectorAll(`span`);
-let errormessage = document.getElementById(`errorText`);
+let errormessage = document.getElementById(`error`);
 let spanArray = [];
 
 function getSpanElements() {

@@ -632,12 +632,6 @@ input:invalid {
     }
 }
 
-#errorMessage{
-    display: flex;
-    color: red;
-    padding-left: var(--contentPaddingLeftRight);
-}
-
 hr {
     border-top: 1px solid #f0f0f0;
     width: 100%;
@@ -648,15 +642,11 @@ hr {
     display: flex;
     flex-direction: column;
 
-    #errorText {
-        display: flex;
-        color: red;
-    }
-
     .ingredientsCalculation {
         display: flex;
         align-items: center;
         margin-top: 32px;
+        padding-bottom: 16px;
 
         label {
             display: flex;
