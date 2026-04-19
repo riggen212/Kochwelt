@@ -29,8 +29,7 @@
     --createdByFigcaptionFontSize: clamp(1.13rem, calc(1.018rem + 0.536vw), 1.50rem);
     --footerFontSize: clamp(0.75rem, calc(0.679rem + 0.357vw), 1.00rem);  
     --dropShadowLogo: 2px 8px 3px black;
-    --headerHight: auto;
-    --footerHight: auto;
+
 }
 
 * {
@@ -47,6 +46,9 @@ body {
     color: var(--designColor);
     font-size: 16px;
     box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 h1, h2, p, figure {
@@ -164,8 +166,7 @@ img {
 }
 
 main {
-    min-height: calc(100vh-(var(--headerHight)-var(--footerHight)));
-    flex: 1;
+    flex-grow: 1;
 
     h2 {
         padding-bottom: var(--contentPaddingTopBottom);
@@ -505,6 +506,7 @@ input:invalid {
 }
 
 .recipePageAleks h1 {
+    font-size: var(--headlineFontSize);
     padding-bottom: 16px;
 }
 
