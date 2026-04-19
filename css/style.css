@@ -29,6 +29,8 @@
     --createdByFigcaptionFontSize: clamp(1.13rem, calc(1.018rem + 0.536vw), 1.50rem);
     --footerFontSize: clamp(0.75rem, calc(0.679rem + 0.357vw), 1.00rem);  
     --dropShadowLogo: 2px 8px 3px black;
+    --headerHight: auto;
+    --footerHight: auto;
 }
 
 * {
@@ -162,7 +164,7 @@ img {
 }
 
 main {
-    min-height: 100vh;
+    min-height: calc(100vh-(var(--headerHight)-var(--footerHight)));
     flex: 1;
 
     h2 {
