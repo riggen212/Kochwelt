@@ -27,7 +27,8 @@
     --profileImageHeight: clamp(60px, calc(48.571px + 3.571vw), 100px);
     --headlineFontSize: clamp(1.5rem, 2.5rem, 2rem);
     --createdByFigcaptionFontSize: clamp(1.13rem, calc(1.018rem + 0.536vw), 1.50rem);
-    --footerFontSize: clamp(0.75rem, calc(0.679rem + 0.357vw), 1.00rem);   
+    --footerFontSize: clamp(0.75rem, calc(0.679rem + 0.357vw), 1.00rem);  
+    --dropShadowLogo: 2px 8px 3px black;
 }
 
 * {
@@ -75,6 +76,7 @@ img {
         display: flex;
         gap: 16px;
         align-items: center;
+        filter: drop-shadow(var(--dropShadowLogo));
 
         figcaption {
             font-size: var(--figcaptionFontSize);
@@ -278,7 +280,7 @@ main {
         display: flex;
         align-items: center;
         gap: 16px;
-        filter: drop-shadow(2px 8px 3px black);
+        filter: drop-shadow(var(--dropShadowLogo));
         
         figcaption {
             font-size: var(--figcaptionFontSize);
