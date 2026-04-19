@@ -648,10 +648,9 @@ hr {
     display: flex;
     flex-direction: column;
 
-    #errorMessage {
+    #errorText {
         display: flex;
         color: red;
-        padding-left: var(--contentPaddingLeftRight);
     }
 
     .ingredientsCalculation {
